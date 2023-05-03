@@ -1,0 +1,57 @@
+import java.util.*;
+import java.util.stream.*;
+import java.lang.*;
+
+public class Main_113 { 
+
+#program#
+
+  public static void main(String[] args) {
+    // test case 1
+    String sentence_1 = "Hello World" ;
+    String word_1 = "Hello" ;
+    if (#function_name#(sentence_1, word_1) == true) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+
+    // test case 2
+  String sentence_2 = "Hello World" ;
+    String word_2 = "World" ;
+    if (#function_name#(sentence_2, word_2) == true) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+
+    // test case 3
+    String sentence_3 = "Hello World" ;
+    String word_3 = "Geeks" ;
+    if (#function_name#(sentence_3, word_3) == false) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+
+    // test case 4
+    String sentence_4 = "Hello World" ;
+    String word_4 = "GeeksforGeeks" ;
+    if (#function_name#(sentence_4, word_4) == false) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+
+    // test case 5
+    String sentence_5 = "Hello World" ;
+    String word_5 = "Hello World" ;
+    if (#function_name#(sentence_5, word_5) == false) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+
+
+  }
+}

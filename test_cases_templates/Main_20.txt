@@ -1,0 +1,47 @@
+import java.util.*;
+import java.util.stream.*;
+import java.lang.*;
+
+public class Main_20 {
+
+#program#
+
+
+    public static void main(String[] args) {
+
+    // test case 1
+    if(#function_name#(new int[]{1, 2, 1, 2}, 4)==true){
+        System.out.println("Success");
+    }else{
+        System.out.println("Fail");
+    }
+
+    // test case 2
+    if(#function_name#(new int[]{1, 2, 3, 4}, 4)==false){
+        System.out.println("Success");
+    }else{
+        System.out.println("Fail");
+    }
+
+    // test case 3
+    if(#function_name#(new int[]{5, 5}, 2)==true){
+        System.out.println("Success");
+    }else{
+        System.out.println("Fail");
+    }
+
+    // test case 4
+    if(#function_name#(new int[]{5, 7}, 2)==false){
+        System.out.println("Success");
+    }else{
+        System.out.println("Fail");
+    }
+
+    // test case 5
+    if(#function_name#(new int[]{1, 2, 3, 2, 1}, 5)==false){
+        System.out.println("Success");
+    }else{
+        System.out.println("Fail");
+    }
+  }
+}

@@ -1,0 +1,54 @@
+import java.util.*;
+import java.util.stream.*;
+import java.lang.*;
+
+public class Main_46 {
+
+#program#
+
+
+  public static void main(String[] args) {
+//  test case 1
+    int arr1[] = new int[]{3,4,-1,1};
+    int n1 = 4;
+    if (#function_name#(arr1, n1) == 2) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+
+//  test case 2
+    int arr2[] = new int[]{1,2,0};
+    int n2 = 3;
+    if (#function_name#(arr2, n2) == 3) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+//  test case 3
+    int arr3[] = new int[]{7,8,9,11,12};
+    int n3 = 5;
+    if (#function_name#(arr3, n3) == 1) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+//  test case 4
+    int arr4[] = new int[]{4,5,6,7,8,1,2,3};
+    int n4 = 8;
+    if (#function_name#(arr4, n4) == 9) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+//  test case 5
+    int arr5[] = new int[]{-3,-2,0,1,2};
+    int n5 = 5;
+    if (#function_name#(arr5, n5) == 3) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+
+  }
+}

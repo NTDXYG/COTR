@@ -1,0 +1,51 @@
+import java.util.*;
+import java.util.stream.*;
+import java.lang.*;
+
+public class Main_77 { 
+
+#program#
+
+  public static void main(String[] args) {
+    //test case 1
+    long arr1[] = {2};
+    int n1 = 1;
+    if (#function_name#(arr1,n1)==0){
+      System.out.println("Success");
+    }else {
+      System.out.println("False");
+    }
+    //test case 2
+    long arr2[] = {1, 2};
+    int n2 = 2;
+    if (#function_name#(arr2,n2)==2){
+      System.out.println("Success");
+    }else {
+      System.out.println("False");
+    }
+    //test case 3
+    long arr3[] = {3, 1, 2};
+    int n3 = 3;
+    if (#function_name#(arr3,n3)==2){
+      System.out.println("Success");
+    }else {
+      System.out.println("False");
+    }
+    //test case 4
+    long arr4[] = {1, 2, 4, 8, 16};
+    int n4 = 5;
+    if (#function_name#(arr4,n4)==4){
+      System.out.println("Success");
+    }else {
+      System.out.println("False");
+    }
+    //test case 5
+    long arr5[] = {3, 5, 7, 11, 13, 17, 19};
+    int n5 = 7;
+    if (#function_name#(arr5,n5)==10){
+      System.out.println("Success");
+    }else {
+      System.out.println("False");
+    }
+  }
+}

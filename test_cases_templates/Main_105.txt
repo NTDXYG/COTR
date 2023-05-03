@@ -1,0 +1,57 @@
+import java.util.*;
+import java.util.stream.*;
+import java.lang.*;
+
+public class Main_105 { 
+
+#program#
+
+  public static void main(String[] args) {
+    // test case 1
+    int l_1 = 1 ;
+    int r_1 = 10 ;
+    if (#function_name#(l_1, r_1) == 3) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+
+    // test case 2
+    int l_2 = 1 ;
+    int r_2 = 100 ;
+    if (#function_name#(l_2, r_2) == 30) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+
+    // test case 3
+    int l_3 = 1 ;
+    int r_3 = 1000 ;
+    if (#function_name#(l_3, r_3) == 300) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+
+    // test case 4
+    int l_4 = 1 ;
+    int r_4 = 10000 ;
+    if (#function_name#(l_4, r_4) == 3000) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+
+    // test case 5
+    int l_5 = 1 ;
+    int r_5 = 100000 ;
+    if (#function_name#(l_5, r_5) == 30000) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+
+
+  }
+}

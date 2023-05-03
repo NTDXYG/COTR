@@ -1,0 +1,59 @@
+import java.util.*;
+import java.util.stream.*;
+import java.lang.*;
+
+public class Main_41 { 
+
+#program#
+
+
+  public static void main(String[] args) {
+//  test case 1
+    int arr1[] = new int[]{1,2,3,4,5};
+    int n1 = 5;
+    int k1 = 3;
+    if (#function_name#(arr1, n1, k1) == 8) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+
+//  test case 2
+    int arr2[] = new int[]{5,4,3,2,1};
+    int n2 = 5;
+    int k2 = 5;
+    if (#function_name#(arr2, n2, k2) == 10) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+//  test case 3
+    int arr3[] = new int[]{1,2,3,4,5};
+    int n3 = 5;
+    int k3 = 10;
+    if (#function_name#(arr3, n3, k3) == 15) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+//  test case 4
+    int arr4[] = new int[]{10,20,30,40,50};
+    int n4 = 5;
+    int k4 = 30;
+    if (#function_name#(arr4, n4, k4) == 33) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+//  test case 5
+    int arr5[] = new int[]{1,2,3,4,5};
+    int n5 = 5;
+    int k5 = 0;
+    if (#function_name#(arr5, n5, k5) == 0) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+
+  }
+}

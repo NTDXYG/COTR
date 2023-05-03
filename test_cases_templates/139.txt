@@ -1,0 +1,38 @@
+import numpy as np 
+import math
+from math import *
+import collections
+from collections import *
+import heapq
+import itertools
+import random
+import sys
+
+
+#program#
+
+
+#test case 1
+lower=1
+higher=2
+assert #function_name#( lower , higher )==2
+
+#test case 2
+lower=11
+higher=11
+assert #function_name#( lower , higher )==11
+
+#test case 3
+lower=123
+higher=321
+assert #function_name#( lower , higher )==2
+
+#test case 4
+lower=12
+higher=21
+assert #function_name#( lower , higher )==2
+
+#test case 5
+lower=123
+higher=123
+assert #function_name#( lower , higher )==123

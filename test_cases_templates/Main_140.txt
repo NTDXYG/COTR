@@ -1,0 +1,52 @@
+import java.util.*;
+import java.util.stream.*;
+import java.lang.*;
+
+
+public class Main_140{
+
+#program#
+
+    public static void main(String []args){
+        // test case 1
+        String str_1="12345";
+        if(#function_name#(str_1)==12345) {
+            System.out.println("Success");
+        }else {
+            System.out.println("Fail");
+        }
+
+        // test case 2
+        String str_2="1a3b5";
+        if(#function_name#(str_2)==5) {
+            System.out.println("Success");
+        }else {
+            System.out.println("Fail");
+        }
+
+        // test case 3
+        String str_3="aa001";
+        if(#function_name#(str_3)==1) {
+            System.out.println("Success");
+        }else {
+            System.out.println("Fail");
+        }
+
+        // test case 4
+        String str_4="aabbcc";
+        if(#function_name#(str_4)==0) {
+            System.out.println("Success");
+        }else {
+            System.out.println("Fail");
+        }
+
+        // test case 5
+        String str_5="As12sf";
+        if(#function_name#(str_5)==12) {
+            System.out.println("Success");
+        }else {
+            System.out.println("Fail");
+        }
+        }
+    }
+

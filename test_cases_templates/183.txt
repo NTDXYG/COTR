@@ -1,0 +1,46 @@
+import numpy as np 
+import math
+from math import *
+import collections
+from collections import *
+import heapq
+import itertools
+import random
+import sys
+
+#program#
+
+# test case 1
+sx = 1
+sy = 1
+dx = 3
+dy = 3
+assert #function_name#(sx, sy, dx, dy) == False
+
+# test case 2 
+sx = 2
+sy = 2
+dx = 5
+dy = 4
+assert #function_name#(sx, sy, dx, dy) == False
+
+# test case 3
+sx = 1
+sy = 1
+dx = 4
+dy = 4
+assert #function_name#(sx, sy, dx, dy) == False
+
+# test case 4
+sx = 1
+sy = 2
+dx = 3
+dy = 2
+assert #function_name#(sx, sy, dx, dy) == True
+
+# test case 5 
+sx = 0
+sy = 1
+dx = 2
+dy = 1
+assert #function_name#(sx, sy, dx, dy) == True

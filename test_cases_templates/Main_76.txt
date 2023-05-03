@@ -1,0 +1,52 @@
+import java.util.*;
+import java.util.stream.*;
+import java.lang.*;
+
+public class Main_76 { 
+
+#program#
+
+
+  public static void main(String[] args) {
+    //test case 1
+    String str1 = "132";
+    int len1 = 3;
+    if (#function_name#(str1,len1).equals("129")){
+      System.out.println("Success");
+    }else {
+      System.out.println("False");
+    }
+    //test case 2
+    String str2 = "139";
+    int len2 = 3;
+    if (#function_name#(str2,len2).equals("139")){
+      System.out.println("Success");
+    }else {
+      System.out.println("False");
+    }
+    //test case 3
+    String str3 = "1000";
+    int len3 = 4;
+    if (#function_name#(str3,len3).equals("0999")){
+      System.out.println("Success");
+    }else {
+      System.out.println("False");
+    }
+    //test case 4
+    String str4 = "9";
+    int len4 = 1;
+    if (#function_name#(str4,len4).equals("9")){
+      System.out.println("Success");
+    }else {
+      System.out.println("False");
+    }
+    //test case 5
+    String str5 = "12345";
+    int len5 = 5;
+    if (#function_name#(str5,len5).equals("12345")){
+      System.out.println("Success");
+    }else {
+      System.out.println("False");
+    }
+  }
+}

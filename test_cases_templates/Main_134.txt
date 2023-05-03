@@ -1,0 +1,52 @@
+import java.util.*;
+import java.util.stream.*;
+import java.lang.*;
+
+
+public class Main_134 {
+
+#program#
+
+    public static  void  main(String []args){
+        // test case 1
+        String str_1="asdfg";
+        if(#function_name#(str_1).equals("AsdfG")) {
+            System.out.println("Success");
+        }else {
+            System.out.println("Fail");
+        }
+
+        // test case 2
+        String str_2="";
+        if(#function_name#(str_2).equals("")) {
+            System.out.println("Success");
+        }else {
+            System.out.println("Fail");
+        }
+
+        // test case 3
+        String str_3="ASDFG";
+        if(#function_name#(str_3).equals("ASDFG")) {
+            System.out.println("Success");
+        }else {
+            System.out.println("Fail");
+        }
+
+        // test case 4
+        String str_4="AsdfG";
+        if(#function_name#(str_4).equals("AsdfG")) {
+            System.out.println("Success");
+        }else {
+            System.out.println("Fail");
+        }
+
+        // test case 5
+        String str_5="asdfg";
+        if(#function_name#(str_5).equals("AsdfG")) {
+            System.out.println("Success");
+        }else {
+            System.out.println("Fail");
+        }
+        }
+    }
+

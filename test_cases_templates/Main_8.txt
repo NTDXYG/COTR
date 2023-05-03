@@ -1,0 +1,55 @@
+import java.util.*;
+import java.util.stream.*;
+import java.lang.*;
+
+public class Main_8 {
+
+#program#
+
+    public static void main(String[] args) {
+    // test case 1
+    int[] arr_1 = new int[]{2, 34, 9, 5, 23, 76};
+    int n_1 = 6;
+    if(#function_name#(arr_1, n_1) == 2){
+        System.out.println("Success");
+    }else{
+        System.out.println("Fail");
+    }
+
+    // test case 2
+    int[] arr_2 = new int[]{12, 456, 789, 123, 654, 789, 123};
+    int n_2 = 7;
+    if(#function_name#(arr_2, n_2) == 3){
+        System.out.println("Success");
+    }else{
+        System.out.println("Fail");
+    }
+
+    // test case 3
+    int[] arr_3 = new int[]{22, 244, 446, 668, 888, 900};
+    int n_3 = 4;
+    if(#function_name#(arr_3, n_3) == 4){
+        System.out.println("Success");
+    }else{
+        System.out.println("Fail");
+    }
+
+    // test case 4
+    int[] arr_4 = new int[]{11, 111, 1111, 11111, 111111};
+    int n_4 = 5;
+    if(#function_name#(arr_4, n_4) == 5){
+        System.out.println("Success");
+    }else{
+        System.out.println("Fail");
+    }
+
+    // test case 5
+    int[] arr_5 = new int[]{12, 34, 56, 78, 90, 123, 456, 789};
+    int n_5 = 8;
+    if(#function_name#(arr_5, n_5) == 2){
+        System.out.println("Success");
+    }else{
+        System.out.println("Fail");
+    }
+  }
+}

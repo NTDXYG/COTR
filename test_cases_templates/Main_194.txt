@@ -1,0 +1,59 @@
+import java.util.*;
+
+import com.sun.net.httpserver.Authenticator.Success;
+import java.util.stream.*;
+import java.lang.*;
+
+public class Main_194 {
+
+#program#
+
+	public static void main(String[] args){
+		// test case 1
+		int l_1 = 1;
+		int r_1 = 4;
+		if (#function_name#(l_1, r_1) == 3) {
+			System.out.println("Success");
+		} else {
+			System.out.println("Fail");
+		}
+		
+		// test case 2
+		int l_2 = 2;
+		int r_2 = 12;
+		if (#function_name#(l_2, r_2) == 7) {
+			System.out.println("Success");
+		} else {
+			System.out.println("Fail");
+		}
+		
+		// test case 3
+		int l_3 = 13;
+		int r_3 = 34;
+		if (#function_name#(l_3, r_3) == 5) {
+			System.out.println("Success");
+		} else {
+			System.out.println("Fail");
+		}
+		
+		// test case 4
+		int l_4 = 41;
+		int r_4 = 65;
+		if (#function_name#(l_4, r_4) == 3) {
+			System.out.println("Success");
+		} else {
+			System.out.println("Fail");
+		}
+		
+		// test case 5
+		int l_5 = 15;
+		int r_5 = 45;
+		if (#function_name#(l_5, r_5) == 6) {
+			System.out.println("Success");
+		} else {
+			System.out.println("Fail");
+		}
+		
+		
+	}
+}

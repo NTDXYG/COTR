@@ -1,0 +1,61 @@
+import java.util.*;
+import java.util.stream.*;
+import java.lang.*;
+
+
+public class Main_136 {
+  
+#program#
+
+    public static  void  main(String []args){
+        // test case 1
+        int []a_1=new int[]{};
+        int n_1=0;
+        int k_1=0;
+        if(#function_name#(a_1,n_1,k_1)==0) {
+            System.out.println("Success");
+        }else {
+            System.out.println("Fail");
+        }
+
+        // test case 2
+        int []a_2=new int []{1,2,3};
+        int n_2=3;
+        int k_2=2;
+        if(#function_name#(a_2,n_2,k_2)==1) {
+            System.out.println("Success");
+        }else {
+            System.out.println("Fail");
+        }
+
+        // test case 3
+        int []a_3=new int []{1,2,3,4,5};
+        int n_3=5;
+        int k_3=1;
+        if(#function_name#(a_3,n_3,k_3)==5) {
+            System.out.println("Success");
+        }else {
+            System.out.println("Fail");
+        }
+
+        // test case 4
+        int []a_4=new int []{1,2,3,4,5};
+        int n_4=5;
+        int k_4=9;
+        if(#function_name#(a_4,n_4,k_4)==0) {
+            System.out.println("Success");
+        }else {
+            System.out.println("Fail");
+        }
+
+        // test case 5
+        int []a_5=new int []{1,2,3,1,2,3};
+        int n_5=3;
+        int k_5=2;
+        if(#function_name#(a_5,n_5,k_5)==1) {
+            System.out.println("Success");
+        }else {
+            System.out.println("Fail");
+        }
+        }
+    }

@@ -1,0 +1,36 @@
+import numpy as np 
+import math
+from math import *
+import collections
+from collections import *
+import heapq
+import itertools
+import random
+import sys
+
+#program#
+
+# test case 1
+string = "0100110101"
+n=10
+assert #function_name#(string, n) == 7
+
+# test case 2
+string = "0111100010"
+n=10
+assert #function_name#(string, n) == 7
+
+# test case 3
+string = "pos011s90221lpdd"
+n=16
+assert #function_name#(string, n) == 9
+
+# test case 4
+string = "pos011s90221lp00"
+n=16
+assert #function_name#(string, n) == 9
+
+# test case 5
+string = "p00011s90221lp00"
+n=16
+assert #function_name#(string, n) == 10

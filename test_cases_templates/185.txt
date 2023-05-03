@@ -1,0 +1,51 @@
+import numpy as np 
+import math
+from math import *
+import collections
+from collections import *
+import heapq
+import itertools
+import random
+import sys
+
+#program#
+
+# test case 1
+i = 0
+Sum = 0
+cnt = 0
+a = [1, 2, 3]
+n = 3
+assert #function_name#(i, Sum, cnt, a, n) == 0
+
+# test case 2
+i = 0
+Sum = 0
+cnt = 0
+a = [2, 3, 5]
+n = 3
+assert #function_name#(i, Sum, cnt, a, n) == 0
+
+# test case 3
+i = 0
+Sum = 0
+cnt = 0
+a = [1, -1, 2, -2, 3]
+n = 5
+assert #function_name#(i, Sum, cnt, a, n) == 4
+
+# test case 4
+i = 0
+Sum = 0
+cnt = 0
+a = [2, 3, 4, -4, -2]
+n = 5
+assert #function_name#(i, Sum, cnt, a, n) == 3
+
+# test case 5
+i = 0
+Sum = 0
+cnt = 0
+a = [1, 0, -1, 2, -2]
+n = 5
+assert #function_name#(i, Sum, cnt, a, n) == 7

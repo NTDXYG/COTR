@@ -1,0 +1,47 @@
+import java.util.*;
+import java.util.stream.*;
+import java.lang.*;
+
+public class Main_22 {
+
+#program#
+
+
+    public static void main(String[] args) {
+
+    // test case 1
+    if(#function_name#("abcdefg", 7).equals("g")){
+        System.out.println("Success");
+    }else{
+        System.out.println("Fail");
+    }
+
+    // test case 2
+    if(#function_name#("abcdefghijklmnopqrstuvwxyz", 26).equals("z")){
+        System.out.println("Success");
+    }else{
+        System.out.println("Fail");
+    }
+
+    // test case 3
+    if(#function_name#("abcd", 4).equals("d")){
+        System.out.println("Success");
+    }else{
+        System.out.println("Fail");
+    }
+
+    // test case 4
+    if(#function_name#("aaaaaaaaaa", 10).equals("aaaaaaaaaa")){
+        System.out.println("Success");
+    }else{
+        System.out.println("Fail");
+    }
+
+    // test case 5
+    if(#function_name#("abcabcabcabc", 12).equals("cccc")){
+        System.out.println("Success");
+    }else{
+        System.out.println("Fail");
+    }
+  }
+}

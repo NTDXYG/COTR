@@ -1,0 +1,55 @@
+import java.util.*;
+import java.util.stream.*;
+import java.lang.*;
+
+public class Main_106 { 
+
+#program#
+
+  public static void main(String[] args) {
+    // test case 1
+    int n_1 = 5;
+    int arr_1[] = {1, 56, 58, 57, 90};
+    if (#function_name#(n_1, arr_1) == 2) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+
+    // test case 2
+    int n_2 = 7;
+    int arr_2[] = {1, 56, 2312, 57, 90, 92, 94};
+    if (#function_name#(n_2, arr_2) == 2) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+
+    // test case 3
+    int n_3 = 3;
+    int arr_3[] = {451, 2316, 528};
+    if (#function_name#(n_3, arr_3) == 1) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+
+    // test case 4
+    int n_4 = 7;
+    int arr_4[] = {1432, 56, 58, 5732, 90, 92, 9422};
+    if (#function_name#(n_4, arr_4) == 1) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+
+    // test case 5
+    int n_5 = 7;
+    int arr_5[] = {13, 56, 5238, 547, 950, 962, 914};
+    if (#function_name#(n_5, arr_5) == 1) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+  }
+}

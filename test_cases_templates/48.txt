@@ -1,0 +1,33 @@
+import numpy as np 
+import math
+from math import *
+import collections
+from collections import *
+import heapq
+import itertools
+import random
+import sys
+
+#program#
+
+# test case 1
+l = 3
+b = 5
+assert #function_name#(l, b) == 74
+# test case 2
+l = 2
+b = 2
+assert #function_name#(l, b) == 8
+# test case 3
+l = 5
+b = 3
+assert #function_name#(l, b) == 74
+# test case 4
+l = 1
+b = 1
+assert #function_name#(l, b) == 1
+# test case 5
+l = 4
+b = 4
+assert #function_name#(l, b) == 104
+

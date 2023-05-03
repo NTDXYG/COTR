@@ -1,0 +1,50 @@
+import java.util.*;
+import java.util.stream.*;
+import java.lang.*;
+
+public class Main_123 { 
+
+#program#
+
+  public static void main(String[] args) {
+    // test case 1
+    int N_1 = 1 ;
+    if (#function_name#(N_1) == 1) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+
+    // test case 2
+    int N_2 = 2021 ;
+    if (#function_name#(N_2) == 5) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+
+    // test case 3
+    int N_3 = 2020 ;
+    if (#function_name#(N_3) == 4) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+
+    // test case 4
+    int N_4 = 2019 ;
+    if (#function_name#(N_4) == 2) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+
+    // test case 5
+    int N_5 = -2018 ;
+    if (#function_name#(N_5) == -3) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+  }
+}

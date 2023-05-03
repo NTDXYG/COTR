@@ -1,0 +1,60 @@
+import java.util.*;
+import java.util.stream.*;
+import java.lang.*;
+
+public class Main_196 {
+
+#program#
+
+	public static void main(String[] args){
+		// test case 1
+		int L_1 = 2;
+		int R_1 = 9;
+		int K_1 = 3;
+		if (#function_name#(L_1, R_1, K_1) == 1) {
+			System.out.println("Success");
+		} else {
+			System.out.println("Fail");
+		}
+		
+		// test case 2
+		int L_2 = 2;
+		int R_2 = 29;
+		int K_2 = 23;
+		if (#function_name#(L_2, R_2, K_2) == 3) {
+			System.out.println("Success");
+		} else {
+			System.out.println("Fail");
+		}
+		
+		// test case 3
+		int L_3 = 32;
+		int R_3 = 39;
+		int K_3 = 3;
+		if (#function_name#(L_3, R_3, K_3) == 1) {
+			System.out.println("Success");
+		} else {
+			System.out.println("Fail");
+		}
+		
+		// test case 4
+		int L_4 = 24;
+		int R_4 = 49;
+		int K_4 = 4;
+		if (#function_name#(L_4, R_4, K_4) == 3) {
+			System.out.println("Success");
+		} else {
+			System.out.println("Fail");
+		}
+		
+		// test case 5
+		int L_5 = 25;
+		int R_5 = 59;
+		int K_5 = 5;
+		if (#function_name#(L_5, R_5, K_5) == 4) {
+			System.out.println("Success");
+		} else {
+			System.out.println("Fail");
+		}
+	}
+}

@@ -1,0 +1,51 @@
+import java.util.*;
+import java.util.stream.*;
+import java.lang.*;
+
+public class Main_158 {
+
+#program#
+
+  public static void main(String[] args){
+    //test case 1
+    String arr1 = "1";
+    if(#function_name#(arr1) == 49){
+      System.out.print("Success");
+    }else {
+      System.out.print("Fail");
+    }
+
+    //test case 2
+    String arr2 = "1,2";
+    if(#function_name#(arr2) == 47){
+      System.out.print("Success");
+    }else {
+      System.out.print("Fail");
+    }
+
+    //test case 3
+    String arr3 = "1,2";
+    if(#function_name#(arr3) == 47){
+      System.out.print("Success");
+    }else {
+      System.out.print("Fail");
+    }
+
+    //test case 4
+    String arr4 = "1,2,3";
+    if(#function_name#(arr4) == 47){
+      System.out.print("Success");
+    }else {
+      System.out.print("Fail");
+    }
+
+    //test case 5
+    String arr5 = "1,2,3,4";
+    if(#function_name#(arr5) == 47){
+      System.out.print("Success");
+    }else {
+      System.out.print("Fail");
+    }
+  }
+
+}

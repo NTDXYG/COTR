@@ -1,0 +1,60 @@
+import java.util.*;
+import java.util.stream.*;
+import java.lang.*;
+
+public class Main_3 {
+
+#program#
+
+    public static void main(String[] args) {
+    // test case 1
+    int n_1 = 15;
+    int l_1 = 2;
+    int r_1 = 4;
+    if(#function_name#(n_1, l_1, r_1) == "Yes"){
+        System.out.println("Success");
+    }else{
+        System.out.println("Fail");
+    }
+
+    // test case 2
+    int n_2 = 0;
+    int l_2 = 1;
+    int r_2 = 2;
+    if(#function_name#(n_2, l_2, r_2) == "No"){
+        System.out.println("Success");
+    }else{
+        System.out.println("Fail");
+    }
+
+    // test case 3
+    int n_3 = 12;
+    int l_3 = 3;
+    int r_3 = 4;
+    if(#function_name#(n_3, l_3, r_3) == "Yes"){
+        System.out.println("Success");
+    }else{
+        System.out.println("Fail");
+    }
+
+    // test case 4
+    int n_4 = 12;
+    int l_4 = 2;
+    int r_4 = 2;
+    if(#function_name#(n_4, l_4, r_4) == "No"){
+        System.out.println("Success");
+    }else{
+        System.out.println("Fail");
+    }
+
+    // test case 5
+    int n_5 = 12;
+    int l_5 = 2;
+    int r_5 = 2;
+    if(#function_name#(n_5, l_5, r_5) == "No"){
+        System.out.println("Success");
+    }else{
+        System.out.println("Fail");
+    }
+  }
+}

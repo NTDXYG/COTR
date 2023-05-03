@@ -1,0 +1,37 @@
+import numpy as np 
+import math
+from math import *
+import collections
+from collections import *
+import heapq
+import itertools
+import random
+import sys
+
+
+#program#
+
+#test case 1
+s="asfd"
+length=4
+assert #function_name#( s , length )==""
+
+#test case 2
+s="as22fd"
+length=6
+assert #function_name#( s , length )=="22"
+
+#test case 3
+s="11asdf1"
+length=6
+assert #function_name#( s , length )=="11"
+
+#test case 4
+s="f71addsfd2"
+length=9
+assert #function_name#( s , length )=="71"
+
+#test case 5
+s="a22sf12345d3"
+length=11
+assert #function_name#( s , length )=="12345"

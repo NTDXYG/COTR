@@ -1,0 +1,50 @@
+import java.util.*;
+import java.util.stream.*;
+import java.lang.*;
+
+public class Main_124 { 
+
+#program#
+
+  public static void main(String[] args) {
+    // test case 1
+    double a_1 = 1 ;
+    if (#function_name#(a_1) == 1.22d) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+
+    // test case 2
+    double a_2 = 2 ;
+    if (#function_name#(a_2) == 2.44d) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+
+    // test case 3
+    double a_3 = 3 ;
+    if (#function_name#(a_3) == 3.66d) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+
+    // test case 4
+    double a_4 = 4 ;
+    if (#function_name#(a_4) == 4.88d) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+
+    // test case 5
+    double a_5 = 5 ;
+    if (#function_name#(a_5) == 6.1d) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+  }
+}

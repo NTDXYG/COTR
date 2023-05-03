@@ -1,0 +1,56 @@
+import java.util.*;
+import java.util.stream.*;
+import java.lang.*;
+
+public class Main_125 { 
+
+#program#
+
+	public static void main(String []args){
+
+	//test case 1
+	int n_1=100;
+	int d_1=1;
+	if(#function_name# ( n_1 , d_1 )==1){
+          System.out.println("Success");
+	}else{
+	System.out.println("Fail");
+	}
+	
+	//test case 2
+	int n_2=1000;
+	int d_2=0;
+	if(#function_name# ( n_2 , d_2 )==3){
+    System.out.println("Success");
+	}else{
+	System.out.println("Fail");
+	}	
+	
+	//test case 3
+	int n_3=12345;
+	int d_3=1;
+	if(#function_name# ( n_3 , d_3 )==1){
+    System.out.println("Success");
+	}else{
+	System.out.println("Fail");
+	}
+		
+	//test case 4
+	int n_4=9999;
+	int d_4=9;
+	if(#function_name# ( n_4 , d_4 )==4){
+    System.out.println("Success");
+	}else{
+	System.out.println("Fail");
+	}
+		
+	//test case 5
+	int n_5=15692;
+	int d_5=9;
+	if(#function_name# ( n_5 , d_5 )==1){
+    System.out.println("Success");
+	}else{
+	System.out.println("Fail");
+	}	
+	}
+}

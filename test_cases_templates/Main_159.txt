@@ -1,0 +1,66 @@
+import java.util.*;
+import java.util.stream.*;
+import java.lang.*;
+
+public class Main_159 {
+
+#program#
+
+  public static void main(String[] args){
+    //test case 1
+    int n1 = 2;
+    int l1 = 1;
+    int r1 = 0;
+    int s1 = 1;
+    if(#function_name#(n1,l1,r1,s1) == -1){
+      System.out.print("Success");
+    }else {
+      System.out.print("Fail");
+    }
+
+    //test case 2
+    int n2 = 2;
+    int l2 = 1;
+    int r2 = 1;
+    int s2 = 1;
+    if(#function_name#(n2,l2,r2,s2) == 0){
+      System.out.print("Success");
+    }else {
+      System.out.print("Fail");
+    }
+
+    //test case 3
+    int n3 = 2;
+    int l3 = 1;
+    int r3 = 1;
+    int s3 = -1;
+    if(#function_name#(n3,l3,r3,s3) == 2){
+      System.out.print("Success");
+    }else {
+      System.out.print("Fail");
+    }
+
+    //test case 4
+    int n4 = 1;
+    int l4 = 2;
+    int r4 = 1;
+    int s4 = 1;
+    if(#function_name#(n4,l4,r4,s4) == 1){
+      System.out.print("Success");
+    }else {
+      System.out.print("Fail");
+    }
+
+    //test case 5
+    int n5 = 2;
+    int l5 = 1;
+    int r5 = 1;
+    int s5 = 0;
+    if(#function_name#(n5,l5,r5,s5) == 1){
+      System.out.print("Success");
+    }else {
+      System.out.print("Fail");
+    }
+  }
+
+}

@@ -1,0 +1,62 @@
+import java.util.*;
+import java.util.stream.*;
+import java.lang.*;
+
+
+public class Main_142 {
+
+#program#
+
+    public static void main(String []args){
+        // test case 1
+        int N_1=0;
+        int M_1=0;
+        int K_1=1;
+        if(#function_name#(N_1,M_1,K_1)==0) {
+            System.out.println("Success");
+        }else {
+            System.out.println("Fail");
+        }
+
+        // test case 2
+        int N_2=3;
+        int M_2=5;
+        int K_2=1;
+        if(#function_name#(N_2,M_2,K_2)==6) {
+            System.out.println("Success");
+        }else {
+            System.out.println("Fail");
+        }
+
+        // test case 3
+        int N_3=3;
+        int M_3=12;
+        int K_3=0;
+        if(#function_name#(N_3,M_3,K_3)==36) {
+            System.out.println("Success");
+        }else {
+            System.out.println("Fail");
+        }
+
+        // test case 4
+        int N_4=3;
+        int M_4=12;
+        int K_4=3;
+        if(#function_name#(N_4,M_4,K_4)==9) {
+            System.out.println("Success");
+        }else {
+            System.out.println("Fail");
+        }
+
+        // test case 5
+        int N_5=2;
+        int M_5=2;
+        int K_5=1;
+        if(#function_name#(N_5,M_5,K_5)==0) {
+            System.out.println("Success");
+        }else {
+            System.out.println("Fail");
+        }
+        }
+    }
+

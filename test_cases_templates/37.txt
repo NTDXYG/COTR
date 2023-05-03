@@ -1,0 +1,32 @@
+import numpy as np 
+import math
+from math import *
+import collections
+from collections import *
+import heapq
+import itertools
+import random
+import sys
+
+#program#
+
+# test case 1
+a = [1,0,0,1,0]
+n = 5
+assert #function_name#(a, n) == True
+# test case 2
+a = [0,0,0,0,0]
+n = 5
+assert #function_name#(a, n) == False
+# test case 3
+a = [1,1,1,0,1]
+n = 5
+assert #function_name#(a, n) == True
+# test case 4
+a = [1,1,1,1,1]
+n = 5
+assert #function_name#(a, n) == True
+# test case 5
+a = [0]
+n = 1
+assert #function_name#(a, n) == False

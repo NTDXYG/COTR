@@ -1,0 +1,73 @@
+import java.util.*;
+import java.util.stream.*;
+import java.lang.*;
+
+public class Main_44 { 
+
+#program#
+
+
+  public static void main(String[] args) {
+//  test case 1
+    ArrayList<Integer> a1 = new ArrayList<Integer>();
+    a1.add(1);
+    a1.add(2);
+    a1.add(3);
+    a1.add(4);
+    long k1 = 5;
+    if (#function_name#(a1, k1) == 5) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+//  test case 2
+    ArrayList<Integer> a2 = new ArrayList<Integer>();
+    a2.add(2);
+    a2.add(5);
+    a2.add(3);
+    a2.add(10);
+    long k2 = 30;
+    if (#function_name#(a2, k2) == 6) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+//  test case 3
+    ArrayList<Integer> a3 = new ArrayList<Integer>();
+    a3.add(1);
+    a3.add(2);
+    a3.add(3);
+    a3.add(4);
+    a3.add(5);
+    long k3 = 20;
+    if (#function_name#(a3, k3) == 9) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+//  test case 4
+    ArrayList<Integer> a4 = new ArrayList<Integer>();
+    a4.add(1);
+    a4.add(2);
+    a4.add(0);
+    a4.add(4);
+    long k4 = 10;
+    if (#function_name#(a4, k4) == 10) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+//  test case 5
+    ArrayList<Integer> a5 = new ArrayList<Integer>();
+    a5.add(3);
+    a5.add(1);
+    a5.add(2);
+    long k5 = 5;
+    if (#function_name#(a5, k5) == 5) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+
+  }
+}

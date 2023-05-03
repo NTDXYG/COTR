@@ -1,0 +1,57 @@
+import java.util.*;
+import java.util.stream.*;
+import java.lang.*;
+
+
+public class Main_141 {
+
+#program#
+
+    public static void main(String []args){
+        // test case 1
+        String str_1="1asfd";
+        int l_1=5;
+        if(#function_name#(str_1,l_1).equals("1")) {
+            System.out.println("Success");
+        }else {
+            System.out.println("Fail");
+        }
+
+        // test case 2
+        String str_2="as22fd";
+        int l_2=6;
+        if(#function_name#(str_2,l_2).equals("22")) {
+            System.out.println("Success");
+        }else {
+            System.out.println("Fail");
+        }
+
+        // test case 3
+        String str_3="11asdf1";
+        int l_3=6;
+        if(#function_name#(str_3,l_3).equals("11")) {
+            System.out.println("Success");
+        }else {
+            System.out.println("Fail");
+        }
+
+        // test case 4
+        String str_4="f71addsfd2";
+        int l_4=9;
+        if(#function_name#(str_4,l_4).equals("71")) {
+            System.out.println("Success");
+        }else {
+            System.out.println("Fail");
+        }
+
+        // test case 5
+        String str_5="a22sf12345d3";
+        int l_5=11;
+        if(#function_name#(str_5,l_5).equals("12345")) {
+            System.out.println("Success");
+        }else {
+            System.out.println("Fail");
+        }
+        }
+    }
+

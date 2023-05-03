@@ -1,0 +1,36 @@
+import numpy as np
+import math
+from math import *
+import collections
+from collections import *
+import heapq
+import itertools
+import random
+import sys
+
+#program#
+
+# test case 1
+A = [2, 34, 9, 5, 23, 76]
+X = 5
+assert #function_name#(X, A) == [0, 0]
+
+# test case 2
+A = [1, 2, 3, 4, 5]
+X = 0
+assert #function_name#(X, A) == []
+
+# test case 3
+A = [1, 1, 1]
+X = 3
+assert #function_name#(X, A) == [0, 0, 0]
+
+# test case 4
+A = [1, 10, 10]
+X = 1
+assert #function_name#(X, A) == [0]
+
+# test case 5
+A = [1, 5, 8, 10]
+X = 4
+assert #function_name#(X, A) == [0, 0, 0, 0]

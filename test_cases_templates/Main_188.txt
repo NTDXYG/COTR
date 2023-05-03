@@ -1,0 +1,60 @@
+import java.util.*;
+import java.util.stream.*;
+import java.lang.*;
+
+public class Main_188 {
+
+#program#
+
+	public static void main(String[] args){
+		// test case 1
+		int source_1 = -2;
+		int step_1 = 1;
+		int dest_1 = 3;
+		if (#function_name#(source_1, step_1, dest_1) == 3) {
+			System.out.println("Success");
+		} else {
+			System.out.println("Fail");
+		}
+		
+		// test case 2
+		int source_2 = 2;
+		int step_2 = 1;
+		int dest_2 = 3;
+		if(#function_name#(source_2, step_2, dest_2) == 3){
+			System.out.println("Success");
+		} else {
+			System.out.println("Fail");
+		}
+
+		// test case 3
+		int source_3 = 3;
+		int step_3 = 1;
+		int dest_3 = 3;
+		if (#function_name#(source_3, step_3, dest_3) == 1) {
+			System.out.println("Success");
+		} else {
+			System.out.println("Fail");
+		}
+		
+		// test case 4
+		int source_4 = 2;
+		int step_4 = 14;
+		int dest_4 = 34;
+		if (#function_name#(source_4, step_4, dest_4) == 18) {
+			System.out.println("Success");
+		} else {
+			System.out.println("Fail");
+		}
+		
+		// test case 5
+		int source_5 = -3;
+		int step_5 = 1;
+		int dest_5 = 3;
+		if (#function_name#(source_5, step_5, dest_5) == 5) {
+			System.out.println("Success");
+		} else {
+			System.out.println("Fail");
+		}		
+	}
+}

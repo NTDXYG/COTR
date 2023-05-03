@@ -1,0 +1,46 @@
+import numpy as np
+import math
+from math import *
+import collections
+from collections import *
+import heapq
+import itertools
+import random
+import sys
+
+#program#
+
+# test case 1
+A = 2
+B = 1
+S = 1
+N = 1
+assert #function_name#(A, B, S, N)==0
+
+# test case 2
+A = 2
+B = 1
+S = 0
+N = 1
+assert #function_name#(A, B, S, N)==-1
+
+# test case 3
+A = 2
+B = 1
+S = 1
+N = -1
+assert #function_name#(A, B, S, N)==2
+
+# test case 4
+A = 1
+B = 2
+S = 1
+N = 1
+assert #function_name#(A, B, S, N)==1
+
+# test case 5
+A = 2
+B = 1
+S = 1
+N = 0
+assert #function_name#(A, B, S, N)==1

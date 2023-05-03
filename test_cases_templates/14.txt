@@ -1,0 +1,36 @@
+import numpy as np
+import math
+from math import *
+import collections
+from collections import *
+import heapq
+import itertools
+import random
+import sys
+
+#program#
+
+# test case 1
+array=[2,4,6,8,10]
+size=5
+assert #function_name#(array, size)==4
+
+# test case 2
+array=[0,2,4,6,8]
+size=5
+assert #function_name#(array, size)==3
+
+# test case 3
+array=[2,4,6,0,10]
+size=5
+assert #function_name#(array, size)==3
+
+# test case 4
+array=[2,0,0,0,0]
+size=5
+assert #function_name#(array, size)==0
+
+# test case 5
+array=[2,4,2]
+size=2
+assert #function_name#(array, size)==1

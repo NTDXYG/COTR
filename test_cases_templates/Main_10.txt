@@ -1,0 +1,60 @@
+import java.util.*;
+import java.util.stream.*;
+import java.lang.*;
+
+public class Main_10 {
+
+#program#
+
+    public static void main(String[] args) {
+    // test case 1
+    int[] arr_1 = new int[]{2, 34, 9, 5, 23, 76};
+    int n_1 = 6;
+    int k_1 = 3;
+    if(#function_name#(arr_1, n_1, k_1) == -29){
+        System.out.println("Success");
+    }else{
+        System.out.println("Fail");
+    }
+
+    // test case 2
+    int[] arr_2 = new int[]{1, 2, 3, 4, 5};
+    int n_2 = 4;
+    int k_2 = 1;
+    if(#function_name#(arr_2, n_2, k_2) == 2){
+        System.out.println("Success");
+    }else{
+        System.out.println("Fail");
+    }
+
+    // test case 3
+    int[] arr_3 = new int[]{0, 0, 1, 1};
+    int n_3 = 2;
+    int k_3 = 1;
+    if(#function_name#(arr_3, n_3, k_3) == 0){
+        System.out.println("Success");
+    }else{
+        System.out.println("Fail");
+    }
+
+    // test case 4
+    int[] arr_4 = new int[]{1, 2};
+    int n_4 = 1;
+    int k_4 = 0;
+    if(#function_name#(arr_4, n_4, k_4) == 0){
+        System.out.println("Success");
+    }else{
+        System.out.println("Fail");
+    }
+
+    // test case 5
+    int[] arr_5 = new int[]{5, 10, 15, 20, 25, 30};
+    int n_5 = 4;
+    int k_5 = 1;
+    if(#function_name#(arr_5, n_5, k_5) == 10){
+        System.out.println("Success");
+    }else{
+        System.out.println("Fail");
+    }
+  }
+}

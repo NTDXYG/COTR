@@ -1,0 +1,50 @@
+import java.util.*;
+import java.util.stream.*;
+import java.lang.*;
+
+public class Main_68 {
+
+#program#
+
+    public static void main(String[] args) {
+    // test case 1
+    char[] s = {'a', 'b', 'c'};
+    if (#function_name#(s) == true) {
+         System.out.println("Success");
+    } else {
+         System.out.println("Fail");
+    }
+
+    // test case 2
+    s = new char[]{'e', 'z'};
+    if (#function_name#(s) == false) {
+         System.out.println("Success");
+    } else {
+         System.out.println("Fail");
+    }
+
+    // test case 3
+    s = new char[]{'1', '2', '3'};
+    if (#function_name#(s) == true) {
+         System.out.println("Success");
+    } else {
+         System.out.println("Fail");
+    }
+
+    // test case 4
+    s = new char[]{'0', '3', '5'};
+    if (#function_name#(s) == false) {
+         System.out.println("Success");
+    } else {
+         System.out.println("Fail");
+    }
+
+    // test case 5
+    s = new char[]{'a', 'b', 'c', 'd', '1', '2', '3', '4'};
+    if (#function_name#(s) == false) {
+         System.out.println("Success");
+    } else {
+         System.out.println("Fail");
+    }
+    }
+}

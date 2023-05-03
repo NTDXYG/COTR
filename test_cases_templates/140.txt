@@ -1,0 +1,32 @@
+import numpy as np 
+import math
+from math import *
+import collections
+from collections import *
+import heapq
+import itertools
+import random
+import sys
+
+
+#program#
+
+# test case 1
+ss="12345"
+assert #function_name#( ss )==12345
+
+# test case 2
+ss="1a3b5"
+assert #function_name#( ss )==5
+
+# test case 3
+ss="aa001"
+assert #function_name#( ss )==1
+
+# test case 4
+ss="aabbcc"
+assert #function_name#( ss )==0
+
+# test case 5
+ss="As12sf"
+assert #function_name#( ss )==12

@@ -1,0 +1,53 @@
+import java.util.*;
+import java.util.stream.*;
+import java.lang.*;
+
+public class Main_45 { 
+
+#program#
+
+  public static void main(String[] args) {
+//  test case 1
+    int n1 = 24;
+    int d1 = 2;
+    if (#function_name#(n1, d1) == 8) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+
+//  test case 2
+    int n2 = 105;
+    int d2 = 5;
+    if (#function_name#(n2, d2) == 16) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+//  test case 3
+    int n3 = 12345;
+    int d3 = 1;
+    if (#function_name#(n3, d3) == 12) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+//  test case 4
+    int n4 = 100;
+    int d4 = 0;
+    if (#function_name#(n4, d4) == 11) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+//  test case 5
+    int n5 = 90;
+    int d5 = 9;
+    if (#function_name#(n5, d5) == 10) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+
+  }
+}

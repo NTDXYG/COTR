@@ -1,0 +1,56 @@
+import java.util.*;
+import java.util.stream.*;
+import java.lang.*;
+
+public class Main_110 { 
+
+#program#
+
+  public static void main(String[] args) {
+    // test case 1
+    int n_1 = 3 ;
+    int fuel_1 = 10 ;
+    if (#function_name#(n_1, fuel_1) == 18.333333333333336d) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+
+    // test case 2
+    int n_2 = 4 ;
+    int fuel_2 = 10 ;
+    if (#function_name#(n_2, fuel_2) == 20.833333333333336d) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+
+    // test case 3
+    int n_3 = 5 ;
+    int fuel_3 = 10 ;
+    if (#function_name#(n_3, fuel_3) == 22.833333333333336d) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+
+    // test case 4
+    int n_4 = 6 ;
+    int fuel_4 = 10 ;
+    if (#function_name#(n_4, fuel_4) == 24.5d) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+
+    // test case 5
+    int n_5 = 7 ;
+    int fuel_5 = 10 ;
+    if (#function_name#(n_5, fuel_5) == 25.92857142857143d) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+
+  }
+}

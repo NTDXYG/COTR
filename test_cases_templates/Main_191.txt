@@ -1,0 +1,56 @@
+import java.util.*;
+import java.util.stream.*;
+import java.lang.*;
+
+public class Main_191 {
+
+#program#
+
+	public static void main(String[] args){
+		// test case 1
+		float m_1 = 0;
+		float n_1 = 6;
+		if (#function_name#(m_1, n_1) == 0.0) {
+			System.out.println("Success");
+		} else {
+			System.out.println("Fail");
+		}
+		
+		// test case 2
+		float m_2 = 1;
+		float n_2 = 0;
+		if (#function_name#(m_2, n_2) == 0.0) {
+			System.out.println("Success");
+		} else {
+			System.out.println("Fail");
+		}
+		
+		// test case 3
+		float m_3 = 0;
+		float n_3 = -8;
+		if (#function_name#(m_3, n_3) == 0) {
+			System.out.println("Success");
+		} else {
+			System.out.println("Fail");
+		}
+		
+		// test case 4
+		float m_4 = 7;
+		float n_4 = 0;
+		if (#function_name#(m_4, n_4) == 0.0) {
+			System.out.println("Success");
+		} else {
+			System.out.println("Fail");
+		}
+	
+		// test case 5
+		float m_5 = 3;
+		float n_5 = 0;
+		if (#function_name#(m_5, n_5) == 0.0) {
+			System.out.println("Success");
+		} else {
+			System.out.println("Fail");
+		}
+		
+	}
+}

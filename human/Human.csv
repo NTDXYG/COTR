@@ -1,0 +1,6313 @@
+,original,radar,syntax
+0,"static int countPairs ( int A1 [ ] , int A2 [ ] , int n1 , int n2 , int K ) {
+  int res = 0 ;
+  Map < Integer , Integer > m = new HashMap < Integer , Integer > ( ) ;
+  for ( int i = 0 ;
+  i < n1 ;
+  ++ i ) {
+    if ( m . containsKey ( A1 [ i ] ) ) m . put ( A1 [ i ] , m . get ( A1 [ i ] ) + 1 ) ;
+    else m . put ( A1 [ i ] , 1 ) ;
+  }
+  for ( int i = 0 ;
+  i < n2 ;
+  ++ i ) {
+    int temp = K - A2 [ i ] ;
+    if ( m . containsKey ( temp ) && m . get ( temp ) != 0 ) {
+      res ++ ;
+      m . put ( temp , m . get ( A1 [ i ] ) - 1 ) ;
+    }
+  }
+  return res ;
+}
+","static int contPairs ( int A1 [ ] , int A2 [ ] , int n1 , int n2 , int K ) {
+  int res = 0 ;
+  Map < Integer , Integer > m = new HashMap < Integer , Integer > ( ) ;
+  for ( int i = 0 ;
+  i < n1 ;
+  ++ i ) {
+    if ( m . containsKey ( A1 [ i ] ) ) m . put ( A1 [ i ] , m . get ( A1 [ i ] ) + 1 ) ;
+    else m . put ( A1 [ i ] , 1 ) ;
+  }
+  for ( int i = 0 ;
+  i < n2 ;
+  ++ i ) {
+    int temp = K - A2 [ i ] ;
+    if ( m . containsKey ( temp ) && m . get ( temp ) != 0 ) {
+      res ++ ;
+      m . put ( temp , m . get ( A1 [ i ] ) - 1 ) ;
+    }
+  }
+  return res ;
+}
+","static int countPairs ( int A1 [ ] , int A2 [ ] , int n1 , int n2 , int K ) {
+  int res = 0 ;
+  Map < Integer , Integer > m = new HashMap < Integer , Integer > ( ) ;
+  int i = 0 ;
+  while ( i < n1 ) {
+    if ( m . containsKey ( A1 [ i ] ) ) m . put ( A1 [ i ] , m . get ( A1 [ i ] ) + 1 ) ;
+    else m . put ( A1 [ i ] , 1 ) ;
+    ++ i ;
+  }
+  for ( int i = 0 ;
+  i < n2 ;
+  ++ i ) {
+    int temp = K - A2 [ i ] ;
+    if ( m . containsKey ( temp ) && m . get ( temp ) != 0 ) {
+      res ++ ;
+      m . put ( temp , m . get ( A1 [ i ] ) - 1 ) ;
+    }
+  }
+  return res ;
+}"
+1,"static int lehmann ( int n , int t ) {
+  Random rand = new Random ( ) ;
+  rand . setSeed ( 1234 ) ;
+  int a = rand . nextInt ( n - 3 ) + 2 ;
+  float e = ( n - 1 ) / 2 ;
+  while ( t > 0 ) {
+    int result = ( ( int ) ( Math . pow ( a , e ) ) ) % n ;
+    if ( ( result % n ) == 1 || ( result % n ) == ( n - 1 ) ) {
+      a = rand . nextInt ( n - 3 ) + 2 ;
+      t -= 1 ;
+    }
+    else return - 1 ;
+  }
+  return 1 ;
+}
+","static int lehamnn ( int n , int t ) {
+  Random rand = new Random ( ) ;
+  rand . setSeed ( 1234 ) ;
+  int a = rand . nextInt ( n - 3 ) + 2 ;
+  float e = ( n - 1 ) / 2 ;
+  while ( t > 0 ) {
+    int result = ( ( int ) ( Math . pow ( a , e ) ) ) % n ;
+    if ( ( result % n ) == 1 || ( result % n ) == ( n - 1 ) ) {
+      a = rand . nextInt ( n - 3 ) + 2 ;
+      t -= 1 ;
+    }
+    else return - 1 ;
+  }
+  return 1 ;
+}
+","static int lehmann ( int n , int t ) {
+  Random rand = new Random ( ) ;
+  rand . setSeed ( 1234 ) ;
+  int a = rand . nextInt ( n - 3 ) + 2 ;
+  float e = ( n - 1 ) / 2 ;
+  for ( ;
+  0 < t ;
+  ) {
+    int result = ( ( int ) ( Math . pow ( a , e ) ) ) % n ;
+    if ( ( result % n ) == 1 || ( result % n ) == ( n - 1 ) ) {
+      a = rand . nextInt ( n - 3 ) + 2 ;
+      t = t - 1 ;
+    }
+    else return - 1 ;
+  }
+  return 1 ;
+}"
+2,"private static int maxDistance ( int [ ] array ) {
+  int max1 = Integer . MIN_VALUE ;
+  int min1 = Integer . MAX_VALUE ;
+  int max2 = Integer . MIN_VALUE ;
+  int min2 = Integer . MAX_VALUE ;
+  for ( int i = 0 ;
+  i < array . length ;
+  i ++ ) {
+    max1 = Math . max ( max1 , array [ i ] + i ) ;
+    min1 = Math . min ( min1 , array [ i ] + i ) ;
+    max2 = Math . max ( max2 , array [ i ] - i ) ;
+    min2 = Math . min ( min2 , array [ i ] - i ) ;
+  }
+  return Math . max ( max1 - min1 , max2 - min2 ) ;
+}
+","private static int preDistance ( int [ ] array ) {
+  int max1 = Integer . MIN_VALUE ;
+  int min1 = Integer . MAX_VALUE ;
+  int max2 = Integer . MIN_VALUE ;
+  int min2 = Integer . MAX_VALUE ;
+  for ( int i = 0 ;
+  i < array . length ;
+  i ++ ) {
+    max1 = Math . max ( max1 , array [ i ] + i ) ;
+    min1 = Math . min ( min1 , array [ i ] + i ) ;
+    max2 = Math . max ( max2 , array [ i ] - i ) ;
+    min2 = Math . min ( min2 , array [ i ] - i ) ;
+  }
+  return Math . max ( max1 - min1 , max2 - min2 ) ;
+}
+","private static int maxDistance ( int [ ] array ) {
+  int max1 = Integer . MIN_VALUE ;
+  int min1 = Integer . MAX_VALUE ;
+  int max2 = Integer . MIN_VALUE ;
+  int min2 = Integer . MAX_VALUE ;
+  int i = 0 ;
+  while ( i < array . length ) {
+    max1 = Math . max ( max1 , array [ i ] + i ) ;
+    min1 = Math . min ( min1 , array [ i ] + i ) ;
+    max2 = Math . max ( max2 , array [ i ] - i ) ;
+    min2 = Math . min ( min2 , array [ i ] - i ) ;
+    i ++ ;
+  }
+  return Math . max ( max1 - min1 , max2 - min2 ) ;
+}"
+3,"static boolean isPossible ( int n ) {
+  int fac [ ] = new int [ 10 ] ;
+  fac [ 0 ] = fac [ 1 ] = 1 ;
+  for ( int i = 2 ;
+  i < 10 ;
+  i ++ ) fac [ i ] = fac [ i - 1 ] * i ;
+  int sum = 0 ;
+  int x = n ;
+  while ( x != 0 ) {
+    sum += fac [ x % 10 ] ;
+    x /= 10 ;
+  }
+  if ( sum % n == 0 ) return true ;
+  return false ;
+}
+","static boolean zeroChangeable ( int n ) {
+  int fac [ ] = new int [ 10 ] ;
+  fac [ 0 ] = fac [ 1 ] = 1 ;
+  for ( int i = 2 ;
+  i < 10 ;
+  i ++ ) fac [ i ] = fac [ i - 1 ] * i ;
+  int sum = 0 ;
+  int x = n ;
+  while ( x != 0 ) {
+    sum += fac [ x % 10 ] ;
+    x /= 10 ;
+  }
+  if ( sum % n == 0 ) return true ;
+  return false ;
+}
+","static boolean isPossible ( int n ) {
+  int fac [ ] = new int [ 10 ] ;
+  fac [ 0 ] = fac [ 1 ] = 1 ;
+  int i = 2 ;
+  while ( i < 10 ) {
+    fac [ i ] = fac [ i - 1 ] * i ;
+    i ++ ;
+  }
+  int sum = 0 ;
+  int x = n ;
+  while ( x != 0 ) {
+    sum += fac [ x % 10 ] ;
+    x /= 10 ;
+  }
+  if ( sum % n == 0 ) return true ;
+  return false ;
+}"
+4,"static int XorAscii ( String str , int len ) {
+  int ans = ( str . charAt ( 0 ) ) ;
+  for ( int i = 1 ;
+  i < len ;
+  i ++ ) {
+    ans = ( ans ^ ( ( str . charAt ( i ) ) ) ) ;
+  }
+  return ans ;
+}
+","static int calPalin ( String str , int len ) {
+  int ans = ( str . charAt ( 0 ) ) ;
+  for ( int i = 1 ;
+  i < len ;
+  i ++ ) {
+    ans = ( ans ^ ( ( str . charAt ( i ) ) ) ) ;
+  }
+  return ans ;
+}
+","static int XorAscii ( String str , int len ) {
+  int ans = ( str . charAt ( 0 ) ) ;
+  int i = 1 ;
+  while ( i < len ) {
+    ans = ( ans ^ ( ( str . charAt ( i ) ) ) ) ;
+    i ++ ;
+  }
+  return ans ;
+}"
+5,"static Vector missing_elements ( Vector vec ) {
+  Vector mis = new Vector ( ) ;
+  for ( int i = 0 ;
+  i < vec . size ( ) ;
+  i ++ ) {
+    int temp = Math . abs ( ( int ) vec . get ( i ) ) - 1 ;
+    if ( ( int ) vec . get ( temp ) > 0 ) vec . set ( temp , - ( int ) vec . get ( temp ) ) ;
+    else vec . set ( temp , vec . get ( temp ) ) ;
+  }
+  for ( int i = 0 ;
+  i < vec . size ( ) ;
+  i ++ ) {
+    if ( ( int ) vec . get ( i ) > 0 ) mis . add ( i + 1 ) ;
+  }
+  return mis ;
+}
+","static Vector missingElements ( Vector vec ) {
+  Vector mis = new Vector ( ) ;
+  for ( int i = 0 ;
+  i < vec . size ( ) ;
+  i ++ ) {
+    int temp = Math . abs ( ( int ) vec . get ( i ) ) - 1 ;
+    if ( ( int ) vec . get ( temp ) > 0 ) vec . set ( temp , - ( int ) vec . get ( temp ) ) ;
+    else vec . set ( temp , vec . get ( temp ) ) ;
+  }
+  for ( int i = 0 ;
+  i < vec . size ( ) ;
+  i ++ ) {
+    if ( ( int ) vec . get ( i ) > 0 ) mis . add ( i + 1 ) ;
+  }
+  return mis ;
+}
+","static Vector missing_elements ( Vector vec ) {
+  Vector mis = new Vector ( ) ;
+  int i = 0 ;
+  while ( i < vec . size ( ) ) {
+    int temp = Math . abs ( ( int ) vec . get ( i ) ) - 1 ;
+    if ( ( int ) vec . get ( temp ) > 0 ) vec . set ( temp , - ( int ) vec . get ( temp ) ) ;
+    else vec . set ( temp , vec . get ( temp ) ) ;
+    i ++ ;
+  }
+  for ( int i = 0 ;
+  i < vec . size ( ) ;
+  i ++ ) {
+    if ( ( int ) vec . get ( i ) > 0 ) mis . add ( i + 1 ) ;
+  }
+  return mis ;
+}"
+6,"static int find_sub ( String s , int k ) {
+  int len = s . length ( ) ;
+  int lp = 0 , rp = 0 ;
+  int ans = 0 ;
+  int [ ] hash_char = new int [ 26 ] ;
+  for ( ;
+  rp < len ;
+  rp ++ ) {
+    hash_char [ s . charAt ( rp ) - 'a' ] ++ ;
+    while ( hash_char [ s . charAt ( rp ) - 'a' ] > k ) {
+      hash_char [ s . charAt ( lp ) - 'a' ] -- ;
+      lp ++ ;
+    }
+    ans += rp - lp + 1 ;
+  }
+  return ans ;
+}
+","static int findSub ( String s , int k ) {
+  int len = s . length ( ) ;
+  int lp = 0 , rp = 0 ;
+  int ans = 0 ;
+  int [ ] hash_char = new int [ 26 ] ;
+  for ( ;
+  rp < len ;
+  rp ++ ) {
+    hash_char [ s . charAt ( rp ) - 'a' ] ++ ;
+    while ( hash_char [ s . charAt ( rp ) - 'a' ] > k ) {
+      hash_char [ s . charAt ( lp ) - 'a' ] -- ;
+      lp ++ ;
+    }
+    ans += rp - lp + 1 ;
+  }
+  return ans ;
+}
+","static int find_sub ( String s , int k ) {
+  int len = s . length ( ) ;
+  int lp = 0 , rp = 0 ;
+  int ans = 0 ;
+  int [ ] hash_char = new int [ 26 ] ;
+  for ( ;
+  rp < len ;
+  rp ++ ) {
+    hash_char [ s . charAt ( rp ) - 'a' ] ++ ;
+    for ( ;
+    hash_char [ s . charAt ( rp ) - 'a' ] > k ;
+    ) {
+      hash_char [ s . charAt ( lp ) - 'a' ] -- ;
+      lp ++ ;
+    }
+    ans = ans + rp - lp + 1 ;
+  }
+  return ans ;
+}"
+7,"static boolean check ( int a [ ] , int n ) {
+  if ( n % 2 == 1 ) return false ;
+  for ( int i = 0 ;
+  i < n / 2 ;
+  i ++ ) {
+    if ( a [ i ] != a [ i + ( n / 2 ) ] ) return false ;
+  }
+  return true ;
+}
+","static boolean cehck ( int a [ ] , int n ) {
+  if ( n % 2 == 1 ) return false ;
+  for ( int i = 0 ;
+  i < n / 2 ;
+  i ++ ) {
+    if ( a [ i ] != a [ i + ( n / 2 ) ] ) return false ;
+  }
+  return true ;
+}
+","static boolean check ( int a [ ] , int n ) {
+  if ( n % 2 == 1 ) return false ;
+  int i = 0 ;
+  while ( i < n / 2 ) {
+    if ( a [ i ] != a [ i + ( n / 2 ) ] ) i ++ ;
+    return false ;
+    i ++ ;
+  }
+  return true ;
+}"
+8,"static long powerNumbers ( int n ) {
+  HashSet < Long > v = new HashSet < Long > ( ) ;
+  for ( long i = 2 ;
+  i * i * i <= n ;
+  i ++ ) {
+    long j = i * i ;
+    while ( j * i <= n ) {
+      j *= i ;
+      long s = ( long ) Math . sqrt ( j ) ;
+      if ( s * s != j ) v . add ( j ) ;
+    }
+  }
+  return v . size ( ) + ( long ) Math . sqrt ( n ) ;
+}
+","static long pwerNth ( int n ) {
+  HashSet < Long > v = new HashSet < Long > ( ) ;
+  for ( long i = 2 ;
+  i * i * i <= n ;
+  i ++ ) {
+    long j = i * i ;
+    while ( j * i <= n ) {
+      j *= i ;
+      long s = ( long ) Math . sqrt ( j ) ;
+      if ( s * s != j ) v . add ( j ) ;
+    }
+  }
+  return v . size ( ) + ( long ) Math . sqrt ( n ) ;
+}
+","static long powerNumbers ( int n ) {
+  HashSet < Long > v = new HashSet < Long > ( ) ;
+  for ( long i = 2 ;
+  n >= i * i * i ;
+  i ++ ) {
+    long j = i * i ;
+    for ( ;
+    j * i <= n ;
+    ) {
+      j *= i ;
+      long s = ( long ) Math . sqrt ( j ) ;
+      if ( s * s != j ) v . add ( j ) ;
+    }
+  }
+  return v . size ( ) + ( long ) Math . sqrt ( n ) ;
+}"
+9,"static int findSmallest ( int a [ ] , int n ) {
+  for ( int i = 0 ;
+  i < n ;
+  i ++ ) {
+    int j ;
+    for ( j = 0 ;
+    j < n ;
+    j ++ ) if ( a [ j ] % a [ i ] >= 1 ) break ;
+    if ( j == n ) return a [ i ] ;
+  }
+  return - 1 ;
+}
+","static int subarraySmallest ( int a [ ] , int n ) {
+  for ( int i = 0 ;
+  i < n ;
+  i ++ ) {
+    int j ;
+    for ( j = 0 ;
+    j < n ;
+    j ++ ) if ( a [ j ] % a [ i ] >= 1 ) break ;
+    if ( j == n ) return a [ i ] ;
+  }
+  return - 1 ;
+}
+","static int findSmallest ( int a [ ] , int n ) {
+  for ( int i = 0 ;
+  i < n ;
+  i ++ ) {
+    int j ;
+    j = 0 ;
+    while ( n > j ) {
+      if ( a [ j ] % a [ i ] >= 1 ) j ++ ;
+      break ;
+      j ++ ;
+    }
+    if ( j == n ) return a [ i ] ;
+  }
+  return - 1 ;
+}"
+10,"static boolean isWordPresent ( String sentence , String word ) {
+  String [ ] s = sentence . split ( "" "" ) ;
+  for ( String temp : s ) {
+    if ( temp . compareTo ( word ) == 0 ) {
+      return true ;
+    }
+  }
+  return false ;
+}
+","static boolean possibleWordReachable ( String sentence , String word ) {
+  String [ ] s = sentence . split ( "" "" ) ;
+  for ( String temp : s ) {
+    if ( temp . compareTo ( word ) == 0 ) {
+      return true ;
+    }
+  }
+  return false ;
+}
+","static boolean isWordPresent ( String sentence , String word ) {
+  String [ ] s = sentence . split ( "" "" ) ;
+  for ( String temp : s ) {
+    if ( 0 == temp . compareTo ( word ) ) {
+      return true ;
+    }
+  }
+  return false ;
+}"
+11,"static int countChars ( String str , int n ) {
+  int i = 0 , cnt = 0 ;
+  while ( i < n ) {
+    if ( str . charAt ( i ) == '0' ) i += 1 ;
+    else i += 2 ;
+    cnt += 1 ;
+  }
+  return cnt ;
+}
+","static int coutnChars ( String str , int n ) {
+  int i = 0 , cnt = 0 ;
+  while ( i < n ) {
+    if ( str . charAt ( i ) == '0' ) i += 1 ;
+    else i += 2 ;
+    cnt += 1 ;
+  }
+  return cnt ;
+}
+","static int countChars ( String str , int n ) {
+  int i = 0 , cnt = 0 ;
+  while ( i < n ) {
+    if ( '0' == str . charAt ( i ) ) i = i + 1 ;
+    else i = i + 2 ;
+    cnt = cnt + 1 ;
+  }
+  return cnt ;
+}"
+12,"static String smallestPoss ( String s , int n ) {
+  String ans = """" ;
+  int arr [ ] = new int [ 10 ] ;
+  for ( int i = 0 ;
+  i < n ;
+  i ++ ) {
+    arr [ s . charAt ( i ) - 48 ] ++ ;
+  }
+  for ( int i = 0 ;
+  i < 10 ;
+  i ++ ) {
+    for ( int j = 0 ;
+    j < arr [ i ] ;
+    j ++ ) ans = ans + String . valueOf ( i ) ;
+  }
+  return ans ;
+}
+","static String smallestPss ( String s , int n ) {
+  String ans = """" ;
+  int arr [ ] = new int [ 10 ] ;
+  for ( int i = 0 ;
+  i < n ;
+  i ++ ) {
+    arr [ s . charAt ( i ) - 48 ] ++ ;
+  }
+  for ( int i = 0 ;
+  i < 10 ;
+  i ++ ) {
+    for ( int j = 0 ;
+    j < arr [ i ] ;
+    j ++ ) ans = ans + String . valueOf ( i ) ;
+  }
+  return ans ;
+}
+","static String smallestPoss ( String s , int n ) {
+  String ans = """" ;
+  int arr [ ] = new int [ 10 ] ;
+  for ( int i = 0 ;
+  i < n ;
+  i ++ ) {
+    arr [ s . charAt ( i ) - 48 ] ++ ;
+  }
+  for ( int i = 0 ;
+  i < 10 ;
+  i ++ ) {
+    for ( int j = 0 ;
+    arr [ i ] > j ;
+    j ++ ) ans = ans + String . valueOf ( i ) ;
+  }
+  return ans ;
+}"
+13,"static int totalBoxesRemoved ( int arr [ ] , int n ) {
+  int count = 0 ;
+  int prev = arr [ 0 ] ;
+  for ( int i = 1 ;
+  i < n ;
+  i ++ ) {
+    if ( arr [ i ] > prev ) {
+      count += ( arr [ i ] - prev ) ;
+      arr [ i ] = prev ;
+      prev = arr [ i ] ;
+    }
+    else {
+      prev = arr [ i ] ;
+    }
+  }
+  return count ;
+}
+","static int totalDivRemovde ( int arr [ ] , int n ) {
+  int count = 0 ;
+  int prev = arr [ 0 ] ;
+  for ( int i = 1 ;
+  i < n ;
+  i ++ ) {
+    if ( arr [ i ] > prev ) {
+      count += ( arr [ i ] - prev ) ;
+      arr [ i ] = prev ;
+      prev = arr [ i ] ;
+    }
+    else {
+      prev = arr [ i ] ;
+    }
+  }
+  return count ;
+}
+","static int totalBoxesRemoved ( int arr [ ] , int n ) {
+  int count = 0 ;
+  int prev = arr [ 0 ] ;
+  int i = 1 ;
+  while ( i < n ) {
+    if ( arr [ i ] <= prev ) {
+      prev = arr [ i ] ;
+    }
+    else {
+      count += ( arr [ i ] - prev ) ;
+      arr [ i ] = prev ;
+      prev = arr [ i ] ;
+    }
+    i ++ ;
+  }
+  return count ;
+}"
+14,"static int numLen ( int K ) {
+  if ( K % 2 == 0 || K % 5 == 0 ) {
+    return - 1 ;
+  }
+  int number = 0 ;
+  int len = 1 ;
+  for ( len = 1 ;
+  len <= K ;
+  len ++ ) {
+    number = number * 10 + 1 ;
+    if ( ( number % K == 0 ) ) {
+      return len ;
+    }
+  }
+  return - 1 ;
+}
+","static int nmuLen ( int K ) {
+  if ( K % 2 == 0 || K % 5 == 0 ) {
+    return - 1 ;
+  }
+  int number = 0 ;
+  int len = 1 ;
+  for ( len = 1 ;
+  len <= K ;
+  len ++ ) {
+    number = number * 10 + 1 ;
+    if ( ( number % K == 0 ) ) {
+      return len ;
+    }
+  }
+  return - 1 ;
+}
+","static int numLen ( int K ) {
+  if ( K % 2 == 0 || K % 5 == 0 ) {
+    return - 1 ;
+  }
+  int number = 0 ;
+  int len = 1 ;
+  len = 1 ;
+  while ( len <= K ) {
+    number = number * 10 + 1 ;
+    if ( ( 0 == number % K ) ) {
+      len ++ ;
+      return len ;
+    }
+    len ++ ;
+  }
+  return - 1 ;
+}"
+15,"public static int numLen ( int K ) {
+  if ( K % 2 == 0 || K % 5 == 0 ) return - 1 ;
+  int number = 0 ;
+  int len = 1 ;
+  for ( len = 1 ;
+  len <= K ;
+  len ++ ) {
+    number = ( number * 10 + 1 ) % K ;
+    if ( number == 0 ) return len ;
+  }
+  return - 1 ;
+}
+","public static int digitLne ( int K ) {
+  if ( K % 2 == 0 || K % 5 == 0 ) return - 1 ;
+  int number = 0 ;
+  int len = 1 ;
+  for ( len = 1 ;
+  len <= K ;
+  len ++ ) {
+    number = ( number * 10 + 1 ) % K ;
+    if ( number == 0 ) return len ;
+  }
+  return - 1 ;
+}
+","public static int numLen ( int K ) {
+  if ( K % 2 == 0 || K % 5 == 0 ) return - 1 ;
+  int number = 0 ;
+  int len = 1 ;
+  len = 1 ;
+  while ( len <= K ) {
+    number = ( number * 10 + 1 ) % K ;
+    if ( number == 0 ) len ++ ;
+    return len ;
+    len ++ ;
+  }
+  return - 1 ;
+}"
+16,"static int countSubarray ( int arr [ ] , int n , int k ) {
+  int count = 0 ;
+  for ( int i = 0 ;
+  i < n ;
+  i ++ ) {
+    int sum = 0 ;
+    for ( int j = i ;
+    j < n ;
+    j ++ ) {
+      if ( sum + arr [ j ] < k ) {
+        sum = arr [ j ] + sum ;
+        count ++ ;
+      }
+      else {
+        break ;
+      }
+    }
+  }
+  return count ;
+}
+","static int countPublic ( int arr [ ] , int n , int k ) {
+  int count = 0 ;
+  for ( int i = 0 ;
+  i < n ;
+  i ++ ) {
+    int sum = 0 ;
+    for ( int j = i ;
+    j < n ;
+    j ++ ) {
+      if ( sum + arr [ j ] < k ) {
+        sum = arr [ j ] + sum ;
+        count ++ ;
+      }
+      else {
+        break ;
+      }
+    }
+  }
+  return count ;
+}
+","static int countSubarray ( int arr [ ] , int n , int k ) {
+  int count = 0 ;
+  int i = 0 ;
+  while ( i < n ) {
+    int sum = 0 ;
+    for ( int j = i ;
+    j < n ;
+    j ++ ) {
+      if ( k <= sum + arr [ j ] ) {
+        i ++ ;
+        break ;
+      }
+      else {
+        sum = arr [ j ] + sum ;
+        count ++ ;
+      }
+    }
+    i ++ ;
+  }
+  return count ;
+}"
+17,"static int countNumbers ( int L , int R , int K ) {
+  if ( K == 9 ) {
+    K = 0 ;
+  }
+  int totalnumbers = R - L + 1 ;
+  int factor9 = totalnumbers / 9 ;
+  int rem = totalnumbers % 9 ;
+  int ans = factor9 ;
+  for ( int i = R ;
+  i > R - rem ;
+  i -- ) {
+    int rem1 = i % 9 ;
+    if ( rem1 == K ) {
+      ans ++ ;
+    }
+  }
+  return ans ;
+}
+","static int countNubers ( int L , int R , int K ) {
+  if ( K == 9 ) {
+    K = 0 ;
+  }
+  int totalnumbers = R - L + 1 ;
+  int factor9 = totalnumbers / 9 ;
+  int rem = totalnumbers % 9 ;
+  int ans = factor9 ;
+  for ( int i = R ;
+  i > R - rem ;
+  i -- ) {
+    int rem1 = i % 9 ;
+    if ( rem1 == K ) {
+      ans ++ ;
+    }
+  }
+  return ans ;
+}
+","static int countNumbers ( int L , int R , int K ) {
+  if ( K == 9 ) {
+    K = 0 ;
+  }
+  int totalnumbers = R - L + 1 ;
+  int factor9 = totalnumbers / 9 ;
+  int rem = totalnumbers % 9 ;
+  int ans = factor9 ;
+  for ( int i = R ;
+  R - rem < i ;
+  i -- ) {
+    int rem1 = i % 9 ;
+    if ( rem1 == K ) {
+      ans ++ ;
+    }
+  }
+  return ans ;
+}"
+18,"static int FindElement ( int [ ] A , int n ) {
+  for ( int i = 0 ;
+  i < n ;
+  i ++ ) {
+    int flag = 0 ;
+    for ( int j = 0 ;
+    j < i ;
+    j ++ ) if ( A [ j ] >= A [ i ] ) {
+      flag = 1 ;
+      break ;
+    }
+    for ( int j = i + 1 ;
+    j < n ;
+    j ++ ) if ( A [ j ] <= A [ i ] ) {
+      flag = 1 ;
+      break ;
+    }
+    if ( flag == 0 ) return A [ i ] ;
+  }
+  return - 1 ;
+}
+","static int finEleemnt ( int [ ] A , int n ) {
+  for ( int i = 0 ;
+  i < n ;
+  i ++ ) {
+    int flag = 0 ;
+    for ( int j = 0 ;
+    j < i ;
+    j ++ ) if ( A [ j ] >= A [ i ] ) {
+      flag = 1 ;
+      break ;
+    }
+    for ( int j = i + 1 ;
+    j < n ;
+    j ++ ) if ( A [ j ] <= A [ i ] ) {
+      flag = 1 ;
+      break ;
+    }
+    if ( flag == 0 ) return A [ i ] ;
+  }
+  return - 1 ;
+}
+","static int FindElement ( int [ ] A , int n ) {
+  int i = 0 ;
+  while ( i < n ) {
+    int flag = 0 ;
+    for ( int j = 0 ;
+    j < i ;
+    j ++ ) if ( A [ j ] >= A [ i ] ) {
+      flag = 1 ;
+      i ++ ;
+      break ;
+    }
+    for ( int j = i + 1 ;
+    n > j ;
+    j ++ ) if ( A [ j ] <= A [ i ] ) {
+      flag = 1 ;
+      i ++ ;
+      break ;
+    }
+    if ( flag == 0 ) i ++ ;
+    return A [ i ] ;
+    i ++ ;
+  }
+  return - 1 ;
+}"
+19,"static int countKdivPairs ( int A [ ] , int n , int K ) {
+  int [ ] freq = new int [ K ] ;
+  int ans = 0 ;
+  for ( int i = 0 ;
+  i < n ;
+  i ++ ) {
+    int rem = A [ i ] % K ;
+    if ( rem != 0 ) ans += freq [ K - rem ] ;
+    else ans += freq [ 0 ] ;
+    freq [ rem ] ++ ;
+  }
+  return ans ;
+}
+","static int cuontDivisiblesPairs ( int A [ ] , int n , int K ) {
+  int [ ] freq = new int [ K ] ;
+  int ans = 0 ;
+  for ( int i = 0 ;
+  i < n ;
+  i ++ ) {
+    int rem = A [ i ] % K ;
+    if ( rem != 0 ) ans += freq [ K - rem ] ;
+    else ans += freq [ 0 ] ;
+    freq [ rem ] ++ ;
+  }
+  return ans ;
+}
+","static int countKdivPairs ( int A [ ] , int n , int K ) {
+  int [ ] freq = new int [ K ] ;
+  int ans = 0 ;
+  for ( int i = 0 ;
+  i < n ;
+  i ++ ) {
+    int rem = A [ i ] % K ;
+    if ( rem != 0 ) ans = ans + freq [ K - rem ] ;
+    else ans = ans + freq [ 0 ] ;
+    freq [ rem ] ++ ;
+  }
+  return ans ;
+}"
+20,"static Vector missing_elements ( Vector vec ) {
+  Vector mis = new Vector ( ) ;
+  for ( int i = 0 ;
+  i < vec . size ( ) ;
+  i ++ ) {
+    int temp = Math . abs ( ( int ) vec . get ( i ) ) - 1 ;
+    if ( ( int ) vec . get ( temp ) > 0 ) vec . set ( temp , - ( int ) vec . get ( temp ) ) ;
+    else vec . set ( temp , vec . get ( temp ) ) ;
+  }
+  for ( int i = 0 ;
+  i < vec . size ( ) ;
+  i ++ ) {
+    if ( ( int ) vec . get ( i ) > 0 ) mis . add ( i + 1 ) ;
+  }
+  return mis ;
+}
+","static Vector duplicateparenthesisElements ( Vector vec ) {
+  Vector mis = new Vector ( ) ;
+  for ( int i = 0 ;
+  i < vec . size ( ) ;
+  i ++ ) {
+    int temp = Math . abs ( ( int ) vec . get ( i ) ) - 1 ;
+    if ( ( int ) vec . get ( temp ) > 0 ) vec . set ( temp , - ( int ) vec . get ( temp ) ) ;
+    else vec . set ( temp , vec . get ( temp ) ) ;
+  }
+  for ( int i = 0 ;
+  i < vec . size ( ) ;
+  i ++ ) {
+    if ( ( int ) vec . get ( i ) > 0 ) mis . add ( i + 1 ) ;
+  }
+  return mis ;
+}
+","static Vector missing_elements ( Vector vec ) {
+  Vector mis = new Vector ( ) ;
+  int i = 0 ;
+  while ( i < vec . size ( ) ) {
+    int temp = Math . abs ( ( int ) vec . get ( i ) ) - 1 ;
+    if ( ( int ) vec . get ( temp ) > 0 ) vec . set ( temp , - ( int ) vec . get ( temp ) ) ;
+    else vec . set ( temp , vec . get ( temp ) ) ;
+    i ++ ;
+  }
+  for ( int i = 0 ;
+  i < vec . size ( ) ;
+  i ++ ) {
+    if ( 0 < ( int ) vec . get ( i ) ) mis . add ( i + 1 ) ;
+  }
+  return mis ;
+}"
+21,"static int run_tasks ( Queue < Integer > A , Queue < Integer > B ) {
+  int total_time = 0 ;
+  while ( ! A . isEmpty ( ) ) {
+    int x = A . peek ( ) ;
+    int y = B . peek ( ) ;
+    if ( x == y ) {
+      A . remove ( ) ;
+      B . remove ( ) ;
+      total_time ++ ;
+    }
+    else {
+      A . remove ( ) ;
+      A . add ( x ) ;
+      total_time += 2 ;
+    }
+  }
+  return total_time ;
+}
+","static int notesTasks ( Queue < Integer > A , Queue < Integer > B ) {
+  int total_time = 0 ;
+  while ( ! A . isEmpty ( ) ) {
+    int x = A . peek ( ) ;
+    int y = B . peek ( ) ;
+    if ( x == y ) {
+      A . remove ( ) ;
+      B . remove ( ) ;
+      total_time ++ ;
+    }
+    else {
+      A . remove ( ) ;
+      A . add ( x ) ;
+      total_time += 2 ;
+    }
+  }
+  return total_time ;
+}
+","static int run_tasks ( Queue < Integer > A , Queue < Integer > B ) {
+  int total_time = 0 ;
+  while ( ! A . isEmpty ( ) ) {
+    int x = A . peek ( ) ;
+    int y = B . peek ( ) ;
+    if ( y != x ) {
+      A . remove ( ) ;
+      A . add ( x ) ;
+      total_time = total_time + 2 ;
+    }
+    else {
+      A . remove ( ) ;
+      B . remove ( ) ;
+      total_time ++ ;
+    }
+  }
+  return total_time ;
+}"
+22,"static int countDistinctCode ( String str ) {
+  Set < String > codes = new HashSet < > ( ) ;
+  for ( int i = 0 ;
+  i < str . length ( ) - 1 ;
+  i ++ ) codes . add ( str . substring ( i , i + 2 ) ) ;
+  return codes . size ( ) ;
+}
+","static int countDistinctTotal ( String str ) {
+  Set < String > codes = new HashSet < > ( ) ;
+  for ( int i = 0 ;
+  i < str . length ( ) - 1 ;
+  i ++ ) codes . add ( str . substring ( i , i + 2 ) ) ;
+  return codes . size ( ) ;
+}
+","static int countDistinctCode ( String str ) {
+  Set < String > codes = new HashSet < > ( ) ;
+  int i = 0 ;
+  while ( str . length ( ) - 1 > i ) {
+    codes . add ( str . substring ( i , i + 2 ) ) ;
+    i ++ ;
+  }
+  return codes . size ( ) ;
+}"
+23,"static int countPairs ( int arr [ ] , int n ) {
+  int count = 0 ;
+  int right = 0 , left = 0 ;
+  boolean visited [ ] = new boolean [ n ] ;
+  for ( int i = 0 ;
+  i < n ;
+  i ++ ) visited [ i ] = false ;
+  while ( right < n ) {
+    while ( right < n && ! visited [ arr [ right ] ] ) {
+      count += ( right - left ) ;
+      visited [ arr [ right ] ] = true ;
+      right ++ ;
+    }
+    while ( left < right && ( right != n && visited [ arr [ right ] ] ) ) {
+      visited [ arr [ left ] ] = false ;
+      left ++ ;
+    }
+  }
+  return count ;
+}
+","static int coutnPairs ( int arr [ ] , int n ) {
+  int count = 0 ;
+  int right = 0 , left = 0 ;
+  boolean visited [ ] = new boolean [ n ] ;
+  for ( int i = 0 ;
+  i < n ;
+  i ++ ) visited [ i ] = false ;
+  while ( right < n ) {
+    while ( right < n && ! visited [ arr [ right ] ] ) {
+      count += ( right - left ) ;
+      visited [ arr [ right ] ] = true ;
+      right ++ ;
+    }
+    while ( left < right && ( right != n && visited [ arr [ right ] ] ) ) {
+      visited [ arr [ left ] ] = false ;
+      left ++ ;
+    }
+  }
+  return count ;
+}
+","static int countPairs ( int arr [ ] , int n ) {
+  int count = 0 ;
+  int right = 0 , left = 0 ;
+  boolean visited [ ] = new boolean [ n ] ;
+  for ( int i = 0 ;
+  i < n ;
+  i ++ ) visited [ i ] = false ;
+  for ( ;
+  right < n ;
+  ) {
+    while ( right < n && ! visited [ arr [ right ] ] ) {
+      count += ( right - left ) ;
+      visited [ arr [ right ] ] = true ;
+      right ++ ;
+    }
+    while ( left < right && ( right != n && visited [ arr [ right ] ] ) ) {
+      visited [ arr [ left ] ] = false ;
+      left ++ ;
+    }
+  }
+  return count ;
+}"
+24,"public static int numLen ( int K ) {
+  if ( K % 2 == 0 || K % 5 == 0 ) return - 1 ;
+  int number = 0 ;
+  int len = 1 ;
+  for ( len = 1 ;
+  len <= K ;
+  len ++ ) {
+    number = ( number * 10 + 1 ) % K ;
+    if ( number == 0 ) return len ;
+  }
+  return - 1 ;
+}
+","public static int remEle ( int K ) {
+  if ( K % 2 == 0 || K % 5 == 0 ) return - 1 ;
+  int number = 0 ;
+  int len = 1 ;
+  for ( len = 1 ;
+  len <= K ;
+  len ++ ) {
+    number = ( number * 10 + 1 ) % K ;
+    if ( number == 0 ) return len ;
+  }
+  return - 1 ;
+}
+","public static int numLen ( int K ) {
+  if ( K % 2 == 0 || K % 5 == 0 ) return - 1 ;
+  int number = 0 ;
+  int len = 1 ;
+  len = 1 ;
+  while ( len <= K ) {
+    number = ( number * 10 + 1 ) % K ;
+    if ( number == 0 ) len ++ ;
+    return len ;
+    len ++ ;
+  }
+  return - 1 ;
+}"
+25,"static int countKdivPairs ( int A [ ] , int n , int K ) {
+  int [ ] freq = new int [ K ] ;
+  int ans = 0 ;
+  for ( int i = 0 ;
+  i < n ;
+  i ++ ) {
+    int rem = A [ i ] % K ;
+    if ( rem != 0 ) ans += freq [ K - rem ] ;
+    else ans += freq [ 0 ] ;
+    freq [ rem ] ++ ;
+  }
+  return ans ;
+}
+","static int cuontKdivPirs ( int A [ ] , int n , int K ) {
+  int [ ] freq = new int [ K ] ;
+  int ans = 0 ;
+  for ( int i = 0 ;
+  i < n ;
+  i ++ ) {
+    int rem = A [ i ] % K ;
+    if ( rem != 0 ) ans += freq [ K - rem ] ;
+    else ans += freq [ 0 ] ;
+    freq [ rem ] ++ ;
+  }
+  return ans ;
+}
+","static int countKdivPairs ( int A [ ] , int n , int K ) {
+  int [ ] freq = new int [ K ] ;
+  int ans = 0 ;
+  int i = 0 ;
+  while ( i < n ) {
+    int rem = A [ i ] % K ;
+    if ( rem != 0 ) ans = ans + freq [ K - rem ] ;
+    else ans = ans + freq [ 0 ] ;
+    freq [ rem ] ++ ;
+    i ++ ;
+  }
+  return ans ;
+}"
+26,"static String getSubSeq ( String s , int n ) {
+  String res = """" ;
+  int cr = 0 ;
+  while ( cr < n ) {
+    char mx = s . charAt ( cr ) ;
+    for ( int i = cr + 1 ;
+    i < n ;
+    i ++ ) {
+      mx = ( char ) Math . max ( mx , s . charAt ( i ) ) ;
+    }
+    int lst = cr ;
+    for ( int i = cr ;
+    i < n ;
+    i ++ ) {
+      if ( s . charAt ( i ) == mx ) {
+        res += s . charAt ( i ) ;
+        lst = i ;
+      }
+    }
+    cr = lst + 1 ;
+  }
+  return res ;
+}
+","static String keySubSeq ( String s , int n ) {
+  String res = """" ;
+  int cr = 0 ;
+  while ( cr < n ) {
+    char mx = s . charAt ( cr ) ;
+    for ( int i = cr + 1 ;
+    i < n ;
+    i ++ ) {
+      mx = ( char ) Math . max ( mx , s . charAt ( i ) ) ;
+    }
+    int lst = cr ;
+    for ( int i = cr ;
+    i < n ;
+    i ++ ) {
+      if ( s . charAt ( i ) == mx ) {
+        res += s . charAt ( i ) ;
+        lst = i ;
+      }
+    }
+    cr = lst + 1 ;
+  }
+  return res ;
+}
+","static String getSubSeq ( String s , int n ) {
+  String res = """" ;
+  int cr = 0 ;
+  while ( cr < n ) {
+    char mx = s . charAt ( cr ) ;
+    for ( int i = cr + 1 ;
+    i < n ;
+    i ++ ) {
+      mx = ( char ) Math . max ( mx , s . charAt ( i ) ) ;
+    }
+    int lst = cr ;
+    for ( int i = cr ;
+    i < n ;
+    i ++ ) {
+      if ( s . charAt ( i ) == mx ) {
+        res = res + s . charAt ( i ) ;
+        lst = i ;
+      }
+    }
+    cr = lst + 1 ;
+  }
+  return res ;
+}"
+27,"static double sum ( int n ) {
+  if ( n == 0 ) return 1 ;
+  double ans = 1 / ( double ) Math . pow ( 3 , n ) + sum ( n - 1 ) ;
+  return ans ;
+}
+","static double curr ( int n ) {
+  if ( n == 0 ) return 1 ;
+  double ans = 1 / ( double ) Math . pow ( 3 , n ) + curr ( n - 1 ) ;
+  return ans ;
+}
+","static double sum ( int n ) {
+  if ( 0 == n ) return 1 ;
+  double ans = 1 / ( double ) Math . pow ( 3 , n ) + sum ( n - 1 ) ;
+  return ans ;
+}"
+28,"static int MinRemove ( int [ ] a , int n , int k ) {
+  int [ ] cnt = new int [ n ] ;
+  for ( int i = 0 ;
+  i < n ;
+  i ++ ) {
+    if ( a [ i ] == 0 ) cnt [ 0 ] ++ ;
+    else if ( cnt [ a [ i ] - 1 ] > 0 ) {
+      cnt [ a [ i ] - 1 ] -- ;
+      cnt [ a [ i ] ] ++ ;
+    }
+  }
+  return n - ( k * cnt [ k - 1 ] ) ;
+}
+","static int minPalin ( int [ ] a , int n , int k ) {
+  int [ ] cnt = new int [ n ] ;
+  for ( int i = 0 ;
+  i < n ;
+  i ++ ) {
+    if ( a [ i ] == 0 ) cnt [ 0 ] ++ ;
+    else if ( cnt [ a [ i ] - 1 ] > 0 ) {
+      cnt [ a [ i ] - 1 ] -- ;
+      cnt [ a [ i ] ] ++ ;
+    }
+  }
+  return n - ( k * cnt [ k - 1 ] ) ;
+}
+","static int MinRemove ( int [ ] a , int n , int k ) {
+  int [ ] cnt = new int [ n ] ;
+  for ( int i = 0 ;
+  n > i ;
+  i ++ ) {
+    if ( a [ i ] == 0 ) cnt [ 0 ] ++ ;
+    else if ( cnt [ a [ i ] - 1 ] > 0 ) {
+      cnt [ a [ i ] - 1 ] -- ;
+      cnt [ a [ i ] ] ++ ;
+    }
+  }
+  return n - ( k * cnt [ k - 1 ] ) ;
+}"
+29,"static int findNthEvenDigitNumber ( int n ) {
+  if ( n == 1 ) {
+    return 0 ;
+  }
+  Vector < Integer > v = new Vector < > ( ) ;
+  n = n - 1 ;
+  while ( n > 0 ) {
+    v . add ( n % 5 ) ;
+    n = n / 5 ;
+  }
+  int result = 0 ;
+  for ( int i = v . size ( ) - 1 ;
+  i >= 0 ;
+  i -- ) {
+    result = result * 10 ;
+    result = result + v . get ( i ) ;
+  }
+  return 2 * result ;
+}
+","static int fidnNthPairDigitNubmer ( int n ) {
+  if ( n == 1 ) {
+    return 0 ;
+  }
+  Vector < Integer > v = new Vector < > ( ) ;
+  n = n - 1 ;
+  while ( n > 0 ) {
+    v . add ( n % 5 ) ;
+    n = n / 5 ;
+  }
+  int result = 0 ;
+  for ( int i = v . size ( ) - 1 ;
+  i >= 0 ;
+  i -- ) {
+    result = result * 10 ;
+    result = result + v . get ( i ) ;
+  }
+  return 2 * result ;
+}
+","static int findNthEvenDigitNumber ( int n ) {
+  if ( n == 1 ) {
+    return 0 ;
+  }
+  Vector < Integer > v = new Vector < > ( ) ;
+  n = n - 1 ;
+  while ( 0 < n ) {
+    v . add ( n % 5 ) ;
+    n = n / 5 ;
+  }
+  int result = 0 ;
+  int i = v . size ( ) - 1 ;
+  while ( i >= 0 ) {
+    result = result * 10 ;
+    result = result + v . get ( i ) ;
+    i -- ;
+  }
+  return 2 * result ;
+}"
+30,"static int rangesum ( int n , int l , int r ) {
+  int [ ] arr = new int [ n ] ;
+  int c = 1 , i = 0 ;
+  while ( c <= n ) {
+    arr [ i ++ ] = c ;
+    c += 2 ;
+  }
+  c = 2 ;
+  while ( c <= n ) {
+    arr [ i ++ ] = c ;
+    c += 2 ;
+  }
+  int sum = 0 ;
+  for ( i = l - 1 ;
+  i < r ;
+  i ++ ) {
+    sum += arr [ i ] ;
+  }
+  return sum ;
+}
+","static int ranesum ( int n , int l , int r ) {
+  int [ ] arr = new int [ n ] ;
+  int c = 1 , i = 0 ;
+  while ( c <= n ) {
+    arr [ i ++ ] = c ;
+    c += 2 ;
+  }
+  c = 2 ;
+  while ( c <= n ) {
+    arr [ i ++ ] = c ;
+    c += 2 ;
+  }
+  int sum = 0 ;
+  for ( i = l - 1 ;
+  i < r ;
+  i ++ ) {
+    sum += arr [ i ] ;
+  }
+  return sum ;
+}
+","static int rangesum ( int n , int l , int r ) {
+  int [ ] arr = new int [ n ] ;
+  int c = 1 , i = 0 ;
+  for ( ;
+  c <= n ;
+  ) {
+    arr [ i ++ ] = c ;
+    c += 2 ;
+  }
+  c = 2 ;
+  while ( c <= n ) {
+    arr [ i ++ ] = c ;
+    c += 2 ;
+  }
+  int sum = 0 ;
+  for ( i = l - 1 ;
+  r > i ;
+  i ++ ) {
+    sum += arr [ i ] ;
+  }
+  return sum ;
+}"
+31,"public static int minSteps ( int arr [ ] , int n ) {
+  int min_Steps = 0 ;
+  for ( int i = 0 ;
+  i < n ;
+  i ++ ) {
+    if ( i > 0 ) min_Steps += Math . abs ( arr [ i ] - arr [ i - 1 ] ) ;
+    else min_Steps += Math . abs ( arr [ i ] ) ;
+  }
+  return min_Steps ;
+}
+","public static int absSetps ( int arr [ ] , int n ) {
+  int min_Steps = 0 ;
+  for ( int i = 0 ;
+  i < n ;
+  i ++ ) {
+    if ( i > 0 ) min_Steps += Math . abs ( arr [ i ] - arr [ i - 1 ] ) ;
+    else min_Steps += Math . abs ( arr [ i ] ) ;
+  }
+  return min_Steps ;
+}
+","public static int minSteps ( int arr [ ] , int n ) {
+  int min_Steps = 0 ;
+  for ( int i = 0 ;
+  i < n ;
+  i ++ ) {
+    if ( i > 0 ) min_Steps = min_Steps + Math . abs ( arr [ i ] - arr [ i - 1 ] ) ;
+    else min_Steps = min_Steps + Math . abs ( arr [ i ] ) ;
+  }
+  return min_Steps ;
+}"
+32,"static String smallestPoss ( String s , int n ) {
+  String ans = """" ;
+  int arr [ ] = new int [ 10 ] ;
+  for ( int i = 0 ;
+  i < n ;
+  i ++ ) {
+    arr [ s . charAt ( i ) - 48 ] ++ ;
+  }
+  for ( int i = 0 ;
+  i < 10 ;
+  i ++ ) {
+    for ( int j = 0 ;
+    j < arr [ i ] ;
+    j ++ ) ans = ans + String . valueOf ( i ) ;
+  }
+  return ans ;
+}
+","static String alternateToken ( String s , int n ) {
+  String ans = """" ;
+  int arr [ ] = new int [ 10 ] ;
+  for ( int i = 0 ;
+  i < n ;
+  i ++ ) {
+    arr [ s . charAt ( i ) - 48 ] ++ ;
+  }
+  for ( int i = 0 ;
+  i < 10 ;
+  i ++ ) {
+    for ( int j = 0 ;
+    j < arr [ i ] ;
+    j ++ ) ans = ans + String . valueOf ( i ) ;
+  }
+  return ans ;
+}
+","static String smallestPoss ( String s , int n ) {
+  String ans = """" ;
+  int arr [ ] = new int [ 10 ] ;
+  for ( int i = 0 ;
+  n > i ;
+  i ++ ) {
+    arr [ s . charAt ( i ) - 48 ] ++ ;
+  }
+  for ( int i = 0 ;
+  i < 10 ;
+  i ++ ) {
+    for ( int j = 0 ;
+    j < arr [ i ] ;
+    j ++ ) ans = ans + String . valueOf ( i ) ;
+  }
+  return ans ;
+}"
+33,"static int numLen ( int K ) {
+  if ( K % 2 == 0 || K % 5 == 0 ) {
+    return - 1 ;
+  }
+  int number = 0 ;
+  int len = 1 ;
+  for ( len = 1 ;
+  len <= K ;
+  len ++ ) {
+    number = number * 10 + 1 ;
+    if ( ( number % K == 0 ) ) {
+      return len ;
+    }
+  }
+  return - 1 ;
+}
+","static int nuLen ( int K ) {
+  if ( K % 2 == 0 || K % 5 == 0 ) {
+    return - 1 ;
+  }
+  int number = 0 ;
+  int len = 1 ;
+  for ( len = 1 ;
+  len <= K ;
+  len ++ ) {
+    number = number * 10 + 1 ;
+    if ( ( number % K == 0 ) ) {
+      return len ;
+    }
+  }
+  return - 1 ;
+}
+","static int numLen ( int K ) {
+  if ( K % 2 == 0 || K % 5 == 0 ) {
+    return - 1 ;
+  }
+  int number = 0 ;
+  int len = 1 ;
+  for ( len = 1 ;
+  K >= len ;
+  len ++ ) {
+    number = number * 10 + 1 ;
+    if ( ( number % K == 0 ) ) {
+      return len ;
+    }
+  }
+  return - 1 ;
+}"
+34,"public static int numLen ( int K ) {
+  if ( K % 2 == 0 || K % 5 == 0 ) return - 1 ;
+  int number = 0 ;
+  int len = 1 ;
+  for ( len = 1 ;
+  len <= K ;
+  len ++ ) {
+    number = ( number * 10 + 1 ) % K ;
+    if ( number == 0 ) return len ;
+  }
+  return - 1 ;
+}
+","public static int nmEle ( int K ) {
+  if ( K % 2 == 0 || K % 5 == 0 ) return - 1 ;
+  int number = 0 ;
+  int len = 1 ;
+  for ( len = 1 ;
+  len <= K ;
+  len ++ ) {
+    number = ( number * 10 + 1 ) % K ;
+    if ( number == 0 ) return len ;
+  }
+  return - 1 ;
+}
+","public static int numLen ( int K ) {
+  if ( 0 == K % 2 || K % 5 == 0 ) return - 1 ;
+  int number = 0 ;
+  int len = 1 ;
+  len = 1 ;
+  while ( len <= K ) {
+    number = ( number * 10 + 1 ) % K ;
+    if ( number == 0 ) len ++ ;
+    return len ;
+    len ++ ;
+  }
+  return - 1 ;
+}"
+35,"public static int counLastDigitK ( int low , int high , int k ) {
+  int count = ( high - low ) / 10 ;
+  if ( high % 10 >= k ) count ++ ;
+  if ( low % 10 > k ) count -- ;
+  return count ;
+}
+","public static int byLatDigiN ( int low , int high , int k ) {
+  int count = ( high - low ) / 10 ;
+  if ( high % 10 >= k ) count ++ ;
+  if ( low % 10 > k ) count -- ;
+  return count ;
+}
+","public static int counLastDigitK ( int low , int high , int k ) {
+  int count = ( high - low ) / 10 ;
+  if ( k <= high % 10 ) count ++ ;
+  if ( low % 10 > k ) count -- ;
+  return count ;
+}"
+36,"static int countSubarray ( int arr [ ] , int n , int k ) {
+  int count = 0 ;
+  for ( int i = 0 ;
+  i < n ;
+  i ++ ) {
+    int sum = 0 ;
+    for ( int j = i ;
+    j < n ;
+    j ++ ) {
+      if ( sum + arr [ j ] < k ) {
+        sum = arr [ j ] + sum ;
+        count ++ ;
+      }
+      else {
+        break ;
+      }
+    }
+  }
+  return count ;
+}
+","static int cntSuabrray ( int arr [ ] , int n , int k ) {
+  int count = 0 ;
+  for ( int i = 0 ;
+  i < n ;
+  i ++ ) {
+    int sum = 0 ;
+    for ( int j = i ;
+    j < n ;
+    j ++ ) {
+      if ( sum + arr [ j ] < k ) {
+        sum = arr [ j ] + sum ;
+        count ++ ;
+      }
+      else {
+        break ;
+      }
+    }
+  }
+  return count ;
+}
+","static int countSubarray ( int arr [ ] , int n , int k ) {
+  int count = 0 ;
+  for ( int i = 0 ;
+  i < n ;
+  i ++ ) {
+    int sum = 0 ;
+    for ( int j = i ;
+    n > j ;
+    j ++ ) {
+      if ( sum + arr [ j ] < k ) {
+        sum = arr [ j ] + sum ;
+        count ++ ;
+      }
+      else {
+        break ;
+      }
+    }
+  }
+  return count ;
+}"
+37,"static int validPosition ( int arr [ ] , int N , int K ) {
+  int count = 0 , sum = 0 ;
+  for ( int i = 0 ;
+  i < N ;
+  i ++ ) {
+    sum += arr [ i ] ;
+  }
+  for ( int i = 0 ;
+  i < N ;
+  i ++ ) {
+    if ( ( arr [ i ] + K ) > ( sum - arr [ i ] ) ) count ++ ;
+  }
+  return count ;
+}
+","static int validSubarr ( int arr [ ] , int N , int K ) {
+  int count = 0 , sum = 0 ;
+  for ( int i = 0 ;
+  i < N ;
+  i ++ ) {
+    sum += arr [ i ] ;
+  }
+  for ( int i = 0 ;
+  i < N ;
+  i ++ ) {
+    if ( ( arr [ i ] + K ) > ( sum - arr [ i ] ) ) count ++ ;
+  }
+  return count ;
+}
+","static int validPosition ( int arr [ ] , int N , int K ) {
+  int count = 0 , sum = 0 ;
+  for ( int i = 0 ;
+  i < N ;
+  i ++ ) {
+    sum = sum + arr [ i ] ;
+  }
+  for ( int i = 0 ;
+  i < N ;
+  i ++ ) {
+    if ( ( arr [ i ] + K ) > ( sum - arr [ i ] ) ) count ++ ;
+  }
+  return count ;
+}"
+38,"static int countKdivPairs ( int A [ ] , int n , int K ) {
+  int [ ] freq = new int [ K ] ;
+  int ans = 0 ;
+  for ( int i = 0 ;
+  i < n ;
+  i ++ ) {
+    int rem = A [ i ] % K ;
+    if ( rem != 0 ) ans += freq [ K - rem ] ;
+    else ans += freq [ 0 ] ;
+    freq [ rem ] ++ ;
+  }
+  return ans ;
+}
+","static int conutKdvPais ( int A [ ] , int n , int K ) {
+  int [ ] freq = new int [ K ] ;
+  int ans = 0 ;
+  for ( int i = 0 ;
+  i < n ;
+  i ++ ) {
+    int rem = A [ i ] % K ;
+    if ( rem != 0 ) ans += freq [ K - rem ] ;
+    else ans += freq [ 0 ] ;
+    freq [ rem ] ++ ;
+  }
+  return ans ;
+}
+","static int countKdivPairs ( int A [ ] , int n , int K ) {
+  int [ ] freq = new int [ K ] ;
+  int ans = 0 ;
+  for ( int i = 0 ;
+  n > i ;
+  i ++ ) {
+    int rem = A [ i ] % K ;
+    if ( rem != 0 ) ans = ans + freq [ K - rem ] ;
+    else ans = ans + freq [ 0 ] ;
+    freq [ rem ] ++ ;
+  }
+  return ans ;
+}"
+39,"static int run_tasks ( Queue < Integer > A , Queue < Integer > B ) {
+  int total_time = 0 ;
+  while ( ! A . isEmpty ( ) ) {
+    int x = A . peek ( ) ;
+    int y = B . peek ( ) ;
+    if ( x == y ) {
+      A . remove ( ) ;
+      B . remove ( ) ;
+      total_time ++ ;
+    }
+    else {
+      A . remove ( ) ;
+      A . add ( x ) ;
+      total_time += 2 ;
+    }
+  }
+  return total_time ;
+}
+","static int rnuTasks ( Queue < Integer > A , Queue < Integer > B ) {
+  int total_time = 0 ;
+  while ( ! A . isEmpty ( ) ) {
+    int x = A . peek ( ) ;
+    int y = B . peek ( ) ;
+    if ( x == y ) {
+      A . remove ( ) ;
+      B . remove ( ) ;
+      total_time ++ ;
+    }
+    else {
+      A . remove ( ) ;
+      A . add ( x ) ;
+      total_time += 2 ;
+    }
+  }
+  return total_time ;
+}
+","static int run_tasks ( Queue < Integer > A , Queue < Integer > B ) {
+  int total_time = 0 ;
+  for ( ;
+  ! A . isEmpty ( ) ;
+  ) {
+    int x = A . peek ( ) ;
+    int y = B . peek ( ) ;
+    if ( y != x ) {
+      A . remove ( ) ;
+      A . add ( x ) ;
+      total_time = total_time + 2 ;
+    }
+    else {
+      A . remove ( ) ;
+      B . remove ( ) ;
+      total_time ++ ;
+    }
+  }
+  return total_time ;
+}"
+40,"static String getSubSeq ( String s , int n ) {
+  String res = """" ;
+  int cr = 0 ;
+  while ( cr < n ) {
+    char mx = s . charAt ( cr ) ;
+    for ( int i = cr + 1 ;
+    i < n ;
+    i ++ ) {
+      mx = ( char ) Math . max ( mx , s . charAt ( i ) ) ;
+    }
+    int lst = cr ;
+    for ( int i = cr ;
+    i < n ;
+    i ++ ) {
+      if ( s . charAt ( i ) == mx ) {
+        res += s . charAt ( i ) ;
+        lst = i ;
+      }
+    }
+    cr = lst + 1 ;
+  }
+  return res ;
+}
+","static String getLengthSeq ( String s , int n ) {
+  String res = """" ;
+  int cr = 0 ;
+  while ( cr < n ) {
+    char mx = s . charAt ( cr ) ;
+    for ( int i = cr + 1 ;
+    i < n ;
+    i ++ ) {
+      mx = ( char ) Math . max ( mx , s . charAt ( i ) ) ;
+    }
+    int lst = cr ;
+    for ( int i = cr ;
+    i < n ;
+    i ++ ) {
+      if ( s . charAt ( i ) == mx ) {
+        res += s . charAt ( i ) ;
+        lst = i ;
+      }
+    }
+    cr = lst + 1 ;
+  }
+  return res ;
+}
+","static String getSubSeq ( String s , int n ) {
+  String res = """" ;
+  int cr = 0 ;
+  while ( cr < n ) {
+    char mx = s . charAt ( cr ) ;
+    for ( int i = cr + 1 ;
+    i < n ;
+    i ++ ) {
+      mx = ( char ) Math . max ( mx , s . charAt ( i ) ) ;
+    }
+    int lst = cr ;
+    for ( int i = cr ;
+    i < n ;
+    i ++ ) {
+      if ( s . charAt ( i ) == mx ) {
+        res = res + s . charAt ( i ) ;
+        lst = i ;
+      }
+    }
+    cr = lst + 1 ;
+  }
+  return res ;
+}"
+41,"static int ksmallest ( int arr [ ] , int n , int k ) {
+  for ( int i = 0 ;
+  i < n ;
+  i ++ ) {
+    if ( arr [ i ] <= k ) k ++ ;
+    else break ;
+  }
+  return k ;
+}
+","static int sets ( int arr [ ] , int n , int k ) {
+  for ( int i = 0 ;
+  i < n ;
+  i ++ ) {
+    if ( arr [ i ] <= k ) k ++ ;
+    else break ;
+  }
+  return k ;
+}
+","static int ksmallest ( int arr [ ] , int n , int k ) {
+  int i = 0 ;
+  while ( i < n ) {
+    if ( arr [ i ] <= k ) k ++ ;
+    else i ++ ;
+    break ;
+    i ++ ;
+  }
+  return k ;
+}"
+42,"static int getOccurence ( int n , int d ) {
+  int result = 0 ;
+  int itr = d ;
+  while ( itr <= n ) {
+    if ( itr % 10 == d ) result ++ ;
+    if ( itr != 0 && itr / 10 == d ) {
+      result ++ ;
+      itr ++ ;
+    }
+    else if ( itr / 10 == d - 1 ) itr = itr + ( 10 - d ) ;
+    else itr = itr + 10 ;
+  }
+  return result ;
+}
+","static int getOcurence ( int n , int d ) {
+  int result = 0 ;
+  int itr = d ;
+  while ( itr <= n ) {
+    if ( itr % 10 == d ) result ++ ;
+    if ( itr != 0 && itr / 10 == d ) {
+      result ++ ;
+      itr ++ ;
+    }
+    else if ( itr / 10 == d - 1 ) itr = itr + ( 10 - d ) ;
+    else itr = itr + 10 ;
+  }
+  return result ;
+}
+","static int getOccurence ( int n , int d ) {
+  int result = 0 ;
+  int itr = d ;
+  while ( itr <= n ) {
+    if ( d == itr % 10 ) result ++ ;
+    if ( itr != 0 && itr / 10 == d ) {
+      result ++ ;
+      itr ++ ;
+    }
+    else if ( itr / 10 == d - 1 ) itr = itr + ( 10 - d ) ;
+    else itr = itr + 10 ;
+  }
+  return result ;
+}"
+43,"static int countSolutions ( int a ) {
+  int count = 0 ;
+  for ( int i = 0 ;
+  i <= a ;
+  i ++ ) {
+    if ( a == ( i + ( a ^ i ) ) ) count ++ ;
+  }
+  return count ;
+}
+","static int countSoltions ( int a ) {
+  int count = 0 ;
+  for ( int i = 0 ;
+  i <= a ;
+  i ++ ) {
+    if ( a == ( i + ( a ^ i ) ) ) count ++ ;
+  }
+  return count ;
+}
+","static int countSolutions ( int a ) {
+  int count = 0 ;
+  for ( int i = 0 ;
+  a >= i ;
+  i ++ ) {
+    if ( a == ( i + ( a ^ i ) ) ) count ++ ;
+  }
+  return count ;
+}"
+44,"static int findSmallest ( int a [ ] , int n ) {
+  for ( int i = 0 ;
+  i < n ;
+  i ++ ) {
+    int j ;
+    for ( j = 0 ;
+    j < n ;
+    j ++ ) if ( a [ j ] % a [ i ] >= 1 ) break ;
+    if ( j == n ) return a [ i ] ;
+  }
+  return - 1 ;
+}
+","static int finSmallest ( int a [ ] , int n ) {
+  for ( int i = 0 ;
+  i < n ;
+  i ++ ) {
+    int j ;
+    for ( j = 0 ;
+    j < n ;
+    j ++ ) if ( a [ j ] % a [ i ] >= 1 ) break ;
+    if ( j == n ) return a [ i ] ;
+  }
+  return - 1 ;
+}
+","static int findSmallest ( int a [ ] , int n ) {
+  for ( int i = 0 ;
+  i < n ;
+  i ++ ) {
+    int j ;
+    j = 0 ;
+    while ( j < n ) {
+      if ( 1 <= a [ j ] % a [ i ] ) j ++ ;
+      break ;
+      j ++ ;
+    }
+    if ( j == n ) return a [ i ] ;
+  }
+  return - 1 ;
+}"
+45,"static boolean isUnique ( int [ ] a , int n , int k ) {
+  int sum = 0 ;
+  for ( int i = 0 ;
+  i < n ;
+  i ++ ) sum += a [ i ] ;
+  sum += n - 1 ;
+  return ( sum == k ) ;
+}
+","static boolean isUniqu ( int [ ] a , int n , int k ) {
+  int sum = 0 ;
+  for ( int i = 0 ;
+  i < n ;
+  i ++ ) sum += a [ i ] ;
+  sum += n - 1 ;
+  return ( sum == k ) ;
+}
+","static boolean isUnique ( int [ ] a , int n , int k ) {
+  int sum = 0 ;
+  for ( int i = 0 ;
+  i < n ;
+  i ++ ) sum = sum + a [ i ] ;
+  sum = sum + n - 1 ;
+  return ( sum == k ) ;
+}"
+46,"public static boolean judgeSquareSum ( int n ) {
+  for ( int i = 2 ;
+  i * i <= n ;
+  i ++ ) {
+    int count = 0 ;
+    if ( n % i == 0 ) {
+      while ( n % i == 0 ) {
+        count ++ ;
+        n /= i ;
+      }
+      if ( i % 4 == 3 && count % 2 != 0 ) return false ;
+    }
+  }
+  return n % 4 != 3 ;
+}
+","public static boolean jugdeSquareSum ( int n ) {
+  for ( int i = 2 ;
+  i * i <= n ;
+  i ++ ) {
+    int count = 0 ;
+    if ( n % i == 0 ) {
+      while ( n % i == 0 ) {
+        count ++ ;
+        n /= i ;
+      }
+      if ( i % 4 == 3 && count % 2 != 0 ) return false ;
+    }
+  }
+  return n % 4 != 3 ;
+}
+","public static boolean judgeSquareSum ( int n ) {
+  int i = 2 ;
+  while ( i * i <= n ) {
+    int count = 0 ;
+    if ( n % i == 0 ) {
+      while ( n % i == 0 ) {
+        count ++ ;
+        n /= i ;
+      }
+      if ( i % 4 == 3 && count % 2 != 0 ) i ++ ;
+      return false ;
+    }
+    i ++ ;
+  }
+  return 3 != n % 4 ;
+}"
+47,"static int sumOfTheSeries ( int n ) {
+  int sum = 0 ;
+  for ( int i = 1 ;
+  i <= n ;
+  i ++ ) {
+    int k = 2 ;
+    for ( int j = 1 ;
+    j <= i ;
+    j ++ ) {
+      sum += k ;
+      k += 2 ;
+    }
+  }
+  return sum ;
+}
+","static int smuToTheSeries ( int n ) {
+  int sum = 0 ;
+  for ( int i = 1 ;
+  i <= n ;
+  i ++ ) {
+    int k = 2 ;
+    for ( int j = 1 ;
+    j <= i ;
+    j ++ ) {
+      sum += k ;
+      k += 2 ;
+    }
+  }
+  return sum ;
+}
+","static int sumOfTheSeries ( int n ) {
+  int sum = 0 ;
+  int i = 1 ;
+  while ( i <= n ) {
+    int k = 2 ;
+    for ( int j = 1 ;
+    i >= j ;
+    j ++ ) {
+      sum += k ;
+      k += 2 ;
+    }
+    i ++ ;
+  }
+  return sum ;
+}"
+48,"static int sumOfTheSeries ( int n ) {
+  int sum = 0 ;
+  for ( int i = 1 ;
+  i <= n ;
+  i ++ ) {
+    int k = 1 ;
+    for ( int j = 1 ;
+    j <= i ;
+    j ++ ) {
+      sum += k ;
+      k += 2 ;
+    }
+  }
+  return sum ;
+}
+","static int smWaysTheSeries ( int n ) {
+  int sum = 0 ;
+  for ( int i = 1 ;
+  i <= n ;
+  i ++ ) {
+    int k = 1 ;
+    for ( int j = 1 ;
+    j <= i ;
+    j ++ ) {
+      sum += k ;
+      k += 2 ;
+    }
+  }
+  return sum ;
+}
+","static int sumOfTheSeries ( int n ) {
+  int sum = 0 ;
+  for ( int i = 1 ;
+  n >= i ;
+  i ++ ) {
+    int k = 1 ;
+    int j = 1 ;
+    while ( j <= i ) {
+      sum += k ;
+      k += 2 ;
+      j ++ ;
+    }
+  }
+  return sum ;
+}"
+49,"static float sumOfAP ( float a , float d , int n ) {
+  float sum = 0 ;
+  for ( int i = 0 ;
+  i < n ;
+  i ++ ) {
+    sum = sum + a ;
+    a = a + d ;
+  }
+  return sum ;
+}
+","static float smOfCP ( float a , float d , int n ) {
+  float sum = 0 ;
+  for ( int i = 0 ;
+  i < n ;
+  i ++ ) {
+    sum = sum + a ;
+    a = a + d ;
+  }
+  return sum ;
+}
+","static float sumOfAP ( float a , float d , int n ) {
+  float sum = 0 ;
+  for ( int i = 0 ;
+  n > i ;
+  i ++ ) {
+    sum = sum + a ;
+    a = a + d ;
+  }
+  return sum ;
+}"
+50,"static int printNthElement ( int n ) {
+  int arr [ ] = new int [ n + 1 ] ;
+  arr [ 1 ] = 3 ;
+  arr [ 2 ] = 5 ;
+  for ( int i = 3 ;
+  i <= n ;
+  i ++ ) {
+    if ( i % 2 != 0 ) arr [ i ] = arr [ i / 2 ] * 10 + 3 ;
+    else arr [ i ] = arr [ ( i / 2 ) - 1 ] * 10 + 5 ;
+  }
+  return arr [ n ] ;
+}
+","static int prnitNthElement ( int n ) {
+  int arr [ ] = new int [ n + 1 ] ;
+  arr [ 1 ] = 3 ;
+  arr [ 2 ] = 5 ;
+  for ( int i = 3 ;
+  i <= n ;
+  i ++ ) {
+    if ( i % 2 != 0 ) arr [ i ] = arr [ i / 2 ] * 10 + 3 ;
+    else arr [ i ] = arr [ ( i / 2 ) - 1 ] * 10 + 5 ;
+  }
+  return arr [ n ] ;
+}
+","static int printNthElement ( int n ) {
+  int arr [ ] = new int [ n + 1 ] ;
+  arr [ 1 ] = 3 ;
+  arr [ 2 ] = 5 ;
+  for ( int i = 3 ;
+  i <= n ;
+  i ++ ) {
+    if ( 0 != i % 2 ) arr [ i ] = arr [ i / 2 ] * 10 + 3 ;
+    else arr [ i ] = arr [ ( i / 2 ) - 1 ] * 10 + 5 ;
+  }
+  return arr [ n ] ;
+}"
+51,"static int printNthElement ( int n ) {
+  int arr [ ] = new int [ n + 1 ] ;
+  arr [ 1 ] = 1 ;
+  arr [ 2 ] = 2 ;
+  for ( int i = 3 ;
+  i <= n ;
+  i ++ ) {
+    if ( i % 2 != 0 ) arr [ i ] = arr [ i / 2 ] * 10 + 1 ;
+    else arr [ i ] = arr [ ( i / 2 ) - 1 ] * 10 + 2 ;
+  }
+  return arr [ n ] ;
+}
+","static int printlnNthElement ( int n ) {
+  int arr [ ] = new int [ n + 1 ] ;
+  arr [ 1 ] = 1 ;
+  arr [ 2 ] = 2 ;
+  for ( int i = 3 ;
+  i <= n ;
+  i ++ ) {
+    if ( i % 2 != 0 ) arr [ i ] = arr [ i / 2 ] * 10 + 1 ;
+    else arr [ i ] = arr [ ( i / 2 ) - 1 ] * 10 + 2 ;
+  }
+  return arr [ n ] ;
+}
+","static int printNthElement ( int n ) {
+  int arr [ ] = new int [ n + 1 ] ;
+  arr [ 1 ] = 1 ;
+  arr [ 2 ] = 2 ;
+  int i = 3 ;
+  while ( i <= n ) {
+    if ( 0 != i % 2 ) arr [ i ] = arr [ i / 2 ] * 10 + 1 ;
+    else arr [ i ] = arr [ ( i / 2 ) - 1 ] * 10 + 2 ;
+    i ++ ;
+  }
+  return arr [ n ] ;
+}"
+52,"static int countPairs ( int arr [ ] , int n ) {
+  int count = 0 ;
+  int right = 0 , left = 0 ;
+  boolean visited [ ] = new boolean [ n ] ;
+  for ( int i = 0 ;
+  i < n ;
+  i ++ ) visited [ i ] = false ;
+  while ( right < n ) {
+    while ( right < n && ! visited [ arr [ right ] ] ) {
+      count += ( right - left ) ;
+      visited [ arr [ right ] ] = true ;
+      right ++ ;
+    }
+    while ( left < right && ( right != n && visited [ arr [ right ] ] ) ) {
+      visited [ arr [ left ] ] = false ;
+      left ++ ;
+    }
+  }
+  return count ;
+}
+","static int cuontPairs ( int arr [ ] , int n ) {
+  int count = 0 ;
+  int right = 0 , left = 0 ;
+  boolean visited [ ] = new boolean [ n ] ;
+  for ( int i = 0 ;
+  i < n ;
+  i ++ ) visited [ i ] = false ;
+  while ( right < n ) {
+    while ( right < n && ! visited [ arr [ right ] ] ) {
+      count += ( right - left ) ;
+      visited [ arr [ right ] ] = true ;
+      right ++ ;
+    }
+    while ( left < right && ( right != n && visited [ arr [ right ] ] ) ) {
+      visited [ arr [ left ] ] = false ;
+      left ++ ;
+    }
+  }
+  return count ;
+}
+","static int countPairs ( int arr [ ] , int n ) {
+  int count = 0 ;
+  int right = 0 , left = 0 ;
+  boolean visited [ ] = new boolean [ n ] ;
+  for ( int i = 0 ;
+  i < n ;
+  i ++ ) visited [ i ] = false ;
+  while ( n > right ) {
+    while ( right < n && ! visited [ arr [ right ] ] ) {
+      count += ( right - left ) ;
+      visited [ arr [ right ] ] = true ;
+      right ++ ;
+    }
+    while ( left < right && ( right != n && visited [ arr [ right ] ] ) ) {
+      visited [ arr [ left ] ] = false ;
+      left ++ ;
+    }
+  }
+  return count ;
+}"
+53,"public static int minSteps ( int arr [ ] , int n ) {
+  int min_Steps = 0 ;
+  for ( int i = 0 ;
+  i < n ;
+  i ++ ) {
+    if ( i > 0 ) min_Steps += Math . abs ( arr [ i ] - arr [ i - 1 ] ) ;
+    else min_Steps += Math . abs ( arr [ i ] ) ;
+  }
+  return min_Steps ;
+}
+","public static int minLex ( int arr [ ] , int n ) {
+  int min_Steps = 0 ;
+  for ( int i = 0 ;
+  i < n ;
+  i ++ ) {
+    if ( i > 0 ) min_Steps += Math . abs ( arr [ i ] - arr [ i - 1 ] ) ;
+    else min_Steps += Math . abs ( arr [ i ] ) ;
+  }
+  return min_Steps ;
+}
+","public static int minSteps ( int arr [ ] , int n ) {
+  int min_Steps = 0 ;
+  int i = 0 ;
+  while ( i < n ) {
+    if ( 0 < i ) min_Steps = min_Steps + Math . abs ( arr [ i ] - arr [ i - 1 ] ) ;
+    else min_Steps = min_Steps + Math . abs ( arr [ i ] ) ;
+    i ++ ;
+  }
+  return min_Steps ;
+}"
+54,"static String smallestPoss ( String s , int n ) {
+  String ans = """" ;
+  int arr [ ] = new int [ 10 ] ;
+  for ( int i = 0 ;
+  i < n ;
+  i ++ ) {
+    arr [ s . charAt ( i ) - 48 ] ++ ;
+  }
+  for ( int i = 0 ;
+  i < 10 ;
+  i ++ ) {
+    for ( int j = 0 ;
+    j < arr [ i ] ;
+    j ++ ) ans = ans + String . valueOf ( i ) ;
+  }
+  return ans ;
+}
+","static String smlalestMeet ( String s , int n ) {
+  String ans = """" ;
+  int arr [ ] = new int [ 10 ] ;
+  for ( int i = 0 ;
+  i < n ;
+  i ++ ) {
+    arr [ s . charAt ( i ) - 48 ] ++ ;
+  }
+  for ( int i = 0 ;
+  i < 10 ;
+  i ++ ) {
+    for ( int j = 0 ;
+    j < arr [ i ] ;
+    j ++ ) ans = ans + String . valueOf ( i ) ;
+  }
+  return ans ;
+}
+","static String smallestPoss ( String s , int n ) {
+  String ans = """" ;
+  int arr [ ] = new int [ 10 ] ;
+  for ( int i = 0 ;
+  i < n ;
+  i ++ ) {
+    arr [ s . charAt ( i ) - 48 ] ++ ;
+  }
+  int i = 0 ;
+  while ( i < 10 ) {
+    for ( int j = 0 ;
+    arr [ i ] > j ;
+    j ++ ) ans = ans + String . valueOf ( i ) ;
+    i ++ ;
+  }
+  return ans ;
+}"
+55,"static int numLen ( int K ) {
+  if ( K % 2 == 0 || K % 5 == 0 ) {
+    return - 1 ;
+  }
+  int number = 0 ;
+  int len = 1 ;
+  for ( len = 1 ;
+  len <= K ;
+  len ++ ) {
+    number = number * 10 + 1 ;
+    if ( ( number % K == 0 ) ) {
+      return len ;
+    }
+  }
+  return - 1 ;
+}
+","static int nmuLen ( int K ) {
+  if ( K % 2 == 0 || K % 5 == 0 ) {
+    return - 1 ;
+  }
+  int number = 0 ;
+  int len = 1 ;
+  for ( len = 1 ;
+  len <= K ;
+  len ++ ) {
+    number = number * 10 + 1 ;
+    if ( ( number % K == 0 ) ) {
+      return len ;
+    }
+  }
+  return - 1 ;
+}
+","static int numLen ( int K ) {
+  if ( K % 2 == 0 || 0 == K % 5 ) {
+    return - 1 ;
+  }
+  int number = 0 ;
+  int len = 1 ;
+  for ( len = 1 ;
+  len <= K ;
+  len ++ ) {
+    number = number * 10 + 1 ;
+    if ( ( number % K == 0 ) ) {
+      return len ;
+    }
+  }
+  return - 1 ;
+}"
+56,"static boolean areVowelsInOrder ( String s ) {
+  int n = s . length ( ) ;
+  char c = ( char ) 64 ;
+  for ( int i = 1 ;
+  i < n ;
+  i ++ ) {
+    if ( s . charAt ( i ) == 'a' || s . charAt ( i ) == 'e' || s . charAt ( i ) == 'i' || s . charAt ( i ) == 'o' || s . charAt ( i ) == 'u' ) {
+      if ( s . charAt ( i ) < c ) return false ;
+      else {
+        c = s . charAt ( i ) ;
+      }
+    }
+  }
+  return true ;
+}
+","static boolean areVwoelsRangeHut ( String s ) {
+  int n = s . length ( ) ;
+  char c = ( char ) 64 ;
+  for ( int i = 1 ;
+  i < n ;
+  i ++ ) {
+    if ( s . charAt ( i ) == 'a' || s . charAt ( i ) == 'e' || s . charAt ( i ) == 'i' || s . charAt ( i ) == 'o' || s . charAt ( i ) == 'u' ) {
+      if ( s . charAt ( i ) < c ) return false ;
+      else {
+        c = s . charAt ( i ) ;
+      }
+    }
+  }
+  return true ;
+}
+","static boolean areVowelsInOrder ( String s ) {
+  int n = s . length ( ) ;
+  char c = ( char ) 64 ;
+  for ( int i = 1 ;
+  i < n ;
+  i ++ ) {
+    if ( s . charAt ( i ) == 'a' || 'e' == s . charAt ( i ) || s . charAt ( i ) == 'i' || s . charAt ( i ) == 'o' || s . charAt ( i ) == 'u' ) {
+      if ( s . charAt ( i ) < c ) return false ;
+      else {
+        c = s . charAt ( i ) ;
+      }
+    }
+  }
+  return true ;
+}"
+57,"static String newString ( String s ) {
+  int l = s . length ( ) ;
+  int freq [ ] = new int [ 26 ] ;
+  for ( int i = 0 ;
+  i < l ;
+  i ++ ) {
+    freq [ s . charAt ( i ) - 'a' ] += 1 ;
+  }
+  String ans = """" ;
+  for ( int i = 0 ;
+  i < 26 ;
+  i ++ ) {
+    for ( int j = 0 ;
+    j < freq [ i ] ;
+    j ++ ) {
+      ans += ( char ) ( 97 + i ) ;
+    }
+  }
+  return ans ;
+}
+","static String newSrting ( String s ) {
+  int l = s . length ( ) ;
+  int freq [ ] = new int [ 26 ] ;
+  for ( int i = 0 ;
+  i < l ;
+  i ++ ) {
+    freq [ s . charAt ( i ) - 'a' ] += 1 ;
+  }
+  String ans = """" ;
+  for ( int i = 0 ;
+  i < 26 ;
+  i ++ ) {
+    for ( int j = 0 ;
+    j < freq [ i ] ;
+    j ++ ) {
+      ans += ( char ) ( 97 + i ) ;
+    }
+  }
+  return ans ;
+}
+","static String newString ( String s ) {
+  int l = s . length ( ) ;
+  int freq [ ] = new int [ 26 ] ;
+  for ( int i = 0 ;
+  l > i ;
+  i ++ ) {
+    freq [ s . charAt ( i ) - 'a' ] += 1 ;
+  }
+  String ans = """" ;
+  for ( int i = 0 ;
+  i < 26 ;
+  i ++ ) {
+    for ( int j = 0 ;
+    j < freq [ i ] ;
+    j ++ ) {
+      ans = ans + ( char ) ( 97 + i ) ;
+    }
+  }
+  return ans ;
+}"
+58,"static int countSubarray ( int arr [ ] , int n , int k ) {
+  int count = 0 ;
+  for ( int i = 0 ;
+  i < n ;
+  i ++ ) {
+    int sum = 0 ;
+    for ( int j = i ;
+    j < n ;
+    j ++ ) {
+      if ( sum + arr [ j ] < k ) {
+        sum = arr [ j ] + sum ;
+        count ++ ;
+      }
+      else {
+        break ;
+      }
+    }
+  }
+  return count ;
+}
+","static int countPublic ( int arr [ ] , int n , int k ) {
+  int count = 0 ;
+  for ( int i = 0 ;
+  i < n ;
+  i ++ ) {
+    int sum = 0 ;
+    for ( int j = i ;
+    j < n ;
+    j ++ ) {
+      if ( sum + arr [ j ] < k ) {
+        sum = arr [ j ] + sum ;
+        count ++ ;
+      }
+      else {
+        break ;
+      }
+    }
+  }
+  return count ;
+}
+","static int countSubarray ( int arr [ ] , int n , int k ) {
+  int count = 0 ;
+  int i = 0 ;
+  while ( i < n ) {
+    int sum = 0 ;
+    for ( int j = i ;
+    j < n ;
+    j ++ ) {
+      if ( sum + arr [ j ] >= k ) {
+        i ++ ;
+        break ;
+      }
+      else {
+        sum = arr [ j ] + sum ;
+        count ++ ;
+      }
+    }
+    i ++ ;
+  }
+  return count ;
+}"
+59,"static int findTwoThreePrime ( int l , int r ) {
+  if ( l == 1 ) l ++ ;
+  int count = 0 ;
+  for ( int i = l ;
+  i <= r ;
+  i ++ ) {
+    int num = i ;
+    while ( num % 2 == 0 ) num /= 2 ;
+    while ( num % 3 == 0 ) num /= 3 ;
+    if ( num == 1 ) count ++ ;
+  }
+  return count ;
+}
+","static int fnidTwoWthPrime ( int l , int r ) {
+  if ( l == 1 ) l ++ ;
+  int count = 0 ;
+  for ( int i = l ;
+  i <= r ;
+  i ++ ) {
+    int num = i ;
+    while ( num % 2 == 0 ) num /= 2 ;
+    while ( num % 3 == 0 ) num /= 3 ;
+    if ( num == 1 ) count ++ ;
+  }
+  return count ;
+}
+","static int findTwoThreePrime ( int l , int r ) {
+  if ( l == 1 ) l ++ ;
+  int count = 0 ;
+  int i = l ;
+  while ( i <= r ) {
+    int num = i ;
+    while ( num % 2 == 0 ) num /= 2 ;
+    while ( num % 3 == 0 ) num /= 3 ;
+    if ( 1 == num ) count ++ ;
+    i ++ ;
+  }
+  return count ;
+}"
+60,"static int validPosition ( int arr [ ] , int N , int K ) {
+  int count = 0 , sum = 0 ;
+  for ( int i = 0 ;
+  i < N ;
+  i ++ ) {
+    sum += arr [ i ] ;
+  }
+  for ( int i = 0 ;
+  i < N ;
+  i ++ ) {
+    if ( ( arr [ i ] + K ) > ( sum - arr [ i ] ) ) count ++ ;
+  }
+  return count ;
+}
+","static int valdiPosition ( int arr [ ] , int N , int K ) {
+  int count = 0 , sum = 0 ;
+  for ( int i = 0 ;
+  i < N ;
+  i ++ ) {
+    sum += arr [ i ] ;
+  }
+  for ( int i = 0 ;
+  i < N ;
+  i ++ ) {
+    if ( ( arr [ i ] + K ) > ( sum - arr [ i ] ) ) count ++ ;
+  }
+  return count ;
+}
+","static int validPosition ( int arr [ ] , int N , int K ) {
+  int count = 0 , sum = 0 ;
+  for ( int i = 0 ;
+  i < N ;
+  i ++ ) {
+    sum += arr [ i ] ;
+  }
+  for ( int i = 0 ;
+  N > i ;
+  i ++ ) {
+    if ( ( arr [ i ] + K ) > ( sum - arr [ i ] ) ) count ++ ;
+  }
+  return count ;
+}"
+61,"static int maxSumLCM ( int n ) {
+  int max_sum = 0 ;
+  for ( int i = 1 ;
+  i * i <= n ;
+  i ++ ) {
+    if ( n % i == 0 ) {
+      max_sum += i ;
+      if ( n / i != i ) max_sum += ( n / i ) ;
+    }
+  }
+  return max_sum ;
+}
+","static int maxPrefixCCM ( int n ) {
+  int max_sum = 0 ;
+  for ( int i = 1 ;
+  i * i <= n ;
+  i ++ ) {
+    if ( n % i == 0 ) {
+      max_sum += i ;
+      if ( n / i != i ) max_sum += ( n / i ) ;
+    }
+  }
+  return max_sum ;
+}
+","static int maxSumLCM ( int n ) {
+  int max_sum = 0 ;
+  for ( int i = 1 ;
+  n >= i * i ;
+  i ++ ) {
+    if ( n % i == 0 ) {
+      max_sum = max_sum + i ;
+      if ( n / i != i ) max_sum = max_sum + ( n / i ) ;
+    }
+  }
+  return max_sum ;
+}"
+62,"static int longestSubArray ( int arr [ ] , int n ) {
+  boolean isZeroPresent = false ;
+  for ( int i = 0 ;
+  i < n ;
+  i ++ ) {
+    if ( arr [ i ] == 0 ) {
+      isZeroPresent = true ;
+      break ;
+    }
+  }
+  if ( isZeroPresent ) return n ;
+  return 0 ;
+}
+","static int querySubArary ( int arr [ ] , int n ) {
+  boolean isZeroPresent = false ;
+  for ( int i = 0 ;
+  i < n ;
+  i ++ ) {
+    if ( arr [ i ] == 0 ) {
+      isZeroPresent = true ;
+      break ;
+    }
+  }
+  if ( isZeroPresent ) return n ;
+  return 0 ;
+}
+","static int longestSubArray ( int arr [ ] , int n ) {
+  boolean isZeroPresent = false ;
+  for ( int i = 0 ;
+  n > i ;
+  i ++ ) {
+    if ( arr [ i ] == 0 ) {
+      isZeroPresent = true ;
+      break ;
+    }
+  }
+  if ( isZeroPresent ) return n ;
+  return 0 ;
+}"
+63,"static int countSolutions ( int a ) {
+  int count = 0 ;
+  for ( int i = 0 ;
+  i <= a ;
+  i ++ ) {
+    if ( a == ( i + ( a ^ i ) ) ) count ++ ;
+  }
+  return count ;
+}
+","static int cuontSolutions ( int a ) {
+  int count = 0 ;
+  for ( int i = 0 ;
+  i <= a ;
+  i ++ ) {
+    if ( a == ( i + ( a ^ i ) ) ) count ++ ;
+  }
+  return count ;
+}
+","static int countSolutions ( int a ) {
+  int count = 0 ;
+  for ( int i = 0 ;
+  a >= i ;
+  i ++ ) {
+    if ( a == ( i + ( a ^ i ) ) ) count ++ ;
+  }
+  return count ;
+}"
+64,"static float sumOfAP ( float a , float d , int n ) {
+  float sum = 0 ;
+  for ( int i = 0 ;
+  i < n ;
+  i ++ ) {
+    sum = sum + a ;
+    a = a + d ;
+  }
+  return sum ;
+}
+","static float currOfAD ( float a , float d , int n ) {
+  float sum = 0 ;
+  for ( int i = 0 ;
+  i < n ;
+  i ++ ) {
+    sum = sum + a ;
+    a = a + d ;
+  }
+  return sum ;
+}
+","static float sumOfAP ( float a , float d , int n ) {
+  float sum = 0 ;
+  for ( int i = 0 ;
+  n > i ;
+  i ++ ) {
+    sum = sum + a ;
+    a = a + d ;
+  }
+  return sum ;
+}"
+65,"static int findNthNumber ( int A , int B , int N ) {
+  int sum = 0 ;
+  for ( int i = 2 ;
+  i < N ;
+  i ++ ) {
+    sum = A + B ;
+    A = B ;
+    B = sum ;
+  }
+  return sum ;
+}
+","static int cocktailNthNth ( int A , int B , int N ) {
+  int sum = 0 ;
+  for ( int i = 2 ;
+  i < N ;
+  i ++ ) {
+    sum = A + B ;
+    A = B ;
+    B = sum ;
+  }
+  return sum ;
+}
+","static int findNthNumber ( int A , int B , int N ) {
+  int sum = 0 ;
+  int i = 2 ;
+  while ( i < N ) {
+    sum = A + B ;
+    A = B ;
+    B = sum ;
+    i ++ ;
+  }
+  return sum ;
+}"
+66,"static int countChars ( String str , int n ) {
+  int i = 0 , cnt = 0 ;
+  while ( i < n ) {
+    if ( str . charAt ( i ) == '0' ) i += 1 ;
+    else i += 2 ;
+    cnt += 1 ;
+  }
+  return cnt ;
+}
+","static int coutChrs ( String str , int n ) {
+  int i = 0 , cnt = 0 ;
+  while ( i < n ) {
+    if ( str . charAt ( i ) == '0' ) i += 1 ;
+    else i += 2 ;
+    cnt += 1 ;
+  }
+  return cnt ;
+}
+","static int countChars ( String str , int n ) {
+  int i = 0 , cnt = 0 ;
+  while ( n > i ) {
+    if ( str . charAt ( i ) == '0' ) i = i + 1 ;
+    else i = i + 2 ;
+    cnt = cnt + 1 ;
+  }
+  return cnt ;
+}"
+67,"static int countMaxSetBits ( int left , int right ) {
+  while ( ( left | ( left + 1 ) ) <= right ) left |= left + 1 ;
+  return left ;
+}
+","static int cuntMaxSetAdjacent ( int left , int right ) {
+  while ( ( left | ( left + 1 ) ) <= right ) left |= left + 1 ;
+  return left ;
+}
+","static int countMaxSetBits ( int left , int right ) {
+  while ( right >= ( left | ( left + 1 ) ) ) left |= left + 1 ;
+  return left ;
+}"
+68,"static boolean canMakeEqual ( int a [ ] , int n ) {
+  for ( int i = 0 ;
+  i < n ;
+  i ++ ) {
+    while ( a [ i ] % 5 == 0 ) {
+      a [ i ] /= 5 ;
+    }
+    while ( a [ i ] % 3 == 0 ) {
+      a [ i ] /= 3 ;
+    }
+  }
+  int last = a [ 0 ] ;
+  for ( int i = 1 ;
+  i < n ;
+  i ++ ) {
+    if ( a [ i ] != last ) {
+      return false ;
+    }
+  }
+  return true ;
+}
+","static boolean canCanEuqal ( int a [ ] , int n ) {
+  for ( int i = 0 ;
+  i < n ;
+  i ++ ) {
+    while ( a [ i ] % 5 == 0 ) {
+      a [ i ] /= 5 ;
+    }
+    while ( a [ i ] % 3 == 0 ) {
+      a [ i ] /= 3 ;
+    }
+  }
+  int last = a [ 0 ] ;
+  for ( int i = 1 ;
+  i < n ;
+  i ++ ) {
+    if ( a [ i ] != last ) {
+      return false ;
+    }
+  }
+  return true ;
+}
+","static boolean canMakeEqual ( int a [ ] , int n ) {
+  for ( int i = 0 ;
+  i < n ;
+  i ++ ) {
+    while ( a [ i ] % 5 == 0 ) {
+      a [ i ] /= 5 ;
+    }
+    for ( ;
+    a [ i ] % 3 == 0 ;
+    ) {
+      a [ i ] /= 3 ;
+    }
+  }
+  int last = a [ 0 ] ;
+  for ( int i = 1 ;
+  i < n ;
+  i ++ ) {
+    if ( last != a [ i ] ) {
+      return false ;
+    }
+  }
+  return true ;
+}"
+69,"public static int averageValue ( String s ) {
+  int sum_char = 0 ;
+  for ( int i = 0 ;
+  i < s . length ( ) ;
+  i ++ ) {
+    sum_char += ( int ) s . charAt ( i ) ;
+  }
+  return sum_char / s . length ( ) ;
+}
+","public static int spiralPositive ( String s ) {
+  int sum_char = 0 ;
+  for ( int i = 0 ;
+  i < s . length ( ) ;
+  i ++ ) {
+    sum_char += ( int ) s . charAt ( i ) ;
+  }
+  return sum_char / s . length ( ) ;
+}
+","public static int averageValue ( String s ) {
+  int sum_char = 0 ;
+  int i = 0 ;
+  while ( s . length ( ) > i ) {
+    sum_char = sum_char + ( int ) s . charAt ( i ) ;
+    i ++ ;
+  }
+  return sum_char / s . length ( ) ;
+}"
+70,"static int calSum ( int n ) {
+  int a = 3 , b = 0 , c = 2 ;
+  if ( n == 0 ) return 3 ;
+  if ( n == 1 ) return 3 ;
+  if ( n == 2 ) return 5 ;
+  int sum = 5 ;
+  while ( n > 2 ) {
+    int d = a + b ;
+    sum += d ;
+    a = b ;
+    b = c ;
+    c = d ;
+    n -- ;
+  }
+  return sum ;
+}
+","static int claPrefix ( int n ) {
+  int a = 3 , b = 0 , c = 2 ;
+  if ( n == 0 ) return 3 ;
+  if ( n == 1 ) return 3 ;
+  if ( n == 2 ) return 5 ;
+  int sum = 5 ;
+  while ( n > 2 ) {
+    int d = a + b ;
+    sum += d ;
+    a = b ;
+    b = c ;
+    c = d ;
+    n -- ;
+  }
+  return sum ;
+}
+","static int calSum ( int n ) {
+  int a = 3 , b = 0 , c = 2 ;
+  if ( n == 0 ) return 3 ;
+  if ( n == 1 ) return 3 ;
+  if ( n == 2 ) return 5 ;
+  int sum = 5 ;
+  for ( ;
+  n > 2 ;
+  ) {
+    int d = a + b ;
+    sum = sum + d ;
+    a = b ;
+    b = c ;
+    c = d ;
+    n -- ;
+  }
+  return sum ;
+}"
+71,"static boolean areVowelsInOrder ( String s ) {
+  int n = s . length ( ) ;
+  char c = ( char ) 64 ;
+  for ( int i = 1 ;
+  i < n ;
+  i ++ ) {
+    if ( s . charAt ( i ) == 'a' || s . charAt ( i ) == 'e' || s . charAt ( i ) == 'i' || s . charAt ( i ) == 'o' || s . charAt ( i ) == 'u' ) {
+      if ( s . charAt ( i ) < c ) return false ;
+      else {
+        c = s . charAt ( i ) ;
+      }
+    }
+  }
+  return true ;
+}
+","static boolean areVowelsRangeOredr ( String s ) {
+  int n = s . length ( ) ;
+  char c = ( char ) 64 ;
+  for ( int i = 1 ;
+  i < n ;
+  i ++ ) {
+    if ( s . charAt ( i ) == 'a' || s . charAt ( i ) == 'e' || s . charAt ( i ) == 'i' || s . charAt ( i ) == 'o' || s . charAt ( i ) == 'u' ) {
+      if ( s . charAt ( i ) < c ) return false ;
+      else {
+        c = s . charAt ( i ) ;
+      }
+    }
+  }
+  return true ;
+}
+","static boolean areVowelsInOrder ( String s ) {
+  int n = s . length ( ) ;
+  char c = ( char ) 64 ;
+  int i = 1 ;
+  while ( i < n ) {
+    if ( 'a' == s . charAt ( i ) || s . charAt ( i ) == 'e' || s . charAt ( i ) == 'i' || s . charAt ( i ) == 'o' || s . charAt ( i ) == 'u' ) {
+      if ( s . charAt ( i ) < c ) i ++ ;
+      return false ;
+      else {
+        c = s . charAt ( i ) ;
+      }
+    }
+    i ++ ;
+  }
+  return true ;
+}"
+72,"static int countSubarray ( int arr [ ] , int n , int k ) {
+  int count = 0 ;
+  for ( int i = 0 ;
+  i < n ;
+  i ++ ) {
+    int sum = 0 ;
+    for ( int j = i ;
+    j < n ;
+    j ++ ) {
+      if ( sum + arr [ j ] < k ) {
+        sum = arr [ j ] + sum ;
+        count ++ ;
+      }
+      else {
+        break ;
+      }
+    }
+  }
+  return count ;
+}
+","static int cntLongest ( int arr [ ] , int n , int k ) {
+  int count = 0 ;
+  for ( int i = 0 ;
+  i < n ;
+  i ++ ) {
+    int sum = 0 ;
+    for ( int j = i ;
+    j < n ;
+    j ++ ) {
+      if ( sum + arr [ j ] < k ) {
+        sum = arr [ j ] + sum ;
+        count ++ ;
+      }
+      else {
+        break ;
+      }
+    }
+  }
+  return count ;
+}
+","static int countSubarray ( int arr [ ] , int n , int k ) {
+  int count = 0 ;
+  int i = 0 ;
+  while ( i < n ) {
+    int sum = 0 ;
+    for ( int j = i ;
+    j < n ;
+    j ++ ) {
+      if ( sum + arr [ j ] < k ) {
+        sum = arr [ j ] + sum ;
+        count ++ ;
+      }
+      else {
+        i ++ ;
+        break ;
+      }
+    }
+    i ++ ;
+  }
+  return count ;
+}"
+73,"static boolean check ( int a [ ] , int n ) {
+  if ( n % 2 == 1 ) return false ;
+  for ( int i = 0 ;
+  i < n / 2 ;
+  i ++ ) {
+    if ( a [ i ] != a [ i + ( n / 2 ) ] ) return false ;
+  }
+  return true ;
+}
+","static boolean alternate ( int a [ ] , int n ) {
+  if ( n % 2 == 1 ) return false ;
+  for ( int i = 0 ;
+  i < n / 2 ;
+  i ++ ) {
+    if ( a [ i ] != a [ i + ( n / 2 ) ] ) return false ;
+  }
+  return true ;
+}
+","static boolean check ( int a [ ] , int n ) {
+  if ( n % 2 == 1 ) return false ;
+  for ( int i = 0 ;
+  n / 2 > i ;
+  i ++ ) {
+    if ( a [ i ] != a [ i + ( n / 2 ) ] ) return false ;
+  }
+  return true ;
+}"
+74,"static int minReplacement ( String s , int len ) {
+  int ans = 0 ;
+  for ( int i = 0 ;
+  i < len ;
+  i ++ ) {
+    if ( i % 2 == 0 && s . charAt ( i ) == '1' ) ans ++ ;
+    if ( i % 2 == 1 && s . charAt ( i ) == '0' ) ans ++ ;
+  }
+  return Math . min ( ans , len - ans ) ;
+}
+","static int maxReplacement ( String s , int len ) {
+  int ans = 0 ;
+  for ( int i = 0 ;
+  i < len ;
+  i ++ ) {
+    if ( i % 2 == 0 && s . charAt ( i ) == '1' ) ans ++ ;
+    if ( i % 2 == 1 && s . charAt ( i ) == '0' ) ans ++ ;
+  }
+  return Math . min ( ans , len - ans ) ;
+}
+","static int minReplacement ( String s , int len ) {
+  int ans = 0 ;
+  int i = 0 ;
+  while ( i < len ) {
+    if ( i % 2 == 0 && s . charAt ( i ) == '1' ) ans ++ ;
+    if ( 1 == i % 2 && s . charAt ( i ) == '0' ) ans ++ ;
+    i ++ ;
+  }
+  return Math . min ( ans , len - ans ) ;
+}"
+75,"static boolean check ( int a [ ] , int n ) {
+  for ( int i = 0 ;
+  i < n ;
+  i ++ ) if ( a [ i ] == 1 ) return true ;
+  return false ;
+}
+","static boolean chck ( int a [ ] , int n ) {
+  for ( int i = 0 ;
+  i < n ;
+  i ++ ) if ( a [ i ] == 1 ) return true ;
+  return false ;
+}
+","static boolean check ( int a [ ] , int n ) {
+  int i = 0 ;
+  while ( i < n ) {
+    if ( 1 == a [ i ] ) i ++ ;
+    return true ;
+    i ++ ;
+  }
+  return false ;
+}"
+76,"static int calculateAreaSum ( int l , int b ) {
+  int size = 1 ;
+  int maxSize = Math . min ( l , b ) ;
+  int totalArea = 0 ;
+  for ( int i = 1 ;
+  i <= maxSize ;
+  i ++ ) {
+    int totalSquares = ( l - size + 1 ) * ( b - size + 1 ) ;
+    int area = totalSquares * size * size ;
+    totalArea += area ;
+    size ++ ;
+  }
+  return totalArea ;
+}
+","static int calculateReuleauxSm ( int l , int b ) {
+  int size = 1 ;
+  int maxSize = Math . min ( l , b ) ;
+  int totalArea = 0 ;
+  for ( int i = 1 ;
+  i <= maxSize ;
+  i ++ ) {
+    int totalSquares = ( l - size + 1 ) * ( b - size + 1 ) ;
+    int area = totalSquares * size * size ;
+    totalArea += area ;
+    size ++ ;
+  }
+  return totalArea ;
+}
+","static int calculateAreaSum ( int l , int b ) {
+  int size = 1 ;
+  int maxSize = Math . min ( l , b ) ;
+  int totalArea = 0 ;
+  for ( int i = 1 ;
+  maxSize >= i ;
+  i ++ ) {
+    int totalSquares = ( l - size + 1 ) * ( b - size + 1 ) ;
+    int area = totalSquares * size * size ;
+    totalArea += area ;
+    size ++ ;
+  }
+  return totalArea ;
+}"
+77,"static int countIterations ( int arr [ ] , int n ) {
+  boolean oneFound = false ;
+  int res = 0 ;
+  for ( int i = 0 ;
+  i < n ;
+  ) {
+    if ( arr [ i ] == 1 ) oneFound = true ;
+    while ( i < n && arr [ i ] == 1 ) i ++ ;
+    int count_zero = 0 ;
+    while ( i < n && arr [ i ] == 0 ) {
+      count_zero ++ ;
+      i ++ ;
+    }
+    if ( oneFound == false && i == n ) return - 1 ;
+    int curr_count ;
+    if ( i < n && oneFound == true ) {
+      if ( ( count_zero & 1 ) == 0 ) curr_count = count_zero / 2 ;
+      else curr_count = ( count_zero + 1 ) / 2 ;
+      count_zero = 0 ;
+    }
+    else {
+      curr_count = count_zero ;
+      count_zero = 0 ;
+    }
+    res = Math . max ( res , curr_count ) ;
+  }
+  return res ;
+}
+","static int contIteration ( int arr [ ] , int n ) {
+  boolean oneFound = false ;
+  int res = 0 ;
+  for ( int i = 0 ;
+  i < n ;
+  ) {
+    if ( arr [ i ] == 1 ) oneFound = true ;
+    while ( i < n && arr [ i ] == 1 ) i ++ ;
+    int count_zero = 0 ;
+    while ( i < n && arr [ i ] == 0 ) {
+      count_zero ++ ;
+      i ++ ;
+    }
+    if ( oneFound == false && i == n ) return - 1 ;
+    int curr_count ;
+    if ( i < n && oneFound == true ) {
+      if ( ( count_zero & 1 ) == 0 ) curr_count = count_zero / 2 ;
+      else curr_count = ( count_zero + 1 ) / 2 ;
+      count_zero = 0 ;
+    }
+    else {
+      curr_count = count_zero ;
+      count_zero = 0 ;
+    }
+    res = Math . max ( res , curr_count ) ;
+  }
+  return res ;
+}
+","static int countIterations ( int arr [ ] , int n ) {
+  boolean oneFound = false ;
+  int res = 0 ;
+  for ( int i = 0 ;
+  i < n ;
+  ) {
+    if ( arr [ i ] == 1 ) oneFound = true ;
+    while ( i < n && arr [ i ] == 1 ) i ++ ;
+    int count_zero = 0 ;
+    while ( i < n && arr [ i ] == 0 ) {
+      count_zero ++ ;
+      i ++ ;
+    }
+    if ( oneFound == false && i == n ) return - 1 ;
+    int curr_count ;
+    if ( i < n && true == oneFound ) {
+      if ( ( count_zero & 1 ) == 0 ) curr_count = count_zero / 2 ;
+      else curr_count = ( count_zero + 1 ) / 2 ;
+      count_zero = 0 ;
+    }
+    else {
+      curr_count = count_zero ;
+      count_zero = 0 ;
+    }
+    res = Math . max ( res , curr_count ) ;
+  }
+  return res ;
+}"
+78,"static int MinStep ( int a [ ] , int n ) {
+  int positive = 0 , negative = 0 , zero = 0 ;
+  int step = 0 ;
+  for ( int i = 0 ;
+  i < n ;
+  i ++ ) {
+    if ( a [ i ] == 0 ) {
+      zero ++ ;
+    }
+    else if ( a [ i ] < 0 ) {
+      negative ++ ;
+      step = step + ( - 1 - a [ i ] ) ;
+    }
+    else {
+      positive ++ ;
+      step = step + ( a [ i ] - 1 ) ;
+    }
+  }
+  if ( negative % 2 == 0 ) {
+    step = step + zero ;
+  }
+  else {
+    if ( zero > 0 ) {
+      step = step + zero ;
+    }
+    else {
+      step = step + 2 ;
+    }
+  }
+  return step ;
+}
+","static int minimumSte ( int a [ ] , int n ) {
+  int positive = 0 , negative = 0 , zero = 0 ;
+  int step = 0 ;
+  for ( int i = 0 ;
+  i < n ;
+  i ++ ) {
+    if ( a [ i ] == 0 ) {
+      zero ++ ;
+    }
+    else if ( a [ i ] < 0 ) {
+      negative ++ ;
+      step = step + ( - 1 - a [ i ] ) ;
+    }
+    else {
+      positive ++ ;
+      step = step + ( a [ i ] - 1 ) ;
+    }
+  }
+  if ( negative % 2 == 0 ) {
+    step = step + zero ;
+  }
+  else {
+    if ( zero > 0 ) {
+      step = step + zero ;
+    }
+    else {
+      step = step + 2 ;
+    }
+  }
+  return step ;
+}
+","static int MinStep ( int a [ ] , int n ) {
+  int positive = 0 , negative = 0 , zero = 0 ;
+  int step = 0 ;
+  int i = 0 ;
+  while ( i < n ) {
+    if ( a [ i ] == 0 ) {
+      zero ++ ;
+    }
+    else if ( 0 > a [ i ] ) {
+      negative ++ ;
+      step = step + ( - 1 - a [ i ] ) ;
+    }
+    else {
+      positive ++ ;
+      step = step + ( a [ i ] - 1 ) ;
+    }
+    i ++ ;
+  }
+  if ( negative % 2 == 0 ) {
+    step = step + zero ;
+  }
+  else {
+    if ( zero > 0 ) {
+      step = step + zero ;
+    }
+    else {
+      step = step + 2 ;
+    }
+  }
+  return step ;
+}"
+79,"static int findSplit ( int [ ] arr , int n ) {
+  int i ;
+  int preSum = 0 ;
+  int ind1 = - 1 , ind2 = - 1 ;
+  int S ;
+  S = arr [ 0 ] ;
+  for ( i = 1 ;
+  i < n ;
+  i ++ ) S += arr [ i ] ;
+  if ( S % 3 != 0 ) return 0 ;
+  int S1 = S / 3 ;
+  int S2 = 2 * S1 ;
+  for ( i = 0 ;
+  i < n ;
+  i ++ ) {
+    preSum += arr [ i ] ;
+    if ( preSum % S1 == 0 && ind1 == - 1 ) ind1 = i ;
+    else if ( preSum % S2 == 0 ) {
+      ind2 = i ;
+      break ;
+    }
+  }
+  if ( ind1 != - 1 && ind2 != - 1 ) {
+    System . out . print ( ""("" + ind1 + "", "" + ind2 + "")"" ) ;
+    return 1 ;
+  }
+  return 0 ;
+}
+","static int subarrayFunc ( int [ ] arr , int n ) {
+  int i ;
+  int preSum = 0 ;
+  int ind1 = - 1 , ind2 = - 1 ;
+  int S ;
+  S = arr [ 0 ] ;
+  for ( i = 1 ;
+  i < n ;
+  i ++ ) S += arr [ i ] ;
+  if ( S % 3 != 0 ) return 0 ;
+  int S1 = S / 3 ;
+  int S2 = 2 * S1 ;
+  for ( i = 0 ;
+  i < n ;
+  i ++ ) {
+    preSum += arr [ i ] ;
+    if ( preSum % S1 == 0 && ind1 == - 1 ) ind1 = i ;
+    else if ( preSum % S2 == 0 ) {
+      ind2 = i ;
+      break ;
+    }
+  }
+  if ( ind1 != - 1 && ind2 != - 1 ) {
+    System . out . print ( ""("" + ind1 + "", "" + ind2 + "")"" ) ;
+    return 1 ;
+  }
+  return 0 ;
+}
+","static int findSplit ( int [ ] arr , int n ) {
+  int i ;
+  int preSum = 0 ;
+  int ind1 = - 1 , ind2 = - 1 ;
+  int S ;
+  S = arr [ 0 ] ;
+  for ( i = 1 ;
+  n > i ;
+  i ++ ) S = S + arr [ i ] ;
+  if ( S % 3 != 0 ) return 0 ;
+  int S1 = S / 3 ;
+  int S2 = 2 * S1 ;
+  for ( i = 0 ;
+  i < n ;
+  i ++ ) {
+    preSum = preSum + arr [ i ] ;
+    if ( preSum % S1 == 0 && ind1 == - 1 ) ind1 = i ;
+    else if ( preSum % S2 == 0 ) {
+      ind2 = i ;
+      break ;
+    }
+  }
+  if ( ind1 != - 1 && ind2 != - 1 ) {
+    System . out . print ( ""("" + ind1 + "", "" + ind2 + "")"" ) ;
+    return 1 ;
+  }
+  return 0 ;
+}"
+80,"public static int mostCommon ( int lower , int higher ) {
+  if ( lower == higher ) return lower ;
+  else return 2 ;
+}
+","public static int xandCommon ( int lower , int higher ) {
+  if ( lower == higher ) return lower ;
+  else return 2 ;
+}
+","public static int mostCommon ( int lower , int higher ) {
+  if ( higher == lower ) return lower ;
+  else return 2 ;
+}"
+81,"static int changeTheArray ( int arr [ ] , int n ) {
+  int minEle = Arrays . stream ( arr ) . min ( ) . getAsInt ( ) ;
+  int maxEle = Arrays . stream ( arr ) . max ( ) . getAsInt ( ) ;
+  int minOperations = Integer . MAX_VALUE ;
+  for ( int num = minEle ;
+  num <= maxEle ;
+  num ++ ) {
+    int operations = 0 ;
+    for ( int i = 0 ;
+    i < n ;
+    i ++ ) {
+      if ( arr [ i ] != num ) {
+        operations += ( Math . abs ( num - arr [ i ] ) - 1 ) ;
+      }
+    }
+    minOperations = Math . min ( minOperations , operations ) ;
+  }
+  return minOperations ;
+}
+","static int gksParallelArray ( int arr [ ] , int n ) {
+  int minEle = Arrays . stream ( arr ) . min ( ) . getAsInt ( ) ;
+  int maxEle = Arrays . stream ( arr ) . max ( ) . getAsInt ( ) ;
+  int minOperations = Integer . MAX_VALUE ;
+  for ( int num = minEle ;
+  num <= maxEle ;
+  num ++ ) {
+    int operations = 0 ;
+    for ( int i = 0 ;
+    i < n ;
+    i ++ ) {
+      if ( arr [ i ] != num ) {
+        operations += ( Math . abs ( num - arr [ i ] ) - 1 ) ;
+      }
+    }
+    minOperations = Math . min ( minOperations , operations ) ;
+  }
+  return minOperations ;
+}
+","static int changeTheArray ( int arr [ ] , int n ) {
+  int minEle = Arrays . stream ( arr ) . min ( ) . getAsInt ( ) ;
+  int maxEle = Arrays . stream ( arr ) . max ( ) . getAsInt ( ) ;
+  int minOperations = Integer . MAX_VALUE ;
+  for ( int num = minEle ;
+  maxEle >= num ;
+  num ++ ) {
+    int operations = 0 ;
+    for ( int i = 0 ;
+    i < n ;
+    i ++ ) {
+      if ( arr [ i ] != num ) {
+        operations = operations + ( Math . abs ( num - arr [ i ] ) - 1 ) ;
+      }
+    }
+    minOperations = Math . min ( minOperations , operations ) ;
+  }
+  return minOperations ;
+}"
+82,"static boolean isPossible ( int n ) {
+  int fac [ ] = new int [ 10 ] ;
+  fac [ 0 ] = fac [ 1 ] = 1 ;
+  for ( int i = 2 ;
+  i < 10 ;
+  i ++ ) fac [ i ] = fac [ i - 1 ] * i ;
+  int sum = 0 ;
+  int x = n ;
+  while ( x != 0 ) {
+    sum += fac [ x % 10 ] ;
+    x /= 10 ;
+  }
+  if ( sum % n == 0 ) return true ;
+  return false ;
+}
+","static boolean isEqual ( int n ) {
+  int fac [ ] = new int [ 10 ] ;
+  fac [ 0 ] = fac [ 1 ] = 1 ;
+  for ( int i = 2 ;
+  i < 10 ;
+  i ++ ) fac [ i ] = fac [ i - 1 ] * i ;
+  int sum = 0 ;
+  int x = n ;
+  while ( x != 0 ) {
+    sum += fac [ x % 10 ] ;
+    x /= 10 ;
+  }
+  if ( sum % n == 0 ) return true ;
+  return false ;
+}
+","static boolean isPossible ( int n ) {
+  int fac [ ] = new int [ 10 ] ;
+  fac [ 0 ] = fac [ 1 ] = 1 ;
+  for ( int i = 2 ;
+  i < 10 ;
+  i ++ ) fac [ i ] = fac [ i - 1 ] * i ;
+  int sum = 0 ;
+  int x = n ;
+  for ( ;
+  x != 0 ;
+  ) {
+    sum += fac [ x % 10 ] ;
+    x /= 10 ;
+  }
+  if ( 0 == sum % n ) return true ;
+  return false ;
+}"
+83,"static boolean checkFibinnary ( int n ) {
+  int prev_last = 0 ;
+  while ( n != 0 ) {
+    if ( ( n & 1 ) != 0 && prev_last != 0 ) return false ;
+    prev_last = n & 1 ;
+    n >>= 1 ;
+  }
+  return true ;
+}
+","static boolean alternateFibinnary ( int n ) {
+  int prev_last = 0 ;
+  while ( n != 0 ) {
+    if ( ( n & 1 ) != 0 && prev_last != 0 ) return false ;
+    prev_last = n & 1 ;
+    n >>= 1 ;
+  }
+  return true ;
+}
+","static boolean checkFibinnary ( int n ) {
+  int prev_last = 0 ;
+  for ( ;
+  n != 0 ;
+  ) {
+    if ( 0 != ( n & 1 ) && prev_last != 0 ) return false ;
+    prev_last = n & 1 ;
+    n >>= 1 ;
+  }
+  return true ;
+}"
+84,"static long findMinValue ( long arr [ ] , int n ) {
+  Arrays . sort ( arr ) ;
+  double val = 0 ;
+  for ( int i = 0 ;
+  i < n ;
+  i ++ ) {
+    val += ( double ) ( Math . log ( ( double ) ( arr [ i ] ) ) ) ;
+  }
+  long left = arr [ 0 ] , right = arr [ n - 1 ] ;
+  long ans = 0 ;
+  while ( left <= right ) {
+    long mid = ( left + right ) / 2 ;
+    double temp = ( double ) n * ( double ) ( Math . log ( ( double ) ( mid ) ) ) ;
+    if ( val < temp ) {
+      ans = mid ;
+      right = mid - 1 ;
+    }
+    else {
+      left = mid + 1 ;
+    }
+  }
+  return ans ;
+}
+","static long findMinPositive ( long arr [ ] , int n ) {
+  Arrays . sort ( arr ) ;
+  double val = 0 ;
+  for ( int i = 0 ;
+  i < n ;
+  i ++ ) {
+    val += ( double ) ( Math . log ( ( double ) ( arr [ i ] ) ) ) ;
+  }
+  long left = arr [ 0 ] , right = arr [ n - 1 ] ;
+  long ans = 0 ;
+  while ( left <= right ) {
+    long mid = ( left + right ) / 2 ;
+    double temp = ( double ) n * ( double ) ( Math . log ( ( double ) ( mid ) ) ) ;
+    if ( val < temp ) {
+      ans = mid ;
+      right = mid - 1 ;
+    }
+    else {
+      left = mid + 1 ;
+    }
+  }
+  return ans ;
+}
+","static long findMinValue ( long arr [ ] , int n ) {
+  Arrays . sort ( arr ) ;
+  double val = 0 ;
+  for ( int i = 0 ;
+  i < n ;
+  i ++ ) {
+    val += ( double ) ( Math . log ( ( double ) ( arr [ i ] ) ) ) ;
+  }
+  long left = arr [ 0 ] , right = arr [ n - 1 ] ;
+  long ans = 0 ;
+  for ( ;
+  left <= right ;
+  ) {
+    long mid = ( left + right ) / 2 ;
+    double temp = ( double ) n * ( double ) ( Math . log ( ( double ) ( mid ) ) ) ;
+    if ( val >= temp ) {
+      left = mid + 1 ;
+    }
+    else {
+      ans = mid ;
+      right = mid - 1 ;
+    }
+  }
+  return ans ;
+}"
+85,"static String largestSubStr ( String s ) {
+  while ( s . length ( ) != 0 && s . charAt ( s . length ( ) - 1 ) == '1' ) s = s . substring ( 0 , s . length ( ) - 1 ) ;
+  if ( s . length ( ) == 0 ) return ""-1"" ;
+  else return s ;
+}
+","static String laregstLengthLex ( String s ) {
+  while ( s . length ( ) != 0 && s . charAt ( s . length ( ) - 1 ) == '1' ) s = s . substring ( 0 , s . length ( ) - 1 ) ;
+  if ( s . length ( ) == 0 ) return ""-1"" ;
+  else return s ;
+}
+","static String largestSubStr ( String s ) {
+  for ( ;
+  s . length ( ) != 0 && s . charAt ( s . length ( ) - 1 ) == '1' ;
+  ) {
+    s = s . substring ( 0 , s . length ( ) - 1 ) ;
+  }
+  if ( s . length ( ) == 0 ) return ""-1"" ;
+  else return s ;
+}"
+86,"static boolean isWordPresent ( String sentence , String word ) {
+  String [ ] s = sentence . split ( "" "" ) ;
+  for ( String temp : s ) {
+    if ( temp . compareTo ( word ) == 0 ) {
+      return true ;
+    }
+  }
+  return false ;
+}
+","static boolean possibleWordPesent ( String sentence , String word ) {
+  String [ ] s = sentence . split ( "" "" ) ;
+  for ( String temp : s ) {
+    if ( temp . compareTo ( word ) == 0 ) {
+      return true ;
+    }
+  }
+  return false ;
+}
+","static boolean isWordPresent ( String sentence , String word ) {
+  String [ ] s = sentence . split ( "" "" ) ;
+  for ( String temp : s ) {
+    if ( 0 == temp . compareTo ( word ) ) {
+      return true ;
+    }
+  }
+  return false ;
+}"
+87,"static int numLen ( int K ) {
+  if ( K % 2 == 0 || K % 5 == 0 ) {
+    return - 1 ;
+  }
+  int number = 0 ;
+  int len = 1 ;
+  for ( len = 1 ;
+  len <= K ;
+  len ++ ) {
+    number = number * 10 + 1 ;
+    if ( ( number % K == 0 ) ) {
+      return len ;
+    }
+  }
+  return - 1 ;
+}
+","static int nmuLen ( int K ) {
+  if ( K % 2 == 0 || K % 5 == 0 ) {
+    return - 1 ;
+  }
+  int number = 0 ;
+  int len = 1 ;
+  for ( len = 1 ;
+  len <= K ;
+  len ++ ) {
+    number = number * 10 + 1 ;
+    if ( ( number % K == 0 ) ) {
+      return len ;
+    }
+  }
+  return - 1 ;
+}
+","static int numLen ( int K ) {
+  if ( K % 2 == 0 || K % 5 == 0 ) {
+    return - 1 ;
+  }
+  int number = 0 ;
+  int len = 1 ;
+  len = 1 ;
+  while ( len <= K ) {
+    number = number * 10 + 1 ;
+    if ( ( number % K == 0 ) ) {
+      len ++ ;
+      return len ;
+    }
+    len ++ ;
+  }
+  return - 1 ;
+}"
+88,"static boolean isPossible ( int n ) {
+  int fac [ ] = new int [ 10 ] ;
+  fac [ 0 ] = fac [ 1 ] = 1 ;
+  for ( int i = 2 ;
+  i < 10 ;
+  i ++ ) fac [ i ] = fac [ i - 1 ] * i ;
+  int sum = 0 ;
+  int x = n ;
+  while ( x != 0 ) {
+    sum += fac [ x % 10 ] ;
+    x /= 10 ;
+  }
+  if ( sum % n == 0 ) return true ;
+  return false ;
+}
+","static boolean isPossibe ( int n ) {
+  int fac [ ] = new int [ 10 ] ;
+  fac [ 0 ] = fac [ 1 ] = 1 ;
+  for ( int i = 2 ;
+  i < 10 ;
+  i ++ ) fac [ i ] = fac [ i - 1 ] * i ;
+  int sum = 0 ;
+  int x = n ;
+  while ( x != 0 ) {
+    sum += fac [ x % 10 ] ;
+    x /= 10 ;
+  }
+  if ( sum % n == 0 ) return true ;
+  return false ;
+}
+","static boolean isPossible ( int n ) {
+  int fac [ ] = new int [ 10 ] ;
+  fac [ 0 ] = fac [ 1 ] = 1 ;
+  for ( int i = 2 ;
+  i < 10 ;
+  i ++ ) fac [ i ] = fac [ i - 1 ] * i ;
+  int sum = 0 ;
+  int x = n ;
+  for ( ;
+  x != 0 ;
+  ) {
+    sum += fac [ x % 10 ] ;
+    x /= 10 ;
+  }
+  if ( sum % n == 0 ) return true ;
+  return false ;
+}"
+89,"static int findTwoThreePrime ( int l , int r ) {
+  if ( l == 1 ) l ++ ;
+  int count = 0 ;
+  for ( int i = l ;
+  i <= r ;
+  i ++ ) {
+    int num = i ;
+    while ( num % 2 == 0 ) num /= 2 ;
+    while ( num % 3 == 0 ) num /= 3 ;
+    if ( num == 1 ) count ++ ;
+  }
+  return count ;
+}
+","static int findTwoTreePrime ( int l , int r ) {
+  if ( l == 1 ) l ++ ;
+  int count = 0 ;
+  for ( int i = l ;
+  i <= r ;
+  i ++ ) {
+    int num = i ;
+    while ( num % 2 == 0 ) num /= 2 ;
+    while ( num % 3 == 0 ) num /= 3 ;
+    if ( num == 1 ) count ++ ;
+  }
+  return count ;
+}
+","static int findTwoThreePrime ( int l , int r ) {
+  if ( l == 1 ) l ++ ;
+  int count = 0 ;
+  for ( int i = l ;
+  i <= r ;
+  i ++ ) {
+    int num = i ;
+    for ( ;
+    num % 2 == 0 ;
+    ) {
+      num /= 2 ;
+    }
+    while ( 0 == num % 3 ) num /= 3 ;
+    if ( num == 1 ) count ++ ;
+  }
+  return count ;
+}"
+90,"static int lehmann ( int n , int t ) {
+  Random rand = new Random ( ) ;
+  rand . setSeed ( 1234 ) ;
+  int a = rand . nextInt ( n - 3 ) + 2 ;
+  float e = ( n - 1 ) / 2 ;
+  while ( t > 0 ) {
+    int result = ( ( int ) ( Math . pow ( a , e ) ) ) % n ;
+    if ( ( result % n ) == 1 || ( result % n ) == ( n - 1 ) ) {
+      a = rand . nextInt ( n - 3 ) + 2 ;
+      t -= 1 ;
+    }
+    else return - 1 ;
+  }
+  return 1 ;
+}
+","static int totient ( int n , int t ) {
+  Random rand = new Random ( ) ;
+  rand . setSeed ( 1234 ) ;
+  int a = rand . nextInt ( n - 3 ) + 2 ;
+  float e = ( n - 1 ) / 2 ;
+  while ( t > 0 ) {
+    int result = ( ( int ) ( Math . pow ( a , e ) ) ) % n ;
+    if ( ( result % n ) == 1 || ( result % n ) == ( n - 1 ) ) {
+      a = rand . nextInt ( n - 3 ) + 2 ;
+      t -= 1 ;
+    }
+    else return - 1 ;
+  }
+  return 1 ;
+}
+","static int lehmann ( int n , int t ) {
+  Random rand = new Random ( ) ;
+  rand . setSeed ( 1234 ) ;
+  int a = rand . nextInt ( n - 3 ) + 2 ;
+  float e = ( n - 1 ) / 2 ;
+  for ( ;
+  t > 0 ;
+  ) {
+    int result = ( ( int ) ( Math . pow ( a , e ) ) ) % n ;
+    if ( 1 == ( result % n ) || ( result % n ) == ( n - 1 ) ) {
+      a = rand . nextInt ( n - 3 ) + 2 ;
+      t = t - 1 ;
+    }
+    else return - 1 ;
+  }
+  return 1 ;
+}"
+91,"public static boolean judgeSquareSum ( int n ) {
+  for ( int i = 2 ;
+  i * i <= n ;
+  i ++ ) {
+    int count = 0 ;
+    if ( n % i == 0 ) {
+      while ( n % i == 0 ) {
+        count ++ ;
+        n /= i ;
+      }
+      if ( i % 4 == 3 && count % 2 != 0 ) return false ;
+    }
+  }
+  return n % 4 != 3 ;
+}
+","public static boolean factorsSquareSum ( int n ) {
+  for ( int i = 2 ;
+  i * i <= n ;
+  i ++ ) {
+    int count = 0 ;
+    if ( n % i == 0 ) {
+      while ( n % i == 0 ) {
+        count ++ ;
+        n /= i ;
+      }
+      if ( i % 4 == 3 && count % 2 != 0 ) return false ;
+    }
+  }
+  return n % 4 != 3 ;
+}
+","public static boolean judgeSquareSum ( int n ) {
+  for ( int i = 2 ;
+  i * i <= n ;
+  i ++ ) {
+    int count = 0 ;
+    if ( n % i == 0 ) {
+      for ( ;
+      n % i == 0 ;
+      ) {
+        count ++ ;
+        n /= i ;
+      }
+      if ( i % 4 == 3 && 0 != count % 2 ) return false ;
+    }
+  }
+  return n % 4 != 3 ;
+}"
+92,"static String findMaxLenEven ( String str ) {
+  int n = str . length ( ) ;
+  int i = 0 ;
+  int currlen = 0 ;
+  int maxlen = 0 ;
+  int st = - 1 ;
+  while ( i < n ) {
+    if ( str . charAt ( i ) == ' ' ) {
+      if ( currlen % 2 == 0 ) {
+        if ( maxlen < currlen ) {
+          maxlen = currlen ;
+          st = i - currlen ;
+        }
+      }
+      currlen = 0 ;
+    }
+    else {
+      currlen ++ ;
+    }
+    i ++ ;
+  }
+  if ( currlen % 2 == 0 ) {
+    if ( maxlen < currlen ) {
+      maxlen = currlen ;
+      st = i - currlen ;
+    }
+  }
+  if ( st == - 1 ) return ""-1"" ;
+  return str . substring ( st , st + maxlen ) ;
+}
+","static String subarrayMaLenPair ( String str ) {
+  int n = str . length ( ) ;
+  int i = 0 ;
+  int currlen = 0 ;
+  int maxlen = 0 ;
+  int st = - 1 ;
+  while ( i < n ) {
+    if ( str . charAt ( i ) == ' ' ) {
+      if ( currlen % 2 == 0 ) {
+        if ( maxlen < currlen ) {
+          maxlen = currlen ;
+          st = i - currlen ;
+        }
+      }
+      currlen = 0 ;
+    }
+    else {
+      currlen ++ ;
+    }
+    i ++ ;
+  }
+  if ( currlen % 2 == 0 ) {
+    if ( maxlen < currlen ) {
+      maxlen = currlen ;
+      st = i - currlen ;
+    }
+  }
+  if ( st == - 1 ) return ""-1"" ;
+  return str . substring ( st , st + maxlen ) ;
+}
+","static String findMaxLenEven ( String str ) {
+  int n = str . length ( ) ;
+  int i = 0 ;
+  int currlen = 0 ;
+  int maxlen = 0 ;
+  int st = - 1 ;
+  for ( ;
+  i < n ;
+  ) {
+    if ( str . charAt ( i ) == ' ' ) {
+      if ( 0 == currlen % 2 ) {
+        if ( maxlen < currlen ) {
+          maxlen = currlen ;
+          st = i - currlen ;
+        }
+      }
+      currlen = 0 ;
+    }
+    else {
+      currlen ++ ;
+    }
+    i ++ ;
+  }
+  if ( currlen % 2 == 0 ) {
+    if ( maxlen < currlen ) {
+      maxlen = currlen ;
+      st = i - currlen ;
+    }
+  }
+  if ( st == - 1 ) return ""-1"" ;
+  return str . substring ( st , st + maxlen ) ;
+}"
+93,"static int equalize ( int arr [ ] , int n , int k ) {
+  int min_ele = Arrays . stream ( arr ) . min ( ) . getAsInt ( ) ;
+  boolean flag = true ;
+  for ( int i = 0 ;
+  i < n ;
+  i ++ ) {
+    if ( ! ( ( arr [ i ] + k ) >= min_ele + k && min_ele + k >= ( arr [ i ] - k ) ) ) {
+      flag = false ;
+      break ;
+    }
+  }
+  if ( flag ) {
+    return min_ele + k ;
+  }
+  else return - 1 ;
+}
+","static int summation ( int arr [ ] , int n , int k ) {
+  int min_ele = Arrays . stream ( arr ) . min ( ) . getAsInt ( ) ;
+  boolean flag = true ;
+  for ( int i = 0 ;
+  i < n ;
+  i ++ ) {
+    if ( ! ( ( arr [ i ] + k ) >= min_ele + k && min_ele + k >= ( arr [ i ] - k ) ) ) {
+      flag = false ;
+      break ;
+    }
+  }
+  if ( flag ) {
+    return min_ele + k ;
+  }
+  else return - 1 ;
+}
+","static int equalize ( int arr [ ] , int n , int k ) {
+  int min_ele = Arrays . stream ( arr ) . min ( ) . getAsInt ( ) ;
+  boolean flag = true ;
+  int i = 0 ;
+  while ( n > i ) {
+    if ( ! ( ( arr [ i ] + k ) >= min_ele + k && min_ele + k >= ( arr [ i ] - k ) ) ) {
+      flag = false ;
+      i ++ ;
+      break ;
+    }
+    i ++ ;
+  }
+  if ( flag ) {
+    return min_ele + k ;
+  }
+  else return - 1 ;
+}"
+94,"def findOccurrences ( str , substr ) :
+    counter = 0
+    for i in range ( 0 , len ( str ) ) :
+        if ( str [ i ] == substr [ 0 ] ) :
+            for j in range ( i + 1 , len ( str ) ) :
+                if ( str [ j ] == substr [ 1 ] ) :
+                    for k in range ( j + 1 , len ( str ) ) :
+                        if ( str [ k ] == substr [ 2 ] ) :
+                            counter = counter + 1
+    return counter
+","def findChars ( str , substr ) :
+    counter = 0
+    for i in range ( 0 , len ( str ) ) :
+        if ( str [ i ] == substr [ 0 ] ) :
+            for j in range ( i + 1 , len ( str ) ) :
+                if ( str [ j ] == substr [ 1 ] ) :
+                    for k in range ( j + 1 , len ( str ) ) :
+                        if ( str [ k ] == substr [ 2 ] ) :
+                            counter = counter + 1
+    return counter
+","def findOccurrences ( str , substr ) :
+    counter = 0
+    for i in range ( 0 , len ( str ) ) :
+        if ( str [ i ] == substr [ 0 ] ) :
+            for j in range ( i + 1 , len ( str ) ) :
+                if ( str [ j ] == substr [ 1 ] ) :
+                    for k in range ( j + 1 , len ( str ) ) :
+                        if ( substr [ 2 ] == str [ k ] ) :
+                            counter = counter + 1
+    return counter"
+95,"def countPairs ( a , n ) :
+    mp = dict.fromkeys ( a , 0 )
+    for i in range ( n ) :
+        mp [ a [ i ] ] += 1
+    a.sort ( reverse = True )
+    count = 0
+    for i in range ( n ) :
+        if ( mp [ a [ i ] ] < 1 ) :
+            continue
+        cur = 1
+        while ( cur <= a [ i ] ) :
+            cur = cur << 1
+        if ( cur - a [ i ] in mp.keys ( ) ) :
+            if ( cur - a [ i ] == a [ i ] and mp [ a [ i ] ] == 1 ) :
+                continue
+            count += 1
+            mp [ cur - a [ i ] ] -= 1
+            mp [ a [ i ] ] -= 1
+    return count
+","def cuontPair ( a , n ) :
+    mp = dict.fromkeys ( a , 0 )
+    for i in range ( n ) :
+        mp [ a [ i ] ] += 1
+    a.sort ( reverse = True )
+    count = 0
+    for i in range ( n ) :
+        if ( mp [ a [ i ] ] < 1 ) :
+            continue
+        cur = 1
+        while ( cur <= a [ i ] ) :
+            cur = cur << 1
+        if ( cur - a [ i ] in mp.keys ( ) ) :
+            if ( cur - a [ i ] == a [ i ] and mp [ a [ i ] ] == 1 ) :
+                continue
+            count += 1
+            mp [ cur - a [ i ] ] -= 1
+            mp [ a [ i ] ] -= 1
+    return count
+","def countPairs ( a , n ) :
+    mp = dict.fromkeys ( a , 0 )
+    for i in range ( n ) :
+        mp [ a [ i ] ] += 1
+    a.sort ( reverse = True )
+    count = 0
+    for i in range ( n ) :
+        if ( mp [ a [ i ] ] < 1 ) :
+            continue
+        cur = 1
+        while ( cur <= a [ i ] ) :
+            cur = cur << 1
+        if ( cur - a [ i ] in mp.keys ( ) ) :
+            if ( cur - a [ i ] == a [ i ] and mp [ a [ i ] ] == 1 ) :
+                continue
+            count = count + 1
+            mp [ cur - a [ i ] ] -= 1
+            mp [ a [ i ] ] -= 1
+    return count"
+96,"def findMin ( arr , n ) :
+    m = 0
+    for i in range ( n ) :
+        m = max ( m , arr [ i ] )
+    freq = [ 0 ] * ( m + 2 )
+    for i in range ( n ) :
+        freq [ arr [ i ] ] += 1
+    for i in range ( 1 , m + 2 ) :
+        j = i
+        cnt = 0
+        while ( j <= m ) :
+            cnt += freq [ j ]
+            j += i
+        if ( not cnt ) :
+            return i
+    return m + 1
+","def findMinimum ( arr , n ) :
+    m = 0
+    for i in range ( n ) :
+        m = max ( m , arr [ i ] )
+    freq = [ 0 ] * ( m + 2 )
+    for i in range ( n ) :
+        freq [ arr [ i ] ] += 1
+    for i in range ( 1 , m + 2 ) :
+        j = i
+        cnt = 0
+        while ( j <= m ) :
+            cnt += freq [ j ]
+            j += i
+        if ( not cnt ) :
+            return i
+    return m + 1
+","def findMin ( arr , n ) :
+    m = 0
+    for i in range ( n ) :
+        m = max ( m , arr [ i ] )
+    freq = [ 0 ] * ( m + 2 )
+    for i in range ( n ) :
+        freq [ arr [ i ] ] += 1
+    for i in range ( 1 , m + 2 ) :
+        j = i
+        cnt = 0
+        while ( m >= j ) :
+            cnt += freq [ j ]
+            j += i
+        if ( not cnt ) :
+            return i
+    return m + 1"
+97,"def XorAscii ( str1 , len1 ) :
+    ans = ord ( str1 [ 0 ] )
+    for i in range ( 1 , len1 ) :
+        ans = ( ans ^ ( ord ( str1 [ i ] ) ) )
+    return ans
+","def xorAscii ( str1 , len1 ) :
+    ans = ord ( str1 [ 0 ] )
+    for i in range ( 1 , len1 ) :
+        ans = ( ans ^ ( ord ( str1 [ i ] ) ) )
+    return ans
+","def XorAscii ( str1 , len1 ) :
+    ans = ord ( str1 [ 0 ] )
+    i = 1
+    while i in list ( range ( len1 ) ) :
+        ans = ( ans ^ ( ord ( str1 [ i ] ) ) )
+        i += 1
+    return ans"
+98,"def countSubarray ( arr , n , k ) :
+    count = 0
+    for i in range ( 0 , n ) :
+        sum = 0
+        for j in range ( i , n ) :
+            if ( sum + arr [ j ] < k ) :
+                sum = arr [ j ] + sum
+                count += 1
+            else :
+                break
+    return count
+","def cuontSubarray ( arr , n , k ) :
+    count = 0
+    for i in range ( 0 , n ) :
+        sum = 0
+        for j in range ( i , n ) :
+            if ( sum + arr [ j ] < k ) :
+                sum = arr [ j ] + sum
+                count += 1
+            else :
+                break
+    return count
+","def countSubarray ( arr , n , k ) :
+    count = 0
+    i = 0
+    while i in list ( range ( n ) ) :
+        sum = 0
+        for j in range ( i , n ) :
+            if ( sum + arr [ j ] < k ) :
+                sum = arr [ j ] + sum
+                count += 1
+            else :
+                i += 1
+                break
+        i += 1
+    return count"
+99,"def findSubstrings ( s , k ) :
+    ans = 0
+    n = len ( s )
+    for i in range ( n ) :
+        cnt = [ 0 ] * 26
+        for j in range ( i , n ) :
+            cnt [ ord ( s [ j ] ) - ord ( 'a' ) ] += 1
+            if ( cnt [ ord ( s [ j ] ) - ord ( 'a' ) ] <= k ) :
+                ans += 1
+            else :
+                break
+    return ans
+","def findSubsrtings ( s , k ) :
+    ans = 0
+    n = len ( s )
+    for i in range ( n ) :
+        cnt = [ 0 ] * 26
+        for j in range ( i , n ) :
+            cnt [ ord ( s [ j ] ) - ord ( 'a' ) ] += 1
+            if ( cnt [ ord ( s [ j ] ) - ord ( 'a' ) ] <= k ) :
+                ans += 1
+            else :
+                break
+    return ans
+","def findSubstrings ( s , k ) :
+    ans = 0
+    n = len ( s )
+    for i in range ( n ) :
+        cnt = [ 0 ] * 26
+        for j in range ( i , n ) :
+            cnt [ ord ( s [ j ] ) - ord ( ' ' ) ] += 1
+            if ( cnt [ ord ( s [ j ] ) - ord ( ' ' ) ] <= k ) :
+                ans = ans + 1
+                else : break
+    return ans"
+100,"def countsubarray ( array , n , k ) :
+    count = 0
+    for i in range ( 0 , n ) :
+        if array [ i ] <= k :
+            count += 1
+        mul = array [ i ]
+        for j in range ( i + 1 , n ) :
+            mul = mul * array [ j ]
+            if mul <= k :
+                count += 1
+            else :
+                break
+    return count
+","def pendulum ( array , n , k ) :
+    count = 0
+    for i in range ( 0 , n ) :
+        if array [ i ] <= k :
+            count += 1
+        mul = array [ i ]
+        for j in range ( i + 1 , n ) :
+            mul = mul * array [ j ]
+            if mul <= k :
+                count += 1
+            else :
+                break
+    return count
+","def countsubarray ( array , n , k ) :
+    count = 0
+    i = 0
+    while i in list ( range ( n ) ) :
+        if array [ i ] <= k :
+            count += 1
+        mul = array [ i ]
+        for j in range ( i + 1 , n ) :
+            mul = mul * array [ j ]
+            if mul <= k :
+                count += 1
+            else :
+                i += 1
+                break
+        i += 1
+    return count"
+101,"def MinStep ( a , n ) :
+    positive = 0
+    negative = 0
+    zero = 0
+    step = 0
+    for i in range ( n ) :
+        if ( a [ i ] == 0 ) :
+            zero += 1
+        elif ( a [ i ] < 0 ) :
+            negative += 1
+            step = step + ( - 1 - a [ i ] )
+        else :
+            positive += 1
+            step = step + ( a [ i ] - 1 )
+    if ( negative % 2 == 0 ) :
+        step = step + zero
+    else :
+        if ( zero > 0 ) :
+            step = step + zero
+        else :
+            step = step + 2
+    return step
+","def maxPublic ( a , n ) :
+    positive = 0
+    negative = 0
+    zero = 0
+    step = 0
+    for i in range ( n ) :
+        if ( a [ i ] == 0 ) :
+            zero += 1
+        elif ( a [ i ] < 0 ) :
+            negative += 1
+            step = step + ( - 1 - a [ i ] )
+        else :
+            positive += 1
+            step = step + ( a [ i ] - 1 )
+    if ( negative % 2 == 0 ) :
+        step = step + zero
+    else :
+        if ( zero > 0 ) :
+            step = step + zero
+        else :
+            step = step + 2
+    return step
+","def MinStep ( a , n ) :
+    positive = 0
+    negative = 0
+    zero = 0
+    step = 0
+    for i in range ( n ) :
+        if ( 0 == a [ i ] ) :
+            zero += 1
+        elif ( a [ i ] < 0 ) :
+            negative += 1
+            step = step + ( - 1 - a [ i ] )
+        else :
+            positive += 1
+            step = step + ( a [ i ] - 1 )
+    if ( negative % 2 == 0 ) :
+        step = step + zero
+    else :
+        if ( zero > 0 ) :
+            step = step + zero
+        else :
+            step = step + 2
+    return step"
+102,"def minChanges ( A , n ) :
+    cnt = 0
+    for i in range ( n - 2 ) :
+        if ( ( i - 1 >= 0 ) and A [ i - 1 ] == 1 and A [ i + 1 ] == 1 and A [ i ] == 0 ) :
+            A [ i + 1 ] = 0
+            cnt = cnt + 1
+    return cnt
+","def miChangs ( A , n ) :
+    cnt = 0
+    for i in range ( n - 2 ) :
+        if ( ( i - 1 >= 0 ) and A [ i - 1 ] == 1 and A [ i + 1 ] == 1 and A [ i ] == 0 ) :
+            A [ i + 1 ] = 0
+            cnt = cnt + 1
+    return cnt
+","def minChanges ( A , n ) :
+    cnt = 0
+    i = 0
+    while i in list ( range ( n - 2 ) ) :
+        if ( ( i - 1 >= 0 ) and A [ i - 1 ] == 1 and A [ i + 1 ] == 1 and A [ i ] == 0 ) :
+            A [ i + 1 ] = 0
+            cnt = cnt + 1
+        i += 1
+    return cnt"
+103,"def countChars ( string , n ) :
+    i = 0 ; cnt = 0
+    while ( i < n ) :
+        if ( string [ i ] == '0' ) :
+            i += 1
+        else :
+            i += 2
+        cnt += 1
+    return cnt
+","def countSuffix ( string , n ) :
+    i = 0 ; cnt = 0
+    while ( i < n ) :
+        if ( string [ i ] == '0' ) :
+            i += 1
+        else :
+            i += 2
+        cnt += 1
+    return cnt
+","def countChars ( string , n ) :
+    i = 0
+    ; cnt = 0
+    while ( i < n ) :
+        if ( string [ i ] != '0' ) :
+            i += 2
+        else :
+            i += 1
+        cnt += 1
+    return cnt"
+104,"def tribWord ( n ) :
+    Sn_1 = ""1""
+    Sn_2 = ""12""
+    Sn_3 = ""1213""
+    for i in range ( 3 , n + 1 ) :
+        tmp = Sn_3
+        Sn_3 += ( Sn_2 + Sn_1 )
+        Sn_1 = Sn_2
+        Sn_2 = tmp
+    return Sn_3
+","def tribSentence ( n ) :
+    Sn_1 = ""1""
+    Sn_2 = ""12""
+    Sn_3 = ""1213""
+    for i in range ( 3 , n + 1 ) :
+        tmp = Sn_3
+        Sn_3 += ( Sn_2 + Sn_1 )
+        Sn_1 = Sn_2
+        Sn_2 = tmp
+    return Sn_3
+","def tribWord ( n ) :
+    Sn_1 = "" ""
+    Sn_2 = "" ""
+    Sn_3 = "" ""
+    for i in range ( 3 , n + 1 ) :
+        tmp = Sn_3
+        Sn_3 = Sn_3 + ( Sn_2 + Sn_1 )
+        Sn_1 = Sn_2
+        Sn_2 = tmp
+    return Sn_3"
+105,"def findSubstrings ( s , k ) :
+    ans = 0
+    n = len ( s )
+    for i in range ( n ) :
+        cnt = [ 0 ] * 26
+        for j in range ( i , n ) :
+            cnt [ ord ( s [ j ] ) - ord ( 'a' ) ] += 1
+            if ( cnt [ ord ( s [ j ] ) - ord ( 'a' ) ] <= k ) :
+                ans += 1
+            else :
+                break
+    return ans
+","def findSuffix ( s , k ) :
+    ans = 0
+    n = len ( s )
+    for i in range ( n ) :
+        cnt = [ 0 ] * 26
+        for j in range ( i , n ) :
+            cnt [ ord ( s [ j ] ) - ord ( 'a' ) ] += 1
+            if ( cnt [ ord ( s [ j ] ) - ord ( 'a' ) ] <= k ) :
+                ans += 1
+            else :
+                break
+    return ans
+","def findSubstrings ( s , k ) :
+    ans = 0
+    n = len ( s )
+    i = 0
+    while i in list ( range ( n ) ) :
+        cnt = [ 0 ] * 26
+        for j in range ( i , n ) :
+            cnt [ ord ( s [ j ] ) - ord ( 'a' ) ] += 1
+            if ( cnt [ ord ( s [ j ] ) - ord ( 'a' ) ] <= k ) :
+                ans += 1
+            else :
+                i += 1
+                break
+        i += 1
+    return ans"
+106,"def getSubSeq ( s , n ) :
+    res = """"
+    cr = 0
+    while ( cr < n ) :
+        mx = s [ cr ]
+        for i in range ( cr + 1 , n ) :
+            mx = max ( mx , s [ i ] )
+        lst = cr
+        for i in range ( cr , n ) :
+            if ( s [ i ] == mx ) :
+                res += s [ i ]
+                lst = i
+        cr = lst + 1
+    return res
+","def keyLengthSeq ( s , n ) :
+    res = """"
+    cr = 0
+    while ( cr < n ) :
+        mx = s [ cr ]
+        for i in range ( cr + 1 , n ) :
+            mx = max ( mx , s [ i ] )
+        lst = cr
+        for i in range ( cr , n ) :
+            if ( s [ i ] == mx ) :
+                res += s [ i ]
+                lst = i
+        cr = lst + 1
+    return res
+","def getSubSeq ( s , n ) :
+    res = """"
+    cr = 0
+    while ( cr < n ) :
+        mx = s [ cr ]
+        for i in range ( cr + 1 , n ) :
+            mx = max ( mx , s [ i ] )
+        lst = cr
+        for i in range ( cr , n ) :
+            if ( mx == s [ i ] ) :
+                res += s [ i ]
+                lst = i
+        cr = lst + 1
+    return res"
+107,"def findNumber ( n ) :
+    n -= 1
+    i = 1
+    while n >= 0 :
+        n -= i
+        i += 1
+    return ( n + i )
+","def findNumbers ( n ) :
+    n -= 1
+    i = 1
+    while n >= 0 :
+        n -= i
+        i += 1
+    return ( n + i )
+","def findNumber ( n ) :
+    n -= 1
+    i = 1
+    while 0 <= n :
+        n -= i
+        i += 1
+    return ( n + i )"
+108,"def findSmallest ( s ) :
+    length = len ( s )
+    loccur = [ - 1 ] * 26
+    for i in range ( length - 1 , - 1 , - 1 ) :
+        chI = ord ( s [ i ] ) - ord ( 'a' )
+        if ( loccur [ chI ] == - 1 ) :
+            loccur [ chI ] = i
+    sorted_s = s
+    sorted_s.sort ( )
+    for i in range ( length ) :
+        if ( s [ i ] != sorted_s [ i ] ) :
+            chI = ord ( sorted_s [ i ] ) - ord ( 'a' )
+            last_occ = loccur [ chI ]
+            s [ i ] , s [ last_occ ] = s [ last_occ ] , s [ i ]
+            break
+    return """".join ( s )
+","def findPosition ( s ) :
+    length = len ( s )
+    loccur = [ - 1 ] * 26
+    for i in range ( length - 1 , - 1 , - 1 ) :
+        chI = ord ( s [ i ] ) - ord ( 'a' )
+        if ( loccur [ chI ] == - 1 ) :
+            loccur [ chI ] = i
+    sorted_s = s
+    sorted_s.sort ( )
+    for i in range ( length ) :
+        if ( s [ i ] != sorted_s [ i ] ) :
+            chI = ord ( sorted_s [ i ] ) - ord ( 'a' )
+            last_occ = loccur [ chI ]
+            s [ i ] , s [ last_occ ] = s [ last_occ ] , s [ i ]
+            break
+    return """".join ( s )
+","def findSmallest ( s ) :
+    length = len ( s )
+    loccur = [ - 1 ] * 26
+    for i in range ( length - 1 , - 1 , - 1 ) :
+        chI = ord ( s [ i ] ) - ord ( 'a' )
+        if ( - 1 == loccur [ chI ] ) :
+            loccur [ chI ] = i
+    sorted_s = s
+    sorted_s.sort ( )
+    for i in range ( length ) :
+        if ( s [ i ] != sorted_s [ i ] ) :
+            chI = ord ( sorted_s [ i ] ) - ord ( 'a' )
+            last_occ = loccur [ chI ]
+            s [ i ] , s [ last_occ ] = s [ last_occ ] , s [ i ]
+            break
+    return """".join ( s )"
+109,"def canMakeEqual ( a , n ) :
+    for i in range ( n ) :
+        while ( a [ i ] % 5 == 0 ) :
+            a [ i ] //= 5
+        while ( a [ i ] % 3 == 0 ) :
+            a [ i ] //= 3
+    last = a [ 0 ]
+    for i in range ( 1 , n ) :
+        if ( a [ i ] != last ) :
+            return False
+    return True
+","def canMakeEual ( a , n ) :
+    for i in range ( n ) :
+        while ( a [ i ] % 5 == 0 ) :
+            a [ i ] //= 5
+        while ( a [ i ] % 3 == 0 ) :
+            a [ i ] //= 3
+    last = a [ 0 ]
+    for i in range ( 1 , n ) :
+        if ( a [ i ] != last ) :
+            return False
+    return True
+","def canMakeEqual ( a , n ) :
+    for i in range ( n ) :
+        while ( a [ i ] % 5 == 0 ) :
+            a [ i ] //= 5
+        while ( a [ i ] % 3 == 0 ) :
+            a [ i ] //= 3
+    last = a [ 0 ]
+    i = 1
+    while i in list ( range ( n ) ) :
+        if ( a [ i ] != last ) :
+            i += 1
+            return False
+        i += 1
+    return True"
+110,"def isValid ( string , length ) :
+    for i in range ( 1 , length ) :
+        if string [ i ] == string [ i - 1 ] :
+            return False
+    return True
+","def possibleIf ( string , length ) :
+    for i in range ( 1 , length ) :
+        if string [ i ] == string [ i - 1 ] :
+            return False
+    return True
+","def isValid ( string , length ) :
+    i = 1
+    while i in list ( range ( length ) ) :
+        if string [ i ] == string [ i - 1 ] :
+            i += 1
+            return False
+        i += 1
+    return True"
+111,"def XorAscii ( str1 , len1 ) :
+    ans = ord ( str1 [ 0 ] )
+    for i in range ( 1 , len1 ) :
+        ans = ( ans ^ ( ord ( str1 [ i ] ) ) )
+    return ans
+","def seiresAscii ( str1 , len1 ) :
+    ans = ord ( str1 [ 0 ] )
+    for i in range ( 1 , len1 ) :
+        ans = ( ans ^ ( ord ( str1 [ i ] ) ) )
+    return ans
+","def XorAscii ( str1 , len1 ) :
+    ans = ord ( str1 [ 0 ] )
+    i = 1
+    while i in list ( range ( len1 ) ) :
+        ans = ( ans ^ ( ord ( str1 [ i ] ) ) )
+        i += 1
+    return ans"
+112,"def steps ( source , step , dest ) :
+    if ( abs ( source ) > ( dest ) ) :
+        return sys.maxsize
+    if ( source == dest ) :
+        return step
+    pos = steps ( source + step + 1 , step + 1 , dest )
+    neg = steps ( source - step - 1 , step + 1 , dest )
+    return min ( pos , neg )
+","def exclud ( source , step , dest ) :
+    if ( abs ( source ) > ( dest ) ) :
+        return sys.maxsize
+    if ( source == dest ) :
+        return step
+    pos = exclud ( source + step + 1 , step + 1 , dest )
+    neg = exclud ( source - step - 1 , step + 1 , dest )
+    return min ( pos , neg )
+","def steps ( source , step , dest ) :
+    if ( abs ( source ) > ( dest ) ) :
+        return sys.maxsize
+    if ( dest == source ) :
+        return step
+    pos = steps ( source + step + 1 , step + 1 , dest )
+    neg = steps ( source - step - 1 , step + 1 , dest )
+    return min ( pos , neg )"
+113,"def decideWinner ( a , n ) :
+    count0 = 0
+    count1 = 0
+    count2 = 0
+    count3 = 0
+    for i in range ( n ) :
+        if ( a [ i ] % 4 == 0 ) :
+            count0 += 1
+        elif ( a [ i ] % 4 == 1 ) :
+            count1 += 1
+        elif ( a [ i ] % 4 == 2 ) :
+            count2 += 1
+        elif ( a [ i ] % 4 == 3 ) :
+            count3 += 1
+    if ( count0 % 2 == 0 and count1 % 2 == 0 and count2 % 2 == 0 and count3 == 0 ) :
+        return 1
+    else :
+        return 2
+","def decideSurface ( a , n ) :
+    count0 = 0
+    count1 = 0
+    count2 = 0
+    count3 = 0
+    for i in range ( n ) :
+        if ( a [ i ] % 4 == 0 ) :
+            count0 += 1
+        elif ( a [ i ] % 4 == 1 ) :
+            count1 += 1
+        elif ( a [ i ] % 4 == 2 ) :
+            count2 += 1
+        elif ( a [ i ] % 4 == 3 ) :
+            count3 += 1
+    if ( count0 % 2 == 0 and count1 % 2 == 0 and count2 % 2 == 0 and count3 == 0 ) :
+        return 1
+    else :
+        return 2
+","def decideWinner ( a , n ) :
+    count0 = 0
+    count1 = 0
+    count2 = 0
+    count3 = 0
+    i = 0
+    while i in list ( range ( n ) ) :
+        if ( a [ i ] % 4 == 0 ) :
+            count0 += 1
+        elif ( a [ i ] % 4 == 1 ) :
+            count1 += 1
+        elif ( a [ i ] % 4 == 2 ) :
+            count2 += 1
+        elif ( a [ i ] % 4 == 3 ) :
+            count3 += 1
+        i += 1
+    if ( count0 % 2 == 0 and count1 % 2 == 0 and count2 % 2 == 0 and count3 == 0 ) :
+        return 1
+    else :
+        return 2"
+114,"def check ( a , n ) :
+    for i in range ( n ) :
+        if ( a [ i ] ) :
+            return True
+    return False
+","def converthenumber ( a , n ) :
+    for i in range ( n ) :
+        if ( a [ i ] ) :
+            return True
+    return False
+","def check ( a , n ) :
+    i = 0
+    while i in list ( range ( n ) ) :
+        if ( a [ i ] ) :
+            i += 1
+            return True
+        i += 1
+    return False"
+115,"def longestSubArray ( arr , n ) :
+    isZeroPresent = False
+    for i in range ( 0 , n ) :
+        if ( arr [ i ] == 0 ) :
+            isZeroPresent = True
+            break
+    if ( isZeroPresent ) :
+        return n
+    return 0
+","def longstSubArray ( arr , n ) :
+    isZeroPresent = False
+    for i in range ( 0 , n ) :
+        if ( arr [ i ] == 0 ) :
+            isZeroPresent = True
+            break
+    if ( isZeroPresent ) :
+        return n
+    return 0
+","def longestSubArray ( arr , n ) :
+    isZeroPresent = False
+    i = 0
+    while i in list ( range ( n ) ) :
+        if ( arr [ i ] == 0 ) :
+            isZeroPresent = True
+            i += 1
+            break
+        i += 1
+    if ( isZeroPresent ) :
+        return n
+    return 0"
+116,"def submatrixXor ( arr , n ) :
+    ans = 0
+    for i in range ( 0 , n ) :
+        for j in range ( 0 , n ) :
+            top_left = ( i + 1 ) * ( j + 1 )
+            bottom_right = ( n - i ) * ( n - j )
+            if ( top_left % 2 == 1 and bottom_right % 2 == 1 ) :
+                ans = ( ans ^ arr [ i ] [ j ] )
+    return ans
+","def sumbatrixSeires ( arr , n ) :
+    ans = 0
+    for i in range ( 0 , n ) :
+        for j in range ( 0 , n ) :
+            top_left = ( i + 1 ) * ( j + 1 )
+            bottom_right = ( n - i ) * ( n - j )
+            if ( top_left % 2 == 1 and bottom_right % 2 == 1 ) :
+                ans = ( ans ^ arr [ i ] [ j ] )
+    return ans
+","def submatrixXor ( arr , n ) :
+    ans = 0
+    for i in range ( 0 , n ) :
+        for j in range ( 0 , n ) :
+            top_left = ( i + 1 ) * ( j + 1 )
+            bottom_right = ( n - i ) * ( n - j )
+            if ( 1 == top_left % 2 and bottom_right % 2 == 1 ) :
+                ans = ( ans ^ arr [ i ] [ j ] )
+    return ans"
+117,"def sumOfTheSeries ( n ) :
+    sum = 0
+    for i in range ( 0 , n + 1 ) :
+        k = 2
+        for j in range ( 1 , i + 1 ) :
+            sum = sum + k
+            k = k + 2
+    return sum
+","def currOfTheNumberofterm ( n ) :
+    sum = 0
+    for i in range ( 0 , n + 1 ) :
+        k = 2
+        for j in range ( 1 , i + 1 ) :
+            sum = sum + k
+            k = k + 2
+    return sum
+","def sumOfTheSeries ( n ) :
+    sum = 0
+    i = 0
+    while i in list ( range ( n + 1 ) ) :
+        k = 2
+        for j in range ( 1 , i + 1 ) :
+            sum = sum + k
+            k = k + 2
+        i += 1
+    return sum"
+118,"def minChanges ( A , n ) :
+    cnt = 0
+    for i in range ( n - 2 ) :
+        if ( ( i - 1 >= 0 ) and A [ i - 1 ] == 1 and A [ i + 1 ] == 1 and A [ i ] == 0 ) :
+            A [ i + 1 ] = 0
+            cnt = cnt + 1
+    return cnt
+","def miChanges ( A , n ) :
+    cnt = 0
+    for i in range ( n - 2 ) :
+        if ( ( i - 1 >= 0 ) and A [ i - 1 ] == 1 and A [ i + 1 ] == 1 and A [ i ] == 0 ) :
+            A [ i + 1 ] = 0
+            cnt = cnt + 1
+    return cnt
+","def minChanges ( A , n ) :
+    cnt = 0
+    for i in range ( n - 2 ) :
+        if ( ( i - 1 >= 0 ) and 1 == A [ i - 1 ] and A [ i + 1 ] == 1 and A [ i ] == 0 ) :
+            A [ i + 1 ] = 0
+            cnt = cnt + 1
+    return cnt"
+119,"def count ( n ) :
+    cnt = 0
+    p = 1
+    while ( p <= n ) :
+        cnt = cnt + 1
+        p *= 2
+    return cnt
+","def cnt ( n ) :
+    cnt = 0
+    p = 1
+    while ( p <= n ) :
+        cnt = cnt + 1
+        p *= 2
+    return cnt
+","def count ( n ) :
+    cnt = 0
+    p = 1
+    while ( n >= p ) :
+        cnt = cnt + 1
+        p *= 2
+    return cnt"
+120,"def countTripletsLessThanL ( n , L , arr ) :
+    arr.sort ( )
+    ways = 0
+    for i in range ( n ) :
+        for j in range ( i + 1 , n ) :
+            for k in range ( j + 1 , n ) :
+                mostDistantDistance = arr [ k ] - arr [ i ]
+                if ( mostDistantDistance <= L ) :
+                    ways += 1
+    return ways
+","def countTriplestWithWithL ( n , L , arr ) :
+    arr.sort ( )
+    ways = 0
+    for i in range ( n ) :
+        for j in range ( i + 1 , n ) :
+            for k in range ( j + 1 , n ) :
+                mostDistantDistance = arr [ k ] - arr [ i ]
+                if ( mostDistantDistance <= L ) :
+                    ways += 1
+    return ways
+","def countTripletsLessThanL ( n , L , arr ) :
+    arr.sort ( )
+    ways = 0
+    for i in range ( n ) :
+        for j in range ( i + 1 , n ) :
+            for k in range ( j + 1 , n ) :
+                mostDistantDistance = arr [ k ] - arr [ i ]
+                if ( L >= mostDistantDistance ) :
+                    ways += 1
+    return ways"
+121,"def FindElement ( A , n ) :
+    for i in range ( 0 , n , 1 ) :
+        flag = 0
+        for j in range ( 0 , i , 1 ) :
+            if ( A [ j ] >= A [ i ] ) :
+                flag = 1
+                break
+        for j in range ( i + 1 , n , 1 ) :
+            if ( A [ j ] <= A [ i ] ) :
+                flag = 1
+                break
+        if ( flag == 0 ) :
+            return A [ i ]
+    return - 1
+","def findElemnt ( A , n ) :
+    for i in range ( 0 , n , 1 ) :
+        flag = 0
+        for j in range ( 0 , i , 1 ) :
+            if ( A [ j ] >= A [ i ] ) :
+                flag = 1
+                break
+        for j in range ( i + 1 , n , 1 ) :
+            if ( A [ j ] <= A [ i ] ) :
+                flag = 1
+                break
+        if ( flag == 0 ) :
+            return A [ i ]
+    return - 1
+","def FindElement ( A , n ) :
+    i = 0
+    while i in list ( range ( n ) ) :
+        flag = 0
+        for j in range ( 0 , i , 1 ) :
+            if ( A [ j ] >= A [ i ] ) :
+                flag = 1
+                i += 1
+                break
+        for j in range ( i + 1 , n , 1 ) :
+            if ( A [ j ] <= A [ i ] ) :
+                flag = 1
+                i += 1
+                break
+        if ( flag == 0 ) :
+            i += 1
+            return A [ i ]
+        i += 1
+    return - 1"
+122,"def validPosition ( arr , N , K ) :
+    count = 0 ; sum = 0
+    for i in range ( N ) :
+        sum += arr [ i ]
+    for i in range ( N ) :
+        if ( ( arr [ i ] + K ) > ( sum - arr [ i ] ) ) :
+            count += 1
+    return count
+","def validSubarr ( arr , N , K ) :
+    count = 0 ; sum = 0
+    for i in range ( N ) :
+        sum += arr [ i ]
+    for i in range ( N ) :
+        if ( ( arr [ i ] + K ) > ( sum - arr [ i ] ) ) :
+            count += 1
+    return count
+","def validPosition ( arr , N , K ) :
+    count = 0
+    ; sum = 0
+    for i in range ( N ) :
+        sum += arr [ i ]
+    for i in range ( N ) :
+        if ( ( sum - arr [ i ] ) < ( arr [ i ] + K ) ) :
+            count += 1
+    return count"
+123,"def findSmallest ( a , n ) :
+    for i in range ( 0 , n ) :
+        for j in range ( 0 , n ) :
+            if ( ( a [ j ] % a [ i ] ) >= 1 ) :
+                break
+            if ( j == n - 1 ) :
+                return a [ i ]
+        return - 1
+    ","def findSmallest ( a , n ) :
+    for i in range ( 0 , n ) :
+        for j in range ( 0 , n ) :
+            if ( ( a [ j ] % a [ i ] ) >= 1 ) :
+                break
+            if ( j == n - 1 ) :
+                return a [ i ]
+        return - 1
+","def findSmallest ( a , n ) :
+    i = 0
+    while i in list ( range ( n ) ) :
+        for j in range ( 0 , n ) :
+            if ( ( a [ j ] % a [ i ] ) >= 1 ) :
+                i += 1
+                break
+            if ( j == n - 1 ) :
+                i += 1
+                return a [ i ]
+        i += 1
+        return - 1
+        i += 1"
+124,"def findNthEvenDigitNumber ( n ) :
+    if ( n == 1 ) :
+        return 0
+    v = [ ]
+    n = n - 1
+    while ( n > 0 ) :
+        v.append ( n % 5 )
+        n = n // 5
+    result = 0
+    for i in range ( len ( v ) - 1 , - 1 , - 1 ) :
+        result = result * 10
+        result = result + v [ i ]
+    return 2 * result
+","def cocktailNhEevnDigitNumbre ( n ) :
+    if ( n == 1 ) :
+        return 0
+    v = [ ]
+    n = n - 1
+    while ( n > 0 ) :
+        v.append ( n % 5 )
+        n = n // 5
+    result = 0
+    for i in range ( len ( v ) - 1 , - 1 , - 1 ) :
+        result = result * 10
+        result = result + v [ i ]
+    return 2 * result
+","def findNthEvenDigitNumber ( n ) :
+    if ( n == 1 ) :
+        return 0
+    v = [ ]
+    n = n - 1
+    while ( n > 0 ) :
+        v.append ( n % 5 )
+        n = n // 5
+    result = 0
+    i = len ( v ) - 1
+    while i in list ( range ( - 1 ) ) :
+        result = result * 10
+        result = result + v [ i ]
+        i += - 1
+    return 2 * result"
+125,"def countNums ( l , r ) :
+    cnt = 0
+    for i in range ( l , r + 1 ) :
+        lastDigit = ( i % 10 )
+        if ( ( lastDigit % 10 ) == 2 or ( lastDigit % 10 ) == 3 or ( lastDigit % 10 ) == 9 ) :
+            cnt += 1
+    return cnt
+","def cntNusm ( l , r ) :
+    cnt = 0
+    for i in range ( l , r + 1 ) :
+        lastDigit = ( i % 10 )
+        if ( ( lastDigit % 10 ) == 2 or ( lastDigit % 10 ) == 3 or ( lastDigit % 10 ) == 9 ) :
+            cnt += 1
+    return cnt
+","def countNums ( l , r ) :
+    cnt = 0
+    for i in range ( l , r + 1 ) :
+        lastDigit = ( i % 10 )
+        if ( 2 == ( lastDigit % 10 ) or ( lastDigit % 10 ) == 3 or ( lastDigit % 10 ) == 9 ) :
+            cnt += 1
+    return cnt"
+126,"def countMaxSetBits ( left , right ) :
+    while ( left | ( left + 1 ) ) <= right :
+        left |= left + 1
+    return left
+","def cntMaxSetBits ( left , right ) :
+    while ( left | ( left + 1 ) ) <= right :
+        left |= left + 1
+    return left
+","def countMaxSetBits ( left , right ) :
+    while right >= ( left | ( left + 1 ) ) :
+        left |= left + 1
+    return left"
+127,"def LongestSubarray ( a , n , k ) :
+    pre = [ 0 for i in range ( n ) ]
+    for i in range ( n ) :
+        if ( a [ i ] > k ) :
+            pre [ i ] = 1
+        else :
+            pre [ i ] = - 1
+    for i in range ( 1 , n ) :
+        pre [ i ] = pre [ i - 1 ] + pre [ i ]
+    Len = 0
+    lo = 1
+    hi = n
+    while ( lo <= hi ) :
+        mid = ( lo + hi ) // 2
+        ok = False
+        for i in range ( mid - 1 , n ) :
+            x = pre [ i ]
+            if ( i - mid >= 0 ) :
+                x -= pre [ i - mid ]
+            if ( x > 0 ) :
+                ok = True
+                break
+        if ( ok == True ) :
+            Len = mid
+            lo = mid + 1
+        else :
+            hi = mid - 1
+    return Len
+","def longestSubarray ( a , n , k ) :
+    pre = [ 0 for i in range ( n ) ]
+    for i in range ( n ) :
+        if ( a [ i ] > k ) :
+            pre [ i ] = 1
+        else :
+            pre [ i ] = - 1
+    for i in range ( 1 , n ) :
+        pre [ i ] = pre [ i - 1 ] + pre [ i ]
+    Len = 0
+    lo = 1
+    hi = n
+    while ( lo <= hi ) :
+        mid = ( lo + hi ) // 2
+        ok = False
+        for i in range ( mid - 1 , n ) :
+            x = pre [ i ]
+            if ( i - mid >= 0 ) :
+                x -= pre [ i - mid ]
+            if ( x > 0 ) :
+                ok = True
+                break
+        if ( ok == True ) :
+            Len = mid
+            lo = mid + 1
+        else :
+            hi = mid - 1
+    return Len
+","def LongestSubarray ( a , n , k ) :
+    pre = [ 0 for i in range ( n ) ]
+    for i in range ( n ) :
+        if ( a [ i ] > k ) :
+            pre [ i ] = 1
+        else :
+            pre [ i ] = - 1
+    i = 1
+    while i in list ( range ( n ) ) :
+        pre [ i ] = pre [ i - 1 ] + pre [ i ]
+        i += 1
+    Len = 0
+    lo = 1
+    hi = n
+    while ( lo <= hi ) :
+        mid = ( lo + hi ) // 2
+        ok = False
+        for i in range ( mid - 1 , n ) :
+            x = pre [ i ]
+            if ( i - mid >= 0 ) :
+                x -= pre [ i - mid ]
+            if ( x > 0 ) :
+                ok = True
+                break
+        if ( ok == True ) :
+            Len = mid
+            lo = mid + 1
+        else :
+            hi = mid - 1
+    return Len"
+128,"def countSubSeq ( i , Sum , cnt , a , n ) :
+    if ( i == n ) :
+        if ( Sum == 0 and cnt > 0 ) :
+            return 1
+        else :
+            return 0
+    ans = 0
+    ans += countSubSeq ( i + 1 , Sum , cnt , a , n )
+    ans += countSubSeq ( i + 1 , Sum + a [ i ] , cnt + 1 , a , n )
+    return ans
+","def conutSubSeq ( i , Sum , cnt , a , n ) :
+    if ( i == n ) :
+        if ( Sum == 0 and cnt > 0 ) :
+            return 1
+        else :
+            return 0
+    ans = 0
+    ans += conutSubSeq ( i + 1 , Sum , cnt , a , n )
+    ans += conutSubSeq ( i + 1 , Sum + a [ i ] , cnt + 1 , a , n )
+    return ans
+","def countSubSeq ( i , Sum , cnt , a , n ) :
+    if ( i == n ) :
+        if ( 0 == Sum and cnt > 0 ) :
+            return 1
+        else :
+            return 0
+    ans = 0
+    ans += countSubSeq ( i + 1 , Sum , cnt , a , n )
+    ans += countSubSeq ( i + 1 , Sum + a [ i ] , cnt + 1 , a , n )
+    return ans"
+129,"def maxLength ( arr , N ) :
+    product = 1
+    Len = 0
+    for i in arr :
+        product *= i
+    if ( product >= 0 ) :
+        return N
+    for i in range ( N ) :
+        if ( arr [ i ] < 0 ) :
+            Len = max ( Len , max ( N - i - 1 , i ) )
+    return Len
+","def mxLength ( arr , N ) :
+    product = 1
+    Len = 0
+    for i in arr :
+        product *= i
+    if ( product >= 0 ) :
+        return N
+    for i in range ( N ) :
+        if ( arr [ i ] < 0 ) :
+            Len = max ( Len , max ( N - i - 1 , i ) )
+    return Len
+","def maxLength ( arr , N ) :
+    product = 1
+    Len = 0
+    for i in arr :
+        product *= i
+    if ( product >= 0 ) :
+        return N
+    for i in range ( N ) :
+        if ( 0 > arr [ i ] ) :
+            Len = max ( Len , max ( N - i - 1 , i ) )
+    return Len"
+130,"def FindElement ( A , n ) :
+    for i in range ( 0 , n , 1 ) :
+        flag = 0
+        for j in range ( 0 , i , 1 ) :
+            if ( A [ j ] >= A [ i ] ) :
+                flag = 1
+                break
+        for j in range ( i + 1 , n , 1 ) :
+            if ( A [ j ] <= A [ i ] ) :
+                flag = 1
+                break
+        if ( flag == 0 ) :
+            return A [ i ]
+    return - 1
+","def findProduct ( A , n ) :
+    for i in range ( 0 , n , 1 ) :
+        flag = 0
+        for j in range ( 0 , i , 1 ) :
+            if ( A [ j ] >= A [ i ] ) :
+                flag = 1
+                break
+        for j in range ( i + 1 , n , 1 ) :
+            if ( A [ j ] <= A [ i ] ) :
+                flag = 1
+                break
+        if ( flag == 0 ) :
+            return A [ i ]
+    return - 1
+","def FindElement ( A , n ) :
+    for i in range ( 0 , n , 1 ) :
+        flag = 0
+        for j in range ( 0 , i , 1 ) :
+            if ( A [ j ] >= A [ i ] ) :
+                flag = 1
+                break
+        j = i + 1
+        while j in list ( range ( n ) ) :
+            if ( A [ j ] <= A [ i ] ) :
+                flag = 1
+                j += 1
+                break
+            j += 1
+        if ( flag == 0 ) :
+            return A [ i ]
+    return - 1"
+131,"def countKdivPairs ( A , n , K ) :
+    freq = [ 0 for i in range ( K ) ]
+    ans = 0
+    for i in range ( n ) :
+        rem = A [ i ] % K
+        if ( rem != 0 ) :
+            ans += freq [ K - rem ]
+        else :
+            ans += freq [ 0 ]
+        freq [ rem ] += 1
+    return ans
+","def coutnKivSubarrays ( A , n , K ) :
+    freq = [ 0 for i in range ( K ) ]
+    ans = 0
+    for i in range ( n ) :
+        rem = A [ i ] % K
+        if ( rem != 0 ) :
+            ans += freq [ K - rem ]
+        else :
+            ans += freq [ 0 ]
+        freq [ rem ] += 1
+    return ans
+","def countKdivPairs ( A , n , K ) :
+    freq = [ 0 for i in range ( K ) ]
+    ans = 0
+    for i in range ( n ) :
+        rem = A [ i ] % K
+        if ( 0 != rem ) :
+            ans += freq [ K - rem ]
+        else :
+            ans += freq [ 0 ]
+        freq [ rem ] += 1
+    return ans"
+132,"def areSetBitsIncreasing ( n ) :
+    prev_count = sys.maxsize
+    while ( n > 0 ) :
+        while ( n > 0 and n % 2 == 0 ) :
+            n = int ( n / 2 )
+        curr_count = 1
+        while ( n > 0 and n % 2 == 1 ) :
+            n = n / 2
+            curr_count += 1
+        if ( curr_count >= prev_count ) :
+            return False
+        prev_count = curr_count
+    return True
+","def areSetBitIncreasing ( n ) :
+    prev_count = sys.maxsize
+    while ( n > 0 ) :
+        while ( n > 0 and n % 2 == 0 ) :
+            n = int ( n / 2 )
+        curr_count = 1
+        while ( n > 0 and n % 2 == 1 ) :
+            n = n / 2
+            curr_count += 1
+        if ( curr_count >= prev_count ) :
+            return False
+        prev_count = curr_count
+    return True
+","def areSetBitsIncreasing ( n ) :
+    prev_count = sys.maxsize
+    while ( n > 0 ) :
+        while ( 0 < n and n % 2 == 0 ) :
+            n = int ( n / 2 )
+        curr_count = 1
+        while ( n > 0 and n % 2 == 1 ) :
+            n = n / 2
+            curr_count += 1
+        if ( curr_count >= prev_count ) :
+            return False
+        prev_count = curr_count
+    return True"
+133,"def sumOfTheSeries ( n ) :
+    sum = 0
+    for i in range ( 1 , n + 1 ) :
+        k = 1
+        for j in range ( 1 , i + 1 ) :
+            sum += k
+            k += 2
+    return sum
+","def sumOfParallelSeries ( n ) :
+    sum = 0
+    for i in range ( 1 , n + 1 ) :
+        k = 1
+        for j in range ( 1 , i + 1 ) :
+            sum += k
+            k += 2
+    return sum
+","def sumOfTheSeries ( n ) :
+    sum = 0
+    for i in range ( 1 , n + 1 ) :
+        k = 1
+        for j in range ( 1 , i + 1 ) :
+            sum = sum + k
+            k = k + 2
+    return sum"
+134,"def printNthElement ( n ) :
+    arr = [ 0 ] * ( n + 1 )
+    arr [ 1 ] = 3
+    arr [ 2 ] = 5
+    for i in range ( 3 , n + 1 ) :
+        if ( i % 2 != 0 ) :
+            arr [ i ] = arr [ i // 2 ] * 10 + 3
+        else :
+            arr [ i ] = arr [ ( i // 2 ) - 1 ] * 10 + 5
+    return arr [ n ]
+","def printNthFirst ( n ) :
+    arr = [ 0 ] * ( n + 1 )
+    arr [ 1 ] = 3
+    arr [ 2 ] = 5
+    for i in range ( 3 , n + 1 ) :
+        if ( i % 2 != 0 ) :
+            arr [ i ] = arr [ i // 2 ] * 10 + 3
+        else :
+            arr [ i ] = arr [ ( i // 2 ) - 1 ] * 10 + 5
+    return arr [ n ]
+","def printNthElement ( n ) :
+    arr = [ 0 ] * ( n + 1 )
+    arr [ 1 ] = 3
+    arr [ 2 ] = 5
+    i = 3
+    while i in list ( range ( n + 1 ) ) :
+        if ( i % 2 != 0 ) :
+            arr [ i ] = arr [ i // 2 ] * 10 + 3
+        else :
+            arr [ i ] = arr [ ( i // 2 ) - 1 ] * 10 + 5
+        i += 1
+    return arr [ n ]"
+135,"def remainingArea ( N , M , K ) :
+    while ( K > 0 and N > 0 and M > 0 ) :
+        if ( N > M ) :
+            N = N - M
+        else :
+            M = M - N
+        K = K - 1
+    if ( N > 0 and M > 0 ) :
+        return N * M
+    else :
+        return 0
+","def subarrayArea ( N , M , K ) :
+    while ( K > 0 and N > 0 and M > 0 ) :
+        if ( N > M ) :
+            N = N - M
+        else :
+            M = M - N
+        K = K - 1
+    if ( N > 0 and M > 0 ) :
+        return N * M
+    else :
+        return 0
+","def remainingArea ( N , M , K ) :
+    while ( K > 0 and N > 0 and M > 0 ) :
+        if ( N > M ) :
+            N = N - M
+        else :
+            M = M - N
+        K = K - 1
+    if ( N > 0 and 0 < M ) :
+        return N * M
+    else :
+        return 0"
+136,"def averageValue ( s ) :
+    sum_char = 0
+    for i in range ( len ( s ) ) :
+        sum_char += ord ( s [ i ] )
+    return sum_char // len ( s )
+","def spiralVaule ( s ) :
+    sum_char = 0
+    for i in range ( len ( s ) ) :
+        sum_char += ord ( s [ i ] )
+    return sum_char // len ( s )
+","def averageValue ( s ) :
+    sum_char = 0
+    i = 0
+    while i in list ( range ( len ( s ) ) ) :
+        sum_char += ord ( s [ i ] )
+        i += 1
+    return sum_char // len ( s )"
+137,"def isPossible ( n ) :
+    fac = [ 0 for i in range ( 10 ) ]
+    fac [ 0 ] = 1
+    fac [ 1 ] = 1
+    for i in range ( 2 , 10 , 1 ) :
+        fac [ i ] = fac [ i - 1 ] * i
+    sum = 0
+    x = n
+    while ( x ) :
+        sum += fac [ x % 10 ]
+        x = int ( x / 10 )
+    if ( sum % n == 0 ) :
+        return True
+    return False
+","def isEqual ( n ) :
+    fac = [ 0 for i in range ( 10 ) ]
+    fac [ 0 ] = 1
+    fac [ 1 ] = 1
+    for i in range ( 2 , 10 , 1 ) :
+        fac [ i ] = fac [ i - 1 ] * i
+    sum = 0
+    x = n
+    while ( x ) :
+        sum += fac [ x % 10 ]
+        x = int ( x / 10 )
+    if ( sum % n == 0 ) :
+        return True
+    return False
+","def isPossible ( n ) :
+    fac = [ 0 for i in range ( 10 ) ]
+    fac [ 0 ] = 1
+    fac [ 1 ] = 1
+    for i in range ( 2 , 10 , 1 ) :
+        fac [ i ] = fac [ i - 1 ] * i
+    sum = 0
+    x = n
+    while ( x ) :
+        sum += fac [ x % 10 ]
+        x = int ( x / 10 )
+    if ( 0 == sum % n ) :
+        return True
+    return False"
+138,"def XorAscii ( str1 , len1 ) :
+    ans = ord ( str1 [ 0 ] )
+    for i in range ( 1 , len1 ) :
+        ans = ( ans ^ ( ord ( str1 [ i ] ) ) )
+    return ans
+","def seiresPalin ( str1 , len1 ) :
+    ans = ord ( str1 [ 0 ] )
+    for i in range ( 1 , len1 ) :
+        ans = ( ans ^ ( ord ( str1 [ i ] ) ) )
+    return ans
+","def XorAscii ( str1 , len1 ) :
+    ans = ord ( str1 [ 0 ] )
+    i = 1
+    while i in list ( range ( len1 ) ) :
+        ans = ( ans ^ ( ord ( str1 [ i ] ) ) )
+        i += 1
+    return ans"
+139,"def lenOfLongIncSubArr ( arr , n ) :
+    m = 1
+    l = 1
+    for i in range ( 1 , n ) :
+        if ( arr [ i ] > arr [ i - 1 ] ) :
+            l = l + 1
+        else :
+            if ( m < l ) :
+                m = l
+            l = 1
+    if ( m < l ) :
+        m = l
+    return m
+","def lneOLongSpaceSeqVisited ( arr , n ) :
+    m = 1
+    l = 1
+    for i in range ( 1 , n ) :
+        if ( arr [ i ] > arr [ i - 1 ] ) :
+            l = l + 1
+        else :
+            if ( m < l ) :
+                m = l
+            l = 1
+    if ( m < l ) :
+        m = l
+    return m
+","def lenOfLongIncSubArr ( arr , n ) :
+    m = 1
+    l = 1
+    i = 1
+    while i in list ( range ( n ) ) :
+        if ( arr [ i ] > arr [ i - 1 ] ) :
+            l = l + 1
+        else :
+            if ( m < l ) :
+                m = l
+            l = 1
+        i += 1
+    if ( m < l ) :
+        m = l
+    return m"
+140,"def countsubarray ( array , n , k ) :
+    count = 0
+    for i in range ( 0 , n ) :
+        if array [ i ] <= k :
+            count += 1
+        mul = array [ i ]
+        for j in range ( i + 1 , n ) :
+            mul = mul * array [ j ]
+            if mul <= k :
+                count += 1
+            else :
+                break
+    return count
+","def counstubarray ( array , n , k ) :
+    count = 0
+    for i in range ( 0 , n ) :
+        if array [ i ] <= k :
+            count += 1
+        mul = array [ i ]
+        for j in range ( i + 1 , n ) :
+            mul = mul * array [ j ]
+            if mul <= k :
+                count += 1
+            else :
+                break
+    return count
+","def countsubarray ( array , n , k ) :
+    count = 0
+    i = 0
+    while i in list ( range ( n ) ) :
+        if array [ i ] <= k :
+            count += 1
+        mul = array [ i ]
+        for j in range ( i + 1 , n ) :
+            mul = mul * array [ j ]
+            if mul <= k :
+                count += 1
+            else :
+                i += 1
+                break
+        i += 1
+    return count"
+141,"def maxDistance ( array ) :
+    max1 = - 2147483648
+    min1 = + 2147483647
+    max2 = - 2147483648
+    min2 = + 2147483647
+    for i in range ( len ( array ) ) :
+        max1 = max ( max1 , array [ i ] + i )
+        min1 = min ( min1 , array [ i ] + i )
+        max2 = max ( max2 , array [ i ] - i )
+        min2 = min ( min2 , array [ i ] - i )
+    return max ( max1 - min1 , max2 - min2 )
+","def preDitance ( array ) :
+    max1 = - 2147483648
+    min1 = + 2147483647
+    max2 = - 2147483648
+    min2 = + 2147483647
+    for i in range ( len ( array ) ) :
+        max1 = max ( max1 , array [ i ] + i )
+        min1 = min ( min1 , array [ i ] + i )
+        max2 = max ( max2 , array [ i ] - i )
+        min2 = min ( min2 , array [ i ] - i )
+    return max ( max1 - min1 , max2 - min2 )
+","def maxDistance ( array ) :
+    max1 = - 2147483648
+    min1 = + 2147483647
+    max2 = - 2147483648
+    min2 = + 2147483647
+    i = 0
+    while i in list ( range ( len ( array ) ) ) :
+        max1 = max ( max1 , array [ i ] + i )
+        min1 = min ( min1 , array [ i ] + i )
+        max2 = max ( max2 , array [ i ] - i )
+        min2 = min ( min2 , array [ i ] - i )
+        i += 1
+    return max ( max1 - min1 , max2 - min2 )"
+142,"def findSmallest ( a , n ) :
+    for i in range ( 0 , n ) :
+        for j in range ( 0 , n ) :
+            if ( ( a [ j ] % a [ i ] ) >= 1 ) :
+                break
+            if ( j == n - 1 ) :
+                return a [ i ]
+        return - 1
+    ","def findPosition ( a , n ) :
+    for i in range ( 0 , n ) :
+        for j in range ( 0 , n ) :
+            if ( ( a [ j ] % a [ i ] ) >= 1 ) :
+                break
+            if ( j == n - 1 ) :
+                return a [ i ]
+        return - 1
+","def findSmallest ( a , n ) :
+    i = 0
+    while i in list ( range ( n ) ) :
+        for j in range ( 0 , n ) :
+            if ( ( a [ j ] % a [ i ] ) >= 1 ) :
+                i += 1
+                break
+            if ( j == n - 1 ) :
+                i += 1
+                return a [ i ]
+        i += 1
+        return - 1
+        i += 1"
+143,"def isUnique ( a , n , k ) :
+    sum = 0
+    for i in range ( 0 , n , 1 ) :
+        sum += a [ i ]
+    sum += n - 1
+    return ( sum == k )
+","def zeroUnique ( a , n , k ) :
+    sum = 0
+    for i in range ( 0 , n , 1 ) :
+        sum += a [ i ]
+    sum += n - 1
+    return ( sum == k )
+","def isUnique ( a , n , k ) :
+    sum = 0
+    for i in range ( 0 , n , 1 ) :
+        sum = sum + a [ i ]
+    sum = sum + n - 1 return ( sum == k )"
+144,"def onlyFirstAndLastAreSet ( n ) :
+    if ( n == 1 ) :
+        return True
+    if ( n == 2 ) :
+        return False
+    return ( ( ( n - 1 ) & ( n - 2 ) ) == 0 )
+","def suchMajorityAndLastAltSet ( n ) :
+    if ( n == 1 ) :
+        return True
+    if ( n == 2 ) :
+        return False
+    return ( ( ( n - 1 ) & ( n - 2 ) ) == 0 )
+","def onlyFirstAndLastAreSet ( n ) :
+    if ( 1 == n ) :
+        return True
+    if ( n == 2 ) :
+        return False
+    return ( ( ( n - 1 ) & ( n - 2 ) ) == 0 )"
+145,"def MinStep ( a , n ) :
+    positive = 0
+    negative = 0
+    zero = 0
+    step = 0
+    for i in range ( n ) :
+        if ( a [ i ] == 0 ) :
+            zero += 1
+        elif ( a [ i ] < 0 ) :
+            negative += 1
+            step = step + ( - 1 - a [ i ] )
+        else :
+            positive += 1
+            step = step + ( a [ i ] - 1 )
+    if ( negative % 2 == 0 ) :
+        step = step + zero
+    else :
+        if ( zero > 0 ) :
+            step = step + zero
+        else :
+            step = step + 2
+    return step
+","def minSep ( a , n ) :
+    positive = 0
+    negative = 0
+    zero = 0
+    step = 0
+    for i in range ( n ) :
+        if ( a [ i ] == 0 ) :
+            zero += 1
+        elif ( a [ i ] < 0 ) :
+            negative += 1
+            step = step + ( - 1 - a [ i ] )
+        else :
+            positive += 1
+            step = step + ( a [ i ] - 1 )
+    if ( negative % 2 == 0 ) :
+        step = step + zero
+    else :
+        if ( zero > 0 ) :
+            step = step + zero
+        else :
+            step = step + 2
+    return step
+","def MinStep ( a , n ) :
+    positive = 0
+    negative = 0
+    zero = 0
+    step = 0
+    for i in range ( n ) :
+        if ( a [ i ] == 0 ) :
+            zero += 1
+        elif ( a [ i ] < 0 ) :
+            negative += 1
+            step = step + ( - 1 - a [ i ] )
+        else :
+            positive += 1
+            step = step + ( a [ i ] - 1 )
+    if ( negative % 2 != 0 ) :
+        if ( zero > 0 ) :
+            step = step + zero
+        else :
+            step = step + 2
+    else :
+        step = step + zero
+    return step"
+146,"def countDistinctCode ( string ) :
+    codes = set ( )
+    for i in range ( 0 , len ( string ) - 1 ) :
+        codes.add ( string [ i : i + 2 ] )
+    return len ( codes )
+","def cuontSmallestCode ( string ) :
+    codes = set ( )
+    for i in range ( 0 , len ( string ) - 1 ) :
+        codes.add ( string [ i : i + 2 ] )
+    return len ( codes )
+","def countDistinctCode ( string ) :
+    codes = set ( )
+    i = 0
+    while i in list ( range ( len ( string ) - 1 ) ) :
+        codes.add ( string [ i : i + 2 ] )
+        i += 1
+    return len ( codes )"
+147,"def extractMaximum ( ss ) :
+    num , res = 0 , 0
+    for i in range ( len ( ss ) ) :
+        if ss [ i ] >= ""0"" and ss [ i ] <= ""9"" :
+            num = num * 10 + int ( int ( ss [ i ] ) - 0 )
+        else :
+            res = max ( res , num )
+            num = 0
+    return max ( res , num )
+","def reachMaximum ( ss ) :
+    num , res = 0 , 0
+    for i in range ( len ( ss ) ) :
+        if ss [ i ] >= ""0"" and ss [ i ] <= ""9"" :
+            num = num * 10 + int ( int ( ss [ i ] ) - 0 )
+        else :
+            res = max ( res , num )
+            num = 0
+    return max ( res , num )
+","def extractMaximum ( ss ) :
+    num , res = 0 , 0
+    for i in range ( len ( ss ) ) :
+        if ss [ i ] >= ""0"" and ""9"" >= ss [ i ] :
+            num = num * 10 + int ( int ( ss [ i ] ) - 0 )
+        else :
+            res = max ( res , num )
+            num = 0
+    return max ( res , num )"
+148,"def countPairs ( arr , n ) :
+    count = 0
+    right = 0
+    left = 0
+    visited = [ False for i in range ( n ) ]
+    while ( right < n ) :
+        while ( right < n and visited [ arr [ right ] ] == False ) :
+            count += ( right - left )
+            visited [ arr [ right ] ] = True
+            right += 1
+        while ( left < right and ( right != n and visited [ arr [ right ] ] == True ) ) :
+            visited [ arr [ left ] ] = False
+            left += 1
+    return count
+","def cuntPairs ( arr , n ) :
+    count = 0
+    right = 0
+    left = 0
+    visited = [ False for i in range ( n ) ]
+    while ( right < n ) :
+        while ( right < n and visited [ arr [ right ] ] == False ) :
+            count += ( right - left )
+            visited [ arr [ right ] ] = True
+            right += 1
+        while ( left < right and ( right != n and visited [ arr [ right ] ] == True ) ) :
+            visited [ arr [ left ] ] = False
+            left += 1
+    return count
+","def countPairs ( arr , n ) :
+    count = 0
+    right = 0
+    left = 0
+    visited = [ False for i in range ( n ) ]
+    while ( right < n ) :
+        while ( right < n and visited [ arr [ right ] ] == False ) :
+            count = count + ( right - left )
+            visited [ arr [ right ] ] = True
+            right = right + 1
+        while ( left < right and ( right != n and visited [ arr [ right ] ] == True ) ) :
+            visited [ arr [ left ] ] = False
+            left = left + 1
+    return count"
+149,"def countIterations ( arr , n ) :
+    oneFound = False
+    res = 0
+    i = 0
+    while ( i < n ) :
+        if ( arr [ i ] == 1 ) :
+            oneFound = True
+        while ( i < n and arr [ i ] == 1 ) :
+            i += 1
+        count_zero = 0
+        while ( i < n and arr [ i ] == 0 ) :
+            count_zero += 1
+            i += 1
+        if ( oneFound == False and i == n ) :
+            return - 1
+        curr_count = 0
+        if ( i < n and oneFound == True ) :
+            if ( ( count_zero & 1 ) == 0 ) :
+                curr_count = count_zero // 2
+            else :
+                curr_count = ( count_zero + 1 ) // 2
+            count_zero = 0
+        else :
+            curr_count = count_zero
+            count_zero = 0
+        res = max ( res , curr_count )
+    return res
+","def countCommon ( arr , n ) :
+    oneFound = False
+    res = 0
+    i = 0
+    while ( i < n ) :
+        if ( arr [ i ] == 1 ) :
+            oneFound = True
+        while ( i < n and arr [ i ] == 1 ) :
+            i += 1
+        count_zero = 0
+        while ( i < n and arr [ i ] == 0 ) :
+            count_zero += 1
+            i += 1
+        if ( oneFound == False and i == n ) :
+            return - 1
+        curr_count = 0
+        if ( i < n and oneFound == True ) :
+            if ( ( count_zero & 1 ) == 0 ) :
+                curr_count = count_zero // 2
+            else :
+                curr_count = ( count_zero + 1 ) // 2
+            count_zero = 0
+        else :
+            curr_count = count_zero
+            count_zero = 0
+        res = max ( res , curr_count )
+    return res
+","def countIterations ( arr , n ) :
+    oneFound = False
+    res = 0
+    i = 0
+    while ( i < n ) :
+        if ( 1 == arr [ i ] ) :
+            oneFound = True
+        while ( i < n and arr [ i ] == 1 ) :
+            i += 1
+        count_zero = 0
+        while ( i < n and arr [ i ] == 0 ) :
+            count_zero += 1
+            i += 1
+        if ( oneFound == False and i == n ) :
+            return - 1
+        curr_count = 0
+        if ( i < n and oneFound == True ) :
+            if ( ( count_zero & 1 ) == 0 ) :
+                curr_count = count_zero // 2
+            else :
+                curr_count = ( count_zero + 1 ) // 2
+            count_zero = 0
+        else :
+            curr_count = count_zero
+            count_zero = 0
+        res = max ( res , curr_count )
+    return res"
+150,"def successiveChange ( arr , N ) :
+    result = 0
+    var1 = arr [ 0 ]
+    var2 = arr [ 1 ]
+    result = float ( var1 + var2 + ( float ( var1 * var2 ) / 100 ) )
+    for i in range ( 2 , N ) :
+        result = ( result + arr [ i ] + ( float ( result * arr [ i ] ) / 100 ) )
+    return result
+","def successiveSuccessive ( arr , N ) :
+    result = 0
+    var1 = arr [ 0 ]
+    var2 = arr [ 1 ]
+    result = float ( var1 + var2 + ( float ( var1 * var2 ) / 100 ) )
+    for i in range ( 2 , N ) :
+        result = ( result + arr [ i ] + ( float ( result * arr [ i ] ) / 100 ) )
+    return result
+","def successiveChange ( arr , N ) :
+    result = 0
+    var1 = arr [ 0 ]
+    var2 = arr [ 1 ]
+    result = float ( var1 + var2 + ( float ( var1 * var2 ) / 100 ) )
+    i = 2
+    while i in list ( range ( N ) ) :
+        result = ( result + arr [ i ] + ( float ( result * arr [ i ] ) / 100 ) )
+        i += 1
+    return result"
+151,"def extractMaximum ( ss ) :
+    num , res = 0 , 0
+    for i in range ( len ( ss ) ) :
+        if ss [ i ] >= ""0"" and ss [ i ] <= ""9"" :
+            num = num * 10 + int ( int ( ss [ i ] ) - 0 )
+        else :
+            res = max ( res , num )
+            num = 0
+    return max ( res , num )
+","def extratProduct ( ss ) :
+    num , res = 0 , 0
+    for i in range ( len ( ss ) ) :
+        if ss [ i ] >= ""0"" and ss [ i ] <= ""9"" :
+            num = num * 10 + int ( int ( ss [ i ] ) - 0 )
+        else :
+            res = max ( res , num )
+            num = 0
+    return max ( res , num )
+","def extractMaximum ( ss ) :
+    num , res = 0 , 0
+    for i in range ( len ( ss ) ) :
+        if ss [ i ] >= ""0"" and ""9"" >= ss [ i ] :
+            num = num * 10 + int ( int ( ss [ i ] ) - 0 )
+        else :
+            res = max ( res , num )
+            num = 0
+    return max ( res , num )"
+152,"def smallestPoss ( s , n ) :
+    ans = """"
+    arr = [ 0 ] * 10
+    for i in range ( n ) :
+        arr [ ord ( s [ i ] ) - 48 ] += 1
+    for i in range ( 10 ) :
+        for j in range ( arr [ i ] ) :
+            ans = ans + str ( i )
+    return ans
+","def alternatePsos ( s , n ) :
+    ans = """"
+    arr = [ 0 ] * 10
+    for i in range ( n ) :
+        arr [ ord ( s [ i ] ) - 48 ] += 1
+    for i in range ( 10 ) :
+        for j in range ( arr [ i ] ) :
+            ans = ans + str ( i )
+    return ans
+","def smallestPoss ( s , n ) :
+    ans = """"
+    arr = [ 0 ] * 10
+    for i in range ( n ) :
+        arr [ ord ( s [ i ] ) - 48 ] += 1
+    i = 0
+    while i in list ( range ( 10 ) ) :
+        for j in range ( arr [ i ] ) :
+            ans = ans + str ( i )
+        i += 1
+    return ans"
+153,"def XorAscii ( str1 , len1 ) :
+    ans = ord ( str1 [ 0 ] )
+    for i in range ( 1 , len1 ) :
+        ans = ( ans ^ ( ord ( str1 [ i ] ) ) )
+    return ans
+","def xorAsci ( str1 , len1 ) :
+    ans = ord ( str1 [ 0 ] )
+    for i in range ( 1 , len1 ) :
+        ans = ( ans ^ ( ord ( str1 [ i ] ) ) )
+    return ans
+","def XorAscii ( str1 , len1 ) :
+    ans = ord ( str1 [ 0 ] )
+    i = 1
+    while i in list ( range ( len1 ) ) :
+        ans = ( ans ^ ( ord ( str1 [ i ] ) ) )
+        i += 1
+    return ans"
+154,"def countSubseq ( arr , n ) :
+    um = { i : 0 for i in range ( 8 ) }
+    count = 1
+    for i in range ( n ) :
+        um [ arr [ i ] ] += 1
+    for key , values in um.items ( ) :
+        if ( values > 0 ) :
+            count *= values
+    return count
+","def countWith ( arr , n ) :
+    um = { i : 0 for i in range ( 8 ) }
+    count = 1
+    for i in range ( n ) :
+        um [ arr [ i ] ] += 1
+    for key , values in um.items ( ) :
+        if ( values > 0 ) :
+            count *= values
+    return count
+","def countSubseq ( arr , n ) :
+    um = { i : 0 for i in range ( 8 ) }
+    count = 1
+    for i in range ( n ) :
+        um [ arr [ i ] ] += 1
+    for key , values in um.items ( ) :
+        if ( 0 < values ) :
+            count *= values
+    return count"
+155,"def pointsAreOnSameSideOfLine ( a , b , c , x1 , y1 , x2 , y2 ) :
+    fx1 = 0
+    fx2 = 0
+    fx1 = a * x1 + b * y1 - c
+    fx2 = a * x2 + b * y2 - c
+    if ( ( fx1 * fx2 ) > 0 ) :
+        return True
+    return False
+","def amendAltOnSameSdeWaysLine ( a , b , c , x1 , y1 , x2 , y2 ) :
+    fx1 = 0
+    fx2 = 0
+    fx1 = a * x1 + b * y1 - c
+    fx2 = a * x2 + b * y2 - c
+    if ( ( fx1 * fx2 ) > 0 ) :
+        return True
+    return False
+","def pointsAreOnSameSideOfLine ( a , b , c , x1 , y1 , x2 , y2 ) :
+    fx1 = 0
+    fx2 = 0
+    fx1 = a * x1 + b * y1 - c
+    fx2 = a * x2 + b * y2 - c
+    if ( 0 < ( fx1 * fx2 ) ) :
+        return True
+    return False"
+156,"def rangesum ( n , l , r ) :
+    arr = [ 0 ] * n
+    c = 1 ; i = 0
+    while ( c <= n ) :
+        arr [ i ] = c
+        i += 1
+        c += 2
+    c = 2
+    while ( c <= n ) :
+        arr [ i ] = c
+        i += 1
+        c += 2
+    sum = 0
+    for i in range ( l - 1 , r , 1 ) :
+        sum += arr [ i ]
+    return sum
+","def findpair ( n , l , r ) :
+    arr = [ 0 ] * n
+    c = 1 ; i = 0
+    while ( c <= n ) :
+        arr [ i ] = c
+        i += 1
+        c += 2
+    c = 2
+    while ( c <= n ) :
+        arr [ i ] = c
+        i += 1
+        c += 2
+    sum = 0
+    for i in range ( l - 1 , r , 1 ) :
+        sum += arr [ i ]
+    return sum
+","def rangesum ( n , l , r ) :
+    arr = [ 0 ] * n
+    c = 1
+    ; i = 0
+    while ( c <= n ) :
+        arr [ i ] = c
+        i = i + 1
+        c = c + 2
+    c = 2
+    while ( c <= n ) :
+        arr [ i ] = c
+        i = i + 1
+        c = c + 2
+    sum = 0
+    for i in range ( l - 1 , r , 1 ) :
+        sum = sum + arr [ i ]
+    return sum"
+157,"def findOccurrences ( str , substr ) :
+    counter = 0
+    for i in range ( 0 , len ( str ) ) :
+        if ( str [ i ] == substr [ 0 ] ) :
+            for j in range ( i + 1 , len ( str ) ) :
+                if ( str [ j ] == substr [ 1 ] ) :
+                    for k in range ( j + 1 , len ( str ) ) :
+                        if ( str [ k ] == substr [ 2 ] ) :
+                            counter = counter + 1
+    return counter
+","def cocktailChars ( str , substr ) :
+    counter = 0
+    for i in range ( 0 , len ( str ) ) :
+        if ( str [ i ] == substr [ 0 ] ) :
+            for j in range ( i + 1 , len ( str ) ) :
+                if ( str [ j ] == substr [ 1 ] ) :
+                    for k in range ( j + 1 , len ( str ) ) :
+                        if ( str [ k ] == substr [ 2 ] ) :
+                            counter = counter + 1
+    return counter
+","def findOccurrences ( str , substr ) :
+    counter = 0
+    for i in range ( 0 , len ( str ) ) :
+        if ( str [ i ] == substr [ 0 ] ) :
+            for j in range ( i + 1 , len ( str ) ) :
+                if ( str [ j ] == substr [ 1 ] ) :
+                    k = j + 1
+                    while k in list ( range ( len ( str ) ) ) :
+                        if ( str [ k ] == substr [ 2 ] ) :
+                            counter = counter + 1
+                        k += 1
+    return counter"
+158,"def squareArea ( l , b , h ) :
+    if l < 0 or b < 0 or h < 0 :
+        return - 1
+    a = ( l * b ) / ( l + b )
+    return a * a
+","def suareReuleaux ( l , b , h ) :
+    if l < 0 or b < 0 or h < 0 :
+        return - 1
+    a = ( l * b ) / ( l + b )
+    return a * a
+","def squareArea ( l , b , h ) :
+    if 0 > l or b < 0 or h < 0 :
+        return - 1
+    a = ( l * b ) / ( l + b )
+    return a * a"

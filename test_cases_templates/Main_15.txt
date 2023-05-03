@@ -1,0 +1,58 @@
+import java.util.*;
+import java.util.stream.*;
+import java.lang.*;
+
+public class Main_15 {
+
+#program#
+
+    public static void main(String[] args) {
+    String s;
+    int k;
+
+    // test case 1
+    s="aabcd";
+    k=2;
+    if(#function_name#(s, k)==15){
+        System.out.println("Success");
+    }else{
+        System.out.println("Fail");
+    }
+
+    // test case 2
+    s="aaab";
+    k=1;
+    if(#function_name#(s, k)==5){
+        System.out.println("Success");
+    }else{
+        System.out.println("Fail");
+    }
+
+    // test case 3
+    s = "abcdefg";
+    k = 3;
+    if(#function_name#(s, k)==28){
+        System.out.println("Success");
+    }else{
+        System.out.println("Fail");
+    }
+
+    // test case 4
+    s = "ababab";
+    k = 2;
+    if(#function_name#(s, k) == 18){
+        System.out.println("Success");
+    }else{
+        System.out.println("Fail");
+    }
+
+    // test case 5
+    s = "abcdabcdabcd";
+    k = 1;
+    if(#function_name#(s, k) == 42){
+        System.out.println("Success");
+    }else{
+        System.out.println("Fail");
+    }
+  }
+}

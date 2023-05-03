@@ -1,0 +1,52 @@
+import java.util.*;
+import java.util.stream.*;
+import java.lang.*;
+
+
+public class Main_148{
+
+#program#
+
+    public static void main(String []args){
+        // test case 1
+        int n_1=0;
+        if(#function_name#(n_1).equals("1213")) {
+            System.out.println("Success");
+        }else {
+            System.out.println("Fail");
+        }
+
+        // test case 2
+        int n_2=1;
+        if(#function_name#(n_2).equals("1213")) {
+            System.out.println("Success");
+        }else {
+            System.out.println("Fail");
+        }
+
+        // test case 3
+        int n_3=2;
+        if(#function_name#(n_3).equals("1213")) {
+            System.out.println("Success");
+        }else {
+            System.out.println("Fail");
+        }
+
+        // test case 4
+        int n_4=3;
+        if(#function_name#(n_4).equals("1213121")) {
+            System.out.println("Success");
+        }else {
+            System.out.println("Fail");
+        }
+
+        // test case 5
+        int n_5=4;
+        if(#function_name#(n_5).equals("1213121121312")) {
+            System.out.println("Success");
+        }else {
+            System.out.println("Fail");
+        }
+        }
+    }
+

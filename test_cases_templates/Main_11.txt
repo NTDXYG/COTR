@@ -1,0 +1,76 @@
+import java.util.*;
+import java.util.stream.*;
+import java.lang.*;
+
+public class Main_11 {
+
+#program#
+
+    public static void main(String[] args) {
+    // test case 1
+    int X_1 = 5;
+    Vector A_1 = new Vector();
+    A_1.add(2);
+    A_1.add(34);
+    A_1.add(9);
+    A_1.add(5);
+    A_1.add(23);
+    A_1.add(76);
+    if(#function_name#(X_1, A_1).toString().equals("[0, 0]")){
+        System.out.println("Success");
+    }else{
+        System.out.println("Fail");
+    }
+
+    // test case 2
+    int X_2 = 0;
+    Vector A_2 = new Vector();
+    A_2.add(1);
+    A_2.add(2);
+    A_2.add(3);
+    A_2.add(4);
+    A_2.add(5);
+    if(#function_name#(X_2, A_2).toString().equals("[]")){
+        System.out.println("Success");
+    }else{
+        System.out.println("Fail");
+    }
+
+    // test case 3
+    int X_3 = 3;
+    Vector A_3 = new Vector();
+    A_3.add(1);
+    A_3.add(1);
+    A_3.add(1);
+    if(#function_name#(X_3, A_3).toString().equals("[0, 0, 0]")){
+        System.out.println("Success");
+    }else{
+        System.out.println("Fail");
+    }
+
+    // test case 4
+    int X_4 = 1;
+    Vector A_4 = new Vector();
+    A_4.add(1);
+    A_4.add(10);
+    A_4.add(10);
+    if(#function_name#(X_4, A_4).toString().equals("[0]")){
+        System.out.println("Success");
+    }else{
+        System.out.println("Fail");
+    }
+
+    // test case 5
+    int X_5 = 4;
+    Vector A_5 = new Vector();
+    A_5.add(1);
+    A_5.add(5);
+    A_5.add(8);
+    A_5.add(10);
+    if(#function_name#(X_5, A_5).toString().equals("[0, 0, 0, 0]")){
+        System.out.println("Success");
+    }else{
+        System.out.println("Fail");
+    }
+  }
+}

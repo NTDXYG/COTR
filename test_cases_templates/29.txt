@@ -1,0 +1,35 @@
+import numpy as np
+import math
+from math import *
+import collections
+from collections import *
+import heapq
+import itertools
+import random
+import sys
+
+
+#program#
+
+
+# test case 1
+a = [4, 8, 12]
+n = 3
+assert #function_name#(a, n) == 2
+# test case 2
+a = [4, 8, 12, 7]
+n = 4
+assert #function_name#(a, n) == 2
+
+# test case 3
+a = [4, 8, 12, 7, 16]
+n = 5
+assert #function_name#(a, n) == 2
+# test case 4
+a = [4, 8, 12, 7, 16, 3]
+n = 6
+assert #function_name#(a, n) == 2
+# test case 5
+a = [4, 8, 12, 7, 16, 3, 15]
+n = 7
+assert #function_name#(a, n) == 2

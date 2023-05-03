@@ -1,0 +1,55 @@
+import java.util.*;
+import java.util.stream.*;
+import java.lang.*;
+
+public class Main_198 {
+
+#program#
+
+	public static void main(String[] args){
+		// test case 1
+		int[] A_1 = new int[]{12, 53, 4, 5};
+		int n_1 = 2;
+		if (#function_name#(A_1, n_1) == 12) {
+			System.out.println("Success");
+		} else {
+			System.out.println("Fail");
+		}
+		
+		// test case 2
+		int[] A_2 = new int[]{22, 29, 23, 4, 5};
+		int n_2 = 3;
+		if (#function_name#(A_2, n_2) == 22) {
+			System.out.println("Success");
+		} else {
+			System.out.println("Fail");
+		}
+		
+		// test case 3
+		int[] A_3 = new int[]{23, 33, 34, 53, 37, 9};
+		int n_3 = 3;
+		if (#function_name#(A_3, n_3) == 23) {
+			System.out.println("Success");
+		} else {
+			System.out.println("Fail");
+		}
+		
+		// test case 4
+		int[] A_4 = new int[]{2, 3, 4, 5, 21, 10};
+		int n_4 = 1;
+		if (#function_name#(A_4, n_4) == 2) {
+			System.out.println("Success");
+		} else {
+			System.out.println("Fail");
+		}
+		
+		// test case 5
+		int[] A_5 = new int[]{25, 35, 45, 55, 98};
+		int n_5 = 4;
+		if (#function_name#(A_5, n_5) == 25) {
+			System.out.println("Success");
+		} else {
+			System.out.println("Fail");
+		}
+	}
+}

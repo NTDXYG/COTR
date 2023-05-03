@@ -1,0 +1,80 @@
+import java.util.*;
+import java.util.stream.*;
+import java.lang.*;
+
+public class Main_60 {
+
+#program#
+
+    public static void main(String[] args) {
+    // test case 1
+    int a = 1;
+    int b = 2;
+    int c = 3;
+    int x1 = 4;
+    int y1 = 5;
+    int x2 = 6;
+    int y2 = 7;
+    if (#function_name#(a, b, c, x1, y1, x2, y2) == true) {
+         System.out.println("Success");
+    } else {
+         System.out.println("Fail");
+    }
+
+    // test case 2
+    a = -1;
+    b = 2;
+    c = -3;
+    x1 = 4;
+    y1 = -5;
+    x2 = 6;
+    y2 = -7;
+    if (#function_name#(a, b, c, x1, y1, x2, y2) == true) {
+         System.out.println("Success");
+    } else {
+         System.out.println("Fail");
+    }
+
+    // test case 3
+    a = -1;
+    b = -2;
+    c = -3;
+    x1 = 4;
+    y1 = 5;
+    x2 = -6;
+    y2 = -7;
+    if (#function_name#(a, b, c, x1, y1, x2, y2) == false) {
+         System.out.println("Success");
+    } else {
+         System.out.println("Fail");
+    }
+
+    // test case 4
+    a = -2;
+    b = 3;
+    c = 1;
+    x1 = 5;
+    y1 = 2;
+    x2 = 3;
+    y2 = 4;
+    if (#function_name#(a, b, c, x1, y1, x2, y2) == false) {
+         System.out.println("Success");
+    } else {
+         System.out.println("Fail");
+    }
+
+    // test case 5
+    a = 1;
+    b = 0;
+    c = 3;
+    x1 = 2;
+    y1 = -1;
+    x2 = 3;
+    y2 = 4;
+    if (#function_name#(a, b, c, x1, y1, x2, y2) == false) {
+         System.out.println("Success");
+    } else {
+         System.out.println("Fail");
+    }
+    }
+}

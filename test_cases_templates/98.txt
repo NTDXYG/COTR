@@ -1,0 +1,27 @@
+import numpy as np 
+import math
+from math import *
+import collections
+from collections import *
+import heapq
+import itertools
+import random
+import sys
+
+#program#
+
+# test case 1
+s=['d','c','b','a']
+assert #function_name#(s)=="abcd"
+# test case 2
+s=['d','c','a','b']
+assert #function_name#(s)=="abcd"
+# test case 3
+s=['e','c','d','a']
+assert #function_name#(s)=="acde"
+# test case 4
+s=['z','l','b','a']
+assert #function_name#(s)=="ablz"
+# test case 5
+s=['m','o','e','c']
+assert #function_name#(s)=="cemo"

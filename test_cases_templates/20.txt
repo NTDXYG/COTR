@@ -1,0 +1,26 @@
+import numpy as np
+import math
+from math import *
+import collections
+from collections import *
+import heapq
+import itertools
+import random
+import sys
+
+#program#
+
+# test case 1
+assert #function_name#([1, 2, 1, 2], 4)==True
+
+# test case 2
+assert #function_name#([1, 2, 3, 4], 4)==False
+
+# test case 3
+assert #function_name#([5, 5], 2)==True
+
+# test case 4
+assert #function_name#([5, 7], 2)==False
+
+# test case 5
+assert #function_name#([1, 2, 3, 2, 1], 5)==False

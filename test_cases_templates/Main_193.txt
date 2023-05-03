@@ -1,0 +1,60 @@
+import java.util.*;
+import java.util.stream.*;
+import java.lang.*;
+
+public class Main_193 {
+
+#program#
+
+	public static void main(String[] args){
+		// test case 1
+		int n_1 = 3;
+		int L_1 = 2;
+		int[] arr_1 = new int[]{2, 3, 4};
+		if (#function_name#(n_1, L_1, arr_1) == 1) {
+			System.out.println("Success");
+		} else {
+			System.out.println("Fail");
+		}
+		
+		// test case 2
+		int n_2 = 3;
+		int L_2 = 3;
+		int[] arr_2 = new int[]{24, 25, 26};
+		if (#function_name#(n_2, L_2, arr_2) == 1) {
+			System.out.println("Success");
+		} else {
+			System.out.println("Fail");
+		}
+
+		// test case 3
+		int n_3 = 3;
+		int L_3 = 1;
+		int[] arr_3 = new int[]{32, 3, 43};
+		if (#function_name#(n_3, L_3, arr_3) == 0) {
+			System.out.println("Success");
+		} else {
+			System.out.println("Fail");
+		}
+		
+		// test case 4
+		int n_4 = 4;
+		int L_4 = 2;
+		int[] arr_4 = new int[]{2, 3, 4, 5};
+		if (#function_name#(n_4, L_4, arr_4) == 2) {
+			System.out.println("Success");
+		} else {
+			System.out.println("Fail");
+		}
+		
+		// test case 5
+		int n_5 = 4;
+		int L_5 = 3;
+		int[] arr_5 = new int[]{25, 53, 45, 55};
+		if (#function_name#(n_5, L_5, arr_5) == 0) {
+			System.out.println("Success");
+		} else {
+			System.out.println("Fail");
+		}		
+	}
+}

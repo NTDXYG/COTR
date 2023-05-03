@@ -1,0 +1,55 @@
+import java.util.*;
+import java.util.stream.*;
+import java.lang.*;
+
+public class Main_102 { 
+
+#program#
+
+  public static void main(String[] args) {
+    //test case 1
+    String str1 = "abcabcabc" ;
+    String substr1 = "abc" ;
+    if (#function_name#(str1, substr1) == 10) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+
+    //test case 2
+    String str2 = "aaaaa" ;
+    String substr2 = "aaa" ;
+    if (#function_name#(str2, substr2) == 10) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+
+    //test case 3
+    String str3 = "abc" ;
+    String substr3 = "abc" ;
+    if (#function_name#(str3, substr3) == 1) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+
+    //test case 4
+    String str4 = "abcfdsrew" ;
+    String substr4 = "afdsb" ;
+    if (#function_name#(str4, substr4) == 1) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+
+    //test case 5
+    String str5 = "abc" ;
+    String substr5 = "bc" ;
+    if (#function_name#(str5, substr5) == 0) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+  }
+}

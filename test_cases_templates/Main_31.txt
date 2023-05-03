@@ -1,0 +1,67 @@
+import java.util.*;
+import java.util.stream.*;
+import java.lang.*;
+
+public class Main_31 { 
+
+#program#
+
+
+  public static void main(String[] args) {
+//  test case 1
+    int arr1[] = new int[]{1, 2, 3, 4};
+    int n1 = 4;
+    int i1 = 0;
+    int sum1 = 5;
+    int count1 = 0;
+    if (#function_name#(arr1, n1, i1, sum1, count1) == 2) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+//  test case 2
+    int arr2[] = new int[]{1, 1, 1, 1};
+    int n2 = 4;
+    int i2 = 0;
+    int sum2 = 2;
+    int count2 = 0;
+    if (#function_name#(arr2, n2, i2, sum2, count2) == 6) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+//  test case 3
+    int arr3[] = new int[]{2, 3, 4, 5};
+    int n3 = 4;
+    int i3 = 0;
+    int sum3 = 6;
+    int count3 = 0;
+    if (#function_name#(arr3, n3, i3, sum3, count3) == 1) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+//  test case 4
+    int arr4[] = new int[]{1, 2, 3, 4, 5};
+    int n4 = 5;
+    int i4 = 0;
+    int sum4 = 9;
+    int count4 = 0;
+    if (#function_name#(arr4, n4, i4, sum4, count4) == 3) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+//  test case 5
+    int arr5[] = new int[]{10, 20, 15, 5, 25};
+    int n5 = 5;
+    int i5 = 0;
+    int sum5 = 40;
+    int count5 = 0;
+    if (#function_name#(arr5, n5, i5, sum5, count5) == 3) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+  }
+}

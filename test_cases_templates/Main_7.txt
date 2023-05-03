@@ -1,0 +1,85 @@
+import java.util.*;
+import java.util.stream.*;
+import java.lang.*;
+
+public class Main_7 {
+
+#program#
+
+    public static void main(String[] args) {
+    // test case 1
+    Vector vec_1 = new Vector();
+    vec_1.add(3);
+    vec_1.add(4);
+    vec_1.add(2);
+    vec_1.add(1);
+    if(#function_name#(vec_1).toString().equals("[]")){
+        System.out.println("Success");
+    }else{
+        System.out.println("Fail");
+    }
+
+    // test case 2
+    Vector vec_2 = new Vector();
+    vec_2.add(1);
+    vec_2.add(1);
+    vec_2.add(1);
+    if(#function_name#(vec_2).toString().equals("[2, 3]")){
+        System.out.println("Success");
+    }else{
+        System.out.println("Fail");
+    }
+
+    // test case 3
+    Vector vec_3 = new Vector();
+    vec_3.add(1);
+    vec_3.add(1);
+    vec_3.add(2);
+    vec_3.add(2);
+    if(#function_name#(vec_3).toString().equals("[3, 4]")){
+        System.out.println("Success");
+    }else{
+        System.out.println("Fail");
+    }
+
+    // test case 4
+    Vector vec_4 = new Vector();
+    vec_4.add(1);
+    vec_4.add(1);
+    vec_4.add(1);
+    vec_4.add(1);
+    vec_4.add(1);
+    vec_4.add(1);
+    vec_4.add(1);
+    vec_4.add(1);
+    vec_4.add(1);
+    vec_4.add(1);
+    vec_4.add(2);
+    vec_4.add(2);
+    vec_4.add(2);
+    vec_4.add(2);
+    vec_4.add(2);
+    vec_4.add(2);
+    vec_4.add(2);
+    vec_4.add(2);
+    vec_4.add(2);
+    vec_4.add(2);
+    if(#function_name#(vec_4).toString().equals("[3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]")){
+        System.out.println("Success");
+    }else{
+        System.out.println("Fail");
+    }
+
+    // test case 5
+    Vector vec_5 = new Vector();
+    vec_5.add(1);
+    vec_5.add(1);
+    vec_5.add(1);
+    vec_5.add(1);
+    if(#function_name#(vec_5).toString().equals("[2, 3, 4]")){
+        System.out.println("Success");
+    }else{
+        System.out.println("Fail");
+    }
+  }
+}

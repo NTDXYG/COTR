@@ -1,0 +1,36 @@
+import numpy as np 
+import math
+from math import *
+import collections
+from collections import *
+import heapq
+import itertools
+import random
+import sys
+
+#program#
+
+# test case 1
+n = 3
+fuel = 10
+assert #function_name#( n , fuel ) == 18.333333333333336
+
+# test case 2
+n = 4
+fuel = 205
+assert #function_name#( n , fuel ) == 427.0833333333333
+
+# test case 3
+n = 2
+fuel = 100
+assert #function_name#( n , fuel ) == 150.0
+
+# test case 4
+n = 1
+fuel = 100
+assert #function_name#( n , fuel ) == 100
+
+# test case 5
+n = 5
+fuel = 100
+assert #function_name#( n , fuel ) == 228.33333333333334

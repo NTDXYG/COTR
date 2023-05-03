@@ -1,0 +1,53 @@
+import java.util.*;
+import java.util.stream.*;
+import java.lang.*;
+
+public class Main_178 {
+
+#program#
+
+	public static void main(String[] args){
+		// test case 1
+		String s_1 = "abc";
+		if ("abc".equals(#function_name#(s_1))) {
+			System.out.println("Success");
+		} else {
+			System.out.println("Fail");
+		}
+		
+		// test case 2
+		String s_2 = "ahgsdfer";
+		if ("adefghrs".equals(#function_name#(s_2))) {
+			System.out.println("Success");
+		} else {
+			System.out.println("Fail");
+		}
+
+		// test case 3
+		String s_3 = "fiosejrh";
+		if("efhijors".equals(#function_name#(s_3))){
+			System.out.println("Success");
+		}else{
+			System.out.println("Fail");
+		}
+		
+		// test case 4
+		String s_4 = "oirjgonob";
+		if ("bgijnooor".equals(#function_name#(s_4))) {
+			System.out.println("Success");
+		} else {
+			System.out.println("Fail");
+		}
+		
+		// test case 5
+		String s_5 = "uirgsogj";
+		if ("ggijorsu".equals(#function_name#(s_5))) {
+			System.out.println("Success");
+		} else {
+			System.out.println("Fail");
+		}
+		
+	}
+}
+
+

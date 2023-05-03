@@ -1,0 +1,36 @@
+import numpy as np
+import math
+from math import *
+import collections
+from collections import *
+import heapq
+import itertools
+import random
+import sys
+
+#program#
+
+# test case 1
+a = 1
+N = 2
+assert #function_name#(a, N)==3.0
+
+# test case 2
+a = 2
+N = 1
+assert #function_name#(a, N)==0.75
+
+# test case 3
+a = 1
+N = 0
+assert #function_name#(a, N)==0
+
+# test case 4
+a = 1
+N = 3
+assert #function_name#(a, N)==6.0
+
+# test case 5
+a = 1
+N = 1
+assert #function_name#(a, N)==1.0

@@ -1,0 +1,36 @@
+import numpy as np 
+import math
+from math import *
+import collections
+from collections import *
+import heapq
+import itertools
+import random
+import sys
+
+#program#
+
+# test case 1
+n = 100
+k = 3
+assert #function_name#(n ,k) == 100
+
+# test case 2
+n = 1000
+k = 4
+assert #function_name#(n ,k) == 9999
+
+# test case 3
+n = 10000
+k = 5
+assert #function_name#(n ,k) == 10000
+
+# test case 4
+n = 100000
+k = 6
+assert #function_name#(n ,k) == 100000
+
+# test case 5
+n = 1000000
+k = 7
+assert #function_name#(n ,k) == 9999999

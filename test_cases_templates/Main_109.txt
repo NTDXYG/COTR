@@ -1,0 +1,55 @@
+import java.util.*;
+import java.util.stream.*;
+import java.lang.*;
+
+public class Main_109 { 
+
+#program#
+
+  public static void main(String[] args) {
+    // test case 1
+    int n_1 = 3 ;
+    int k_1 = 27 ;
+    if (Arrays.equals(#function_name#(n_1, k_1), new char[]{'a', 'a', 'y'})) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+
+    // test case 2
+    int n_2 = 5 ;
+    int k_2 = 73 ;
+    if (Arrays.equals(#function_name#(n_2, k_2), new char[]{'a', 'a', 's', 'z', 'z'})) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+
+    // test case 3
+    int n_3 = 3 ;
+    int k_3 = 1 ;
+    if (Arrays.equals(#function_name#(n_3, k_3), new char[]{'a', 'a', 'a'})) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+
+    // test case 4
+    int n_4 = 5 ;
+    int k_4 = 130 ;
+    if (Arrays.equals(#function_name#(n_4, k_4), new char[]{'z', 'z', 'z', 'z', 'z'})) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+
+    // test case 5
+    int n_5 = 1 ;
+    int k_5 = 1 ;
+    if (Arrays.equals(#function_name#(n_5, k_5), new char[]{'a'})) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+  }
+}

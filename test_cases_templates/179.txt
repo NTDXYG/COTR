@@ -1,0 +1,37 @@
+import numpy as np 
+import math
+from math import *
+import collections
+from collections import *
+import heapq
+import itertools
+import random
+import sys
+
+#program#
+
+# test case 1
+ar = [1]
+size = 1
+assert #function_name#(ar, size) == 2
+
+# test case 2
+ar = [1, 2]
+size = 2
+assert #function_name#(ar, size) == 2
+
+# test case 3
+ar = [3, 2, 1]
+size = 3
+assert #function_name#(ar, size) == 3
+
+
+# test case 4
+ar = [2, 4, 6, 8]
+size = 4
+assert #function_name#(ar, size) == 5
+
+# test case 5
+ar = [7, 5, 3, 1]
+size = 4
+assert #function_name#(ar, size) == 6

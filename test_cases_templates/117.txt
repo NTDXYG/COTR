@@ -1,0 +1,31 @@
+import numpy as np 
+import math
+from math import *
+import collections
+from collections import *
+import heapq
+import itertools
+import random
+import sys
+
+#program#
+
+# test case 1
+s = "10000111"
+assert #function_name#( s ) == 1
+
+# test case 2
+s = "11110000"
+assert #function_name#( s ) == 0
+
+# test case 3
+s = "10101010"
+assert #function_name#( s ) == 6
+
+# test case 4
+s = "abcd"
+assert #function_name#( s ) == 2
+
+# test case 5
+s = "11111111"
+assert #function_name#( s ) == -1

@@ -1,0 +1,58 @@
+import java.util.*;
+import java.util.stream.*;
+import java.lang.*;
+
+public class Main_14 {
+
+#program#
+
+    public static void main(String[] args) {
+    int[] ar;
+    int size;
+
+    // test case 1
+    ar = new int[]{2,4,6,8,10};
+    size = 5;
+    if(#function_name#(ar, size) == 4){
+        System.out.println("Success");
+    }else{
+        System.out.println("Fail");
+    }
+
+    // test case 2
+    ar = new int[]{0,2,4,6,8};
+    size = 5;
+    if(#function_name#(ar, size) == 3){
+        System.out.println("Success");
+    }else{
+        System.out.println("Fail");
+    }
+
+    // test case 3
+    ar = new int[]{2,4,6,0,10};
+    size = 5;
+    if(#function_name#(ar, size) == 3){
+        System.out.println("Success");
+    }else{
+        System.out.println("Fail");
+    }
+
+    // test case 4
+    ar = new int[]{2,0,0,0,0};
+    size = 5;
+    if(#function_name#(ar, size) == 0){
+        System.out.println("Success");
+    }else{
+        System.out.println("Fail");
+    }
+
+    // test case 5
+    ar = new int[]{2,4,2};
+    size = 2;
+    if(#function_name#(ar, size) == 1){
+        System.out.println("Success");
+    }else{
+        System.out.println("Fail");
+    }
+  }
+}

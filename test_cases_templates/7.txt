@@ -1,0 +1,31 @@
+import numpy as np
+import math
+from math import *
+import collections
+from collections import *
+import heapq
+import itertools
+import random
+import sys
+
+#program#
+
+# test case 1
+vec = [3,4,2,1]
+assert #function_name#(vec)==[]
+
+# test case 2
+vec = [1,1,1]
+assert #function_name#(vec)==[2, 3]
+
+# test case 3
+vec = [1,1,2,2]
+assert #function_name#(vec)==[3, 4]
+
+# test case 4
+vec = [1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,2,2]
+assert #function_name#(vec)==[3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+
+# test case 5
+vec = [1,1,1,1]
+assert #function_name#(vec)==[2, 3, 4]

@@ -1,0 +1,61 @@
+import java.util.*;
+import java.util.stream.*;
+import java.lang.*;
+
+public class Main_175 {
+
+#program#
+
+	public static void main(String[] args){
+		// test case 1
+		int low_1 = 10;
+		int high_1 = 20;
+		int k_1 = 5;
+		if(#function_name#(low_1, high_1, k_1) == 1){
+			System.out.println("Success");
+		}else{
+			System.out.println("Fail");
+		}
+		
+		// test case 2
+		int low_2 = 100;
+		int high_2 = 1000;
+		int k_2 = 5;
+		if(#function_name#(low_2, high_2, k_2) == 90){
+			System.out.println("Success");
+		}else{
+			System.out.println("Fail");
+		}
+		
+		// test case 3
+		int low_3 = 20;
+		int high_3 = 100;
+		int k_3 = 5;
+		if(#function_name#(low_3, high_3, k_3) == 8){
+			System.out.println("Success");
+		}else{
+			System.out.println("Fail");
+		}
+		
+		// test case 4
+		int low_4 = 4;
+		int high_4 = 90;
+		int k_4 = 5;
+		if(#function_name#(low_4, high_4, k_4) == 8){
+			System.out.println("Success");
+		}else{
+			System.out.println("Fail");
+		}
+
+		// test case 5
+		int low_5 = 10;
+		int high_5 = 200;
+		int k_5 = 5;
+		if(#function_name#(low_5, high_5, k_5) == 19){
+			System.out.println("Success");
+		}else{
+			System.out.println("Fail");
+		}		
+	}
+}
+

@@ -1,0 +1,57 @@
+import java.util.*;
+import java.util.stream.*;
+import java.lang.*;
+
+public class Main_116 { 
+
+#program#
+
+  public static void main(String[] args) {
+    // test case 1
+    long x_1 = 1 ;
+    long y_1 = 1 ;
+    if (#function_name#(x_1, y_1) == true) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+
+    // test case 2
+    long x_2 = 2 ;
+    long y_2 = 231 ;
+    if (#function_name#(x_2, y_2) == false) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+
+    // test case 3
+    long x_3 = 32146 ;
+    long y_3 = 321 ;
+    if (#function_name#(x_3, y_3) == false) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+
+    // test case 4
+    long x_4 = 4 ;
+    long y_4 = 1 ;
+    if (#function_name#(x_4, y_4) == true) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+
+    // test case 5
+    long x_5 = 5 ;
+    long y_5 = 1 ;
+    if (#function_name#(x_5, y_5) == true) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+
+
+  }
+}

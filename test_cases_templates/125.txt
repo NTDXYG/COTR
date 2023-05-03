@@ -1,0 +1,37 @@
+import numpy as np 
+import math
+from math import *
+import collections
+from collections import *
+import heapq
+import itertools
+import random
+import sys
+
+#program#
+
+
+# test case 1 
+n=100
+d=1
+assert #function_name#(n, d)==1
+
+# test case 2
+n=1000
+d=0
+assert #function_name#(n, d)==3
+
+# test case 3 
+n=12345
+d=1
+assert #function_name#(n, d)==1
+
+# test case 4 
+n=9999
+d=9
+assert #function_name#(n, d)==4
+
+# test case 5 
+n=15642
+d=9
+assert #function_name#(n, d)==0

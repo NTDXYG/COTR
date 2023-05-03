@@ -1,0 +1,46 @@
+import java.util.*;
+import java.util.stream.*;
+import java.lang.*;
+
+public class Main_98 { 
+
+#program#
+
+  public static void main(String[] args) {
+    //test case 1
+    char[] s1 = new char[]{'c', 'd', 'b', 'a'};
+    if (#function_name#(s1).equals("abcd")){
+      System.out.println("Success");
+    }else {
+      System.out.println("False");
+    }
+    //test case 2
+    char[] s2 = new char[]{'d', 'b', 'a', 'c'};
+    if (#function_name#(s2).equals("abcd")){
+      System.out.println("Success");
+    }else {
+      System.out.println("False");
+    }
+    //test case 3
+    char[] s3 = new char[]{'m', 'q', 'e', 'f'};
+    if (#function_name#(s3).equals("efmq")){
+      System.out.println("Success");
+    }else {
+      System.out.println("False");
+    }
+    //test case 4
+    char[] s4 = new char[]{'c', 'y', 'i', 'o'};
+    if (#function_name#(s4).equals("cioy")){
+      System.out.println("Success");
+    }else {
+      System.out.println("False");
+    }
+    //test case 5
+    char[] s5 = new char[]{'s', 'x', 'r', 'l'};
+    if (#function_name#(s5).equals("lrsx")){
+      System.out.println("Success");
+    }else {
+      System.out.println("False");
+    }
+  }
+}

@@ -1,0 +1,55 @@
+import java.util.*;
+import java.util.stream.*;
+import java.lang.*;
+
+public class Main_119 { 
+
+#program#
+
+  public static void main(String[] args) {
+    // test case 1
+    int arr_1[] = {1, 2, 3, 4, 5};
+    int n_1 = 5;
+    if (#function_name#(arr_1, n_1) == 3) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+
+    // test case 2
+    int arr_2[] = {5, 4, 3, 2, 1};
+    int n_2 = 5;
+    if (#function_name#(arr_2, n_2) == 3) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+
+    // test case 3
+    int arr_3[] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+    int n_3 = 9;
+    if (#function_name#(arr_3, n_3) == 7) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+
+    // test case 4
+    int arr_4[] = {39, 8, 7, 231, -5, 4, 33, 21, 1};
+    int n_4 = 9;
+    if (#function_name#(arr_4, n_4) == 114) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+
+    // test case 5
+    int arr_5[] = {133, 21, 32, 44, 5, 62, 27, 428, 96, 10};
+    int n_5 = 10;
+    if (#function_name#(arr_5, n_5) == 421) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+  }
+}

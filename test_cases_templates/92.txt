@@ -1,0 +1,27 @@
+import numpy as np 
+import math
+from math import *
+import collections
+from collections import *
+import heapq
+import itertools
+import random
+import sys
+
+#program#
+
+# test case 1
+radian=0.5
+assert #function_name#(radian)==28.647913954398888
+# test case 2
+radian=1.0
+assert #function_name#(radian)==57.295827908797776
+# test case 3
+radian=2.0
+assert #function_name#(radian)==114.59165581759555
+# test case 4
+radian=5.0
+assert #function_name#(radian)==286.4791395439889
+# test case 5
+radian=2.5
+assert #function_name#(radian)==143.23956977199444

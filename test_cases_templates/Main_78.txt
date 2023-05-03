@@ -1,0 +1,45 @@
+import java.util.*;
+import java.util.stream.*;
+import java.lang.*;
+
+public class Main_78 { 
+#program#
+
+  public static void main(String[] args) {
+    //test case 1
+    String s1 = "11111";
+    if (#function_name#(s1).equals("-1")){
+      System.out.println("Success");
+    }else {
+      System.out.println("False");
+    }
+    //test case 2
+    String s2 = "01110111";
+    if (#function_name#(s2).equals("01110")){
+      System.out.println("Success");
+    }else {
+      System.out.println("False");
+    }
+    //test case 3
+    String s3 = "101";
+    if (#function_name#(s3).equals("10")){
+      System.out.println("Success");
+    }else {
+      System.out.println("False");
+    }
+    //test case 4
+    String s4 = "111100000111";
+    if (#function_name#(s4).equals("111100000")){
+      System.out.println("Success");
+    }else {
+      System.out.println("False");
+    }
+    //test case 5
+    String s5 = "100";
+    if (#function_name#(s5).equals("100")){
+      System.out.println("Success");
+    }else {
+      System.out.println("False");
+    }
+  }
+}

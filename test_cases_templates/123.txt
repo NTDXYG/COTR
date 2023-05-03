@@ -1,0 +1,31 @@
+import numpy as np 
+import math
+from math import *
+import collections
+from collections import *
+import heapq
+import itertools
+import random
+import sys
+
+#program#
+
+# test case 1
+N = 2019
+assert #function_name#( N ) == 2
+
+# test case 2
+N = 2020
+assert #function_name#( N ) == 4
+
+# test case 3
+N = 2021
+assert #function_name#( N ) == 5
+
+# test case 4
+N = 2022
+assert #function_name#( N ) == 6
+
+# test case 5
+N = 98776521
+assert #function_name#( N ) == 3

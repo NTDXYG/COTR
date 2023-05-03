@@ -1,0 +1,50 @@
+import java.util.*;
+import java.util.stream.*;
+import java.lang.*;
+
+public class Main_107 { 
+
+#program#
+
+  public static void main(String[] args) {
+    // test case 1
+    String str_1 = "Hello World" ;
+    if (#function_name#(str_1).equals("-1")) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+
+    // test case 2
+    String str_2 = "This is a test string" ;
+    if (#function_name#(str_2).equals("string")) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+
+    // test case 3
+    String str_3 = "GeeksforGeeks" ;
+    if (#function_name#(str_3).equals("-1")) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+
+    // test case 4
+    String str_4 = "GeeksQuiz" ;
+    if (#function_name#(str_4).equals("-1")) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+
+    // test case 5
+    String str_5 = "GeeksforGeeks A Computer Science portal for Geeks" ;
+    if (#function_name#(str_5).equals("Computer")) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+  }
+}

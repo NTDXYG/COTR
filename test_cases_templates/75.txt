@@ -1,0 +1,33 @@
+import numpy as np 
+import math
+from math import *
+import collections
+from collections import *
+import heapq
+import itertools
+import random
+import sys
+
+#program#
+
+# test case 1
+a = "abcd"
+b = "abcdabcdabcd"
+assert #function_name#( a , b )==3
+# test case 2
+a = "a"
+b = "aa"
+assert #function_name#( a , b )==2
+# test case 3
+a = "abc"
+b = "def"
+assert #function_name#( a , b )==-1
+# test case 4
+a = "abcd"
+b = "abcdabcdabcdabcdabcd"
+assert #function_name#( a , b )==5
+# test case 5
+a = "abcde"
+b = "abcdeabcde"
+assert #function_name#( a , b )==2
+

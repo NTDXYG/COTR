@@ -1,0 +1,87 @@
+import java.util.*;
+import java.util.stream.*;
+import java.lang.*;
+
+public class Main_12 {
+
+#program#
+
+    public static void main(String[] args) {
+    // test case 1
+    Queue<Integer> A_1 = new LinkedList();
+    A_1.add(1);
+    A_1.add(2);
+    A_1.add(3);
+    Queue<Integer> B_1 = new LinkedList();
+    B_1.add(3);
+    B_1.add(2);
+    B_1.add(1);
+    if(#function_name#(A_1, B_1) == 9){
+        System.out.println("Success");
+    }else{
+        System.out.println("Fail");
+    }
+
+    // test case 2
+    Queue<Integer> A_2 = new LinkedList();
+    A_2.add(1);
+    A_2.add(2);
+    A_2.add(3);
+    Queue<Integer> B_2 = new LinkedList();
+    B_2.add(1);
+    B_2.add(2);
+    B_2.add(3);
+    B_2.add(4);
+    if(#function_name#(A_2, B_2) == 3){
+        System.out.println("Success");
+    }else{
+        System.out.println("Fail");
+    }
+
+    // test case 3
+    Queue<Integer> A_3 = new LinkedList();
+    Queue<Integer> B_3 = new LinkedList();
+    B_3.add(3);
+    B_3.add(2);
+    B_3.add(1);
+    if(#function_name#(A_3, B_3) == 0){
+        System.out.println("Success");
+    }else{
+        System.out.println("Fail");
+    }
+
+    // test case 4
+    Queue<Integer> A_4 = new LinkedList();
+    A_4.add(1);
+    A_4.add(2);
+    A_4.add(3);
+    A_4.add(4);
+    A_4.add(5);
+    Queue<Integer> B_4 = new LinkedList();
+    B_4.add(5);
+    B_4.add(4);
+    B_4.add(3);
+    B_4.add(2);
+    B_4.add(1);
+    if(#function_name#(A_4, B_4) == 25){
+        System.out.println("Success");
+    }else{
+        System.out.println("Fail");
+    }
+
+    // test case 5
+    Queue<Integer> A_5 = new LinkedList();
+    A_5.add(1);
+    A_5.add(2);
+    A_5.add(3);
+    Queue<Integer> B_5 = new LinkedList();
+    B_5.add(1);
+    B_5.add(2);
+    B_5.add(3);
+    if(#function_name#(A_5, B_5) == 3){
+        System.out.println("Success");
+    }else{
+        System.out.println("Fail");
+    }
+  }
+}

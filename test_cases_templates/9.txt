@@ -1,0 +1,31 @@
+import numpy as np
+import math
+from math import *
+import collections
+from collections import *
+import heapq
+import itertools
+import random
+import sys
+
+#program#
+
+# test case 1
+a = [2, 34, 9, 5, 23, 76]
+assert #function_name#(a) == 7
+
+# test case 2
+a = [12, 15, 25, 50, 20]
+assert #function_name#(a) == 9
+
+# test case 3
+a = [1, 2, 3, 4, 5]
+assert #function_name#(a) == 3
+
+# test case 4
+a = [6, 10, 15, 20, 25, 30]
+assert #function_name#(a) == 12
+
+# test case 5
+a = [100, 200, 300, 400, 500, 600, 700]
+assert #function_name#(a) == 17

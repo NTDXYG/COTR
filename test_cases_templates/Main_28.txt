@@ -1,0 +1,52 @@
+import java.util.*;
+import java.util.stream.*;
+import java.lang.*;
+
+public class Main_28 { 
+
+#program#
+
+
+  public static void main(String[] args) {
+//  test case 1
+    int x1 = 3;
+    int y1 = 5;
+    if (#function_name#(x1, y1) == 15){
+      System.out.println("Success");
+    }else {
+      System.out.println("Fail");
+    }
+//  test case 2
+    int x2 = 0;
+    int y2 = 10;
+    if (#function_name#(x2, y2) == 0){
+      System.out.println("Success");
+    }else {
+      System.out.println("Fail");
+    }
+//  test case 3
+    int x3 = 10;
+    int y3 = 0;
+    if (#function_name#(x3, y3) == 0){
+      System.out.println("Success");
+    }else {
+      System.out.println("Fail");
+    }
+//  test case 4
+    int x4 = 2;
+    int y4 = 3;
+    if (#function_name#(x4, y4) == 6){
+      System.out.println("Success");
+    }else {
+      System.out.println("Fail");
+    }
+//  test case 5
+    int x5 = 7;
+    int y5 = 4;
+    if (#function_name#(x5, y5) == 28){
+      System.out.println("Success");
+    }else {
+      System.out.println("Fail");
+    }
+  }
+}

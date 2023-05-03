@@ -1,0 +1,45 @@
+import numpy as np 
+import math
+from math import *
+import collections
+from collections import *
+import heapq
+import itertools
+import random
+import sys
+
+
+#program#
+
+
+# test case 1
+l=-1
+b=2
+h=2
+assert #function_name#( l , b , h )==-1
+
+
+# test case 2
+l=2
+b=-1
+h=-1
+assert #function_name#( l , b , h )==-1
+
+
+# test case 3
+l=2
+b=3
+h=0
+assert #function_name#( l , b , h )==1.44
+
+# test case 4
+l=3
+b=3
+h=5
+assert #function_name#( l , b , h )==2.25
+
+# test case 5
+l=2
+b=0
+h=2
+assert #function_name#( l , b , h )==0

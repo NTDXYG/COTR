@@ -1,0 +1,57 @@
+import java.util.*;
+import java.util.Map.Entry;
+import java.util.stream.*;
+import java.lang.*;
+
+public class Main_186 {
+
+#program#
+
+	public static void main(String[] args){
+		// test case 1
+		int[] arr_1 = new int[] { 1, 2, 3, 4, 5 };
+		int n_1 = 5;
+		if (#function_name#(arr_1, n_1) == 1) {
+			System.out.println("Success");
+		} else {
+			System.out.println("Fail");
+		}
+
+		// test case 2
+		int[] arr_2 = new int[] { 1, 1, 2, 3, 3 };
+		int n_2 = 5;
+		if (#function_name#(arr_2, n_2) == 4) {
+			System.out.println("Success");
+		} else {
+			System.out.println("Fail");
+		}
+
+		// test case 3
+		int[] arr_3 = new int[] { 1, 2, 2, 2, 3 };
+		int n_3 = 5;
+		if (#function_name#(arr_3, n_3) == 3) {
+			System.out.println("Success");
+		} else {
+			System.out.println("Fail");
+		}
+
+		// test case 4
+		int[] arr_4 = new int[] { 1, 1, 1, 1, 1, 1, 1, 1 };
+		int n_4 = 8;
+		if (#function_name#(arr_4, n_4) == 8) {
+			System.out.println("Success");
+		} else {
+			System.out.println("Fail");
+		}
+
+		// test case 5
+		int[] arr_5 = new int[] { 2, 2, 2, 2, 2, 2, 2, 2 };
+		int n_5 = 8;
+		if (#function_name#(arr_5, n_5) == 8) {
+			System.out.println("Success");
+		} else {
+			System.out.println("Fail");
+		}
+
+	}
+}

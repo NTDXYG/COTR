@@ -1,0 +1,28 @@
+import numpy as np 
+import math
+from math import *
+import collections
+from collections import *
+import heapq
+import itertools
+import random
+import sys
+
+#program#
+
+# test case 1
+s="111000111"
+# print(largestSubStr(s))
+assert #function_name#(s)=="111000"
+# test case 2
+s="111"
+assert #function_name#(s)=="-1"
+# test case 3
+s="01010101"
+assert #function_name#(s)=="0101010"
+# test case 4
+s="101"
+assert #function_name#(s)=="10"
+# test case 5
+s="101110101"
+assert #function_name#(s)=="10111010"

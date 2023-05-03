@@ -1,0 +1,32 @@
+import numpy as np 
+import math
+from math import *
+import collections
+from collections import *
+import heapq
+import itertools
+import random
+import sys
+
+#program#
+
+# test case 1
+r = 3
+assert #function_name#(r) == 12.68586
+
+# test case 2
+r = 4
+assert #function_name#(r) == 22.55264
+
+# test case 3
+r = 1
+assert #function_name#(r) == 1.40954
+
+# test case 4
+r = 5
+assert #function_name#(r) == 35.2385
+
+# test case 5
+r = 2
+assert #function_name#(r) == 5.63816
+

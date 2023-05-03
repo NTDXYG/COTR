@@ -1,0 +1,51 @@
+import java.util.*;
+import java.util.stream.*;
+import java.lang.*;
+
+public class Main_174 {
+
+#program#
+
+  public static void main(String[] args){
+    //test case 1
+    String arr1 = "";
+    if(#function_name#(arr1)){
+      System.out.print("Success");
+    }else {
+      System.out.print("Fail");
+    }
+
+    //test case 2
+    String arr2 = "a";
+    if(#function_name#(arr2)){
+      System.out.print("Success");
+    }else {
+      System.out.print("Fail");
+    }
+
+    //test case 3
+    String arr3 = "ae";
+    if(#function_name#(arr3)){
+      System.out.print("Success");
+    }else {
+      System.out.print("Fail");
+    }
+
+    //test case 4
+    String arr4 = "ou";
+    if(#function_name#(arr4)){
+      System.out.print("Success");
+    }else {
+      System.out.print("Fail");
+    }
+
+    //test case 5
+    String arr5 = "aeiou";
+    if(#function_name#(arr5)){
+      System.out.print("Success");
+    }else {
+      System.out.print("Fail");
+    }
+  }
+
+}

@@ -1,0 +1,79 @@
+import java.util.*;
+import java.util.stream.*;
+import java.lang.*;
+
+public class Main_9 {
+
+#program#
+
+    public static void main(String[] args) {
+    // test case 1
+    Vector a_1 = new Vector();
+    a_1.add(2);
+    a_1.add(34);
+    a_1.add(9);
+    a_1.add(5);
+    a_1.add(23);
+    a_1.add(76);
+    if(#function_name#(a_1) == 6){
+        System.out.println("Success");
+    }else{
+        System.out.println("Fail");
+    }
+
+    // test case 2
+    Vector a_2 = new Vector();
+    a_2.add(12);
+    a_2.add(15);
+    a_2.add(25);
+    a_2.add(50);
+    a_2.add(20);
+    if(#function_name#(a_2) == 3){
+        System.out.println("Success");
+    }else{
+        System.out.println("Fail");
+    }
+
+    // test case 3
+    Vector a_3 = new Vector();
+    a_3.add(1);
+    a_3.add(2);
+    a_3.add(3);
+    a_3.add(4);
+    a_3.add(5);
+    if(#function_name#(a_3) == 3){
+        System.out.println("Success");
+    }else{
+        System.out.println("Fail");
+    }
+
+    // test case 4
+    Vector a_4 = new Vector();
+    a_4.add(6);
+    a_4.add(10);
+    a_4.add(15);
+    a_4.add(20);
+    a_4.add(25);
+    a_4.add(30);
+    if(#function_name#(a_4) == 3){
+        System.out.println("Success");
+    }else{
+        System.out.println("Fail");
+    }
+
+    // test case 5
+    Vector a_5 = new Vector();
+    a_5.add(100);
+    a_5.add(200);
+    a_5.add(300);
+    a_5.add(400);
+    a_5.add(500);
+    a_5.add(600);
+    a_5.add(700);
+    if(#function_name#(a_5) == 4){
+        System.out.println("Success");
+    }else{
+        System.out.println("Fail");
+    }
+  }
+}

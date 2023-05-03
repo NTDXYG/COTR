@@ -1,0 +1,51 @@
+import java.util.*;
+import java.util.stream.*;
+import java.lang.*;
+
+public class Main_187 {
+
+#program#
+
+	public static void main(String[] args){
+		// test case 1
+		int height_1 = 1;
+		if (#function_name#(height_1) == 2) {
+			System.out.println("Success");
+		} else {
+			System.out.println("Fail");
+		}
+		
+		// test case 2
+		int height_2 = 2;
+		if (#function_name#(height_2) == 4) {
+			System.out.println("Success");
+		} else {
+			System.out.println("Fail");
+		}
+		
+		// test case 3
+		int height_3 = 3;
+		if (#function_name#(height_3) == 7) {
+			System.out.println("Success");
+		} else {
+			System.out.println("Fail");
+		}
+		
+		// test case 4
+		int height_4 = 4;
+		if (#function_name#(height_4) == 12)  {
+			System.out.println("Success");
+		} else {
+			System.out.println("Fail");
+		}
+
+		// test case 5
+		int height_5 = 5;
+		if (#function_name#(height_5) == 20) {
+			System.out.println("Success");
+		} else {
+			System.out.println("Fail");
+		}
+		
+	}
+}

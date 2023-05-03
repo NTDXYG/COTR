@@ -1,0 +1,66 @@
+import java.util.*;
+import java.util.stream.*;
+import java.lang.*;
+
+public class Main_115 { 
+
+#program#
+
+  public static void main(String[] args) {
+    // test case 1
+    int a_1 = 1 ;
+    int b_1 = 2 ;
+    int c_1 = 3 ;
+    int k_1 = 2 ;
+    if (#function_name#(a_1, b_1, c_1, k_1) == false) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+
+    // test case 2
+    int a_2 = 1 ;
+    int b_2 = 2 ;
+    int c_2 = 3 ;
+    int k_2 = 3 ;
+    if (#function_name#(a_2, b_2, c_2, k_2) == true) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+
+    // test case 3
+    int a_3 = 1 ;
+    int b_3 = 6 ;
+    int c_3 = 30 ;
+    int k_3 = 2 ;
+    if (#function_name#(a_3, b_3, c_3, k_3) == false) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+
+    // test case 4
+    int a_4 = 12 ;
+    int b_4 = 6 ;
+    int c_4 = 98 ;
+    int k_4 = 2 ;
+    if (#function_name#(a_4, b_4, c_4, k_4) == false) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+
+    // test case 5
+    int a_5 = 3 ;
+    int b_5 = 63 ;
+    int c_5 = 9 ;
+    int k_5 = 2 ;
+    if (#function_name#(a_5, b_5, c_5, k_5) == false) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+
+  }
+}

@@ -1,0 +1,46 @@
+import java.util.*;
+import java.util.stream.*;
+import java.lang.*;
+
+public class Main_75 {
+#program#
+
+public static void main(String[] args) {
+  //test case 1
+  String a1 = "ab", b1 = "abab";
+  if (#function_name#(a1,b1)==2) {
+    System.out.println("Success");
+  }else {
+    System.out.println("False");
+  }
+
+  //test case 2
+  String a2 = "abcd", b2 = "abcdabcd";
+  if (#function_name#(a2,b2)==2) {
+    System.out.println("Success");
+  }else {
+    System.out.println("False");
+  }
+  //test case 3
+  String a3 = "abc", b3 = "abcabcabc";
+  if (#function_name#(a3,b3)==3) {
+    System.out.println("Success");
+  }else {
+    System.out.println("False");
+  }
+  //test case 4
+  String a4 = "abc", b4 = "ab";
+  if (#function_name#(a4,b4)==-1) {
+    System.out.println("Success");
+  }else {
+    System.out.println("False");
+  }
+  //test case 5
+  String a5 = "abc", b5 = "abcd";
+  if (#function_name#(a5,b5)==-1) {
+    System.out.println("Success");
+  }else {
+    System.out.println("False");
+  }
+}
+}

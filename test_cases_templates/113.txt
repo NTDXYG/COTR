@@ -1,0 +1,36 @@
+import numpy as np 
+import math
+from math import *
+import collections
+from collections import *
+import heapq
+import itertools
+import random
+import sys
+
+#program#
+
+# test case 1
+sentence = "I am a good programmer"
+word = "am"
+assert #function_name#( sentence , word ) == True
+
+# test case 2
+sentence = "I am a good programmer"
+word = "good"
+assert #function_name#( sentence , word ) == True
+
+# test case 3
+sentence = "I am a good programmer"
+word = "programmer"
+assert #function_name#( sentence , word ) == True
+
+# test case 4
+sentence = "I am a good programmer"
+word = "I"
+assert #function_name#( sentence , word ) == True
+
+# test case 5
+sentence = "I am a good programmer"
+word = "you"
+assert #function_name#( sentence , word ) == False

@@ -1,0 +1,58 @@
+import java.util.*;
+import java.util.stream.*;
+import java.lang.*;
+
+public class Main_25 { 
+
+#program#
+
+
+  public static void main(String[] args) {
+//  test case 1
+    String s1="010101";
+    int len1=6;
+    if (#function_name#(s1, len1) == 0){
+      System.out.println("Success");
+    }else {
+        System.out.println("Fail");
+    }
+
+//  test case 2
+    String s2="101010";
+    int len2=6;
+    if (#function_name#(s2, len2) == 0){
+      System.out.println("Success");
+    }else {
+      System.out.println("Fail");
+    }
+
+//  test case 3
+    String s3="110000";
+    int len3=6;
+    if (#function_name#(s3, len3) == 3){
+      System.out.println("Success");
+    }else {
+      System.out.println("Fail");
+    }
+
+    //  test case 4
+    String s4="111000";
+    int len4=6;
+    if (#function_name#(s4, len4) == 2){
+      System.out.println("Success");
+    }else {
+      System.out.println("Fail");
+    }
+
+    //  test case 5
+    String s5="100000";
+    int len5=6;
+    if (#function_name#(s5, len5) == 2){
+      System.out.println("Success");
+    }else {
+      System.out.println("Fail");
+    }
+  }
+
+
+}

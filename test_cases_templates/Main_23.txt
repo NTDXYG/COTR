@@ -1,0 +1,46 @@
+import java.util.*;
+import java.util.stream.*;
+import java.lang.*;
+
+public class Main_23 {
+
+#program#
+
+    public static void main(String[] args) {
+
+    // test case 1
+    if(#function_name#("10001", "10001", 5)==true){
+        System.out.println("Success");
+    }else{
+        System.out.println("Fail");
+    }
+
+    // test case 2
+    if(#function_name#("0000", "ZZZZ", 4)==false){
+        System.out.println("Success");
+    }else{
+        System.out.println("Fail");
+    }
+
+    // test case 3
+    if(#function_name#("11111", "11111", 5)==true){
+        System.out.println("Success");
+    }else{
+        System.out.println("Fail");
+    }
+
+    // test case 4
+    if(#function_name#("11111", "00011", 2)==false){
+        System.out.println("Success");
+    }else{
+        System.out.println("Fail");
+    }
+
+    // test case 5
+    if(#function_name#("01Z00", "0Z101", 5)==true){
+        System.out.println("Success");
+    }else{
+        System.out.println("Fail");
+    }
+  }
+}

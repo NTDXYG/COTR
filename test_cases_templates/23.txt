@@ -1,0 +1,26 @@
+import numpy as np
+import math
+from math import *
+import collections
+from collections import *
+import heapq
+import itertools
+import random
+import sys
+
+#program#
+
+# test case 1
+assert #function_name#('10001', '10001', 5)==True
+
+# test case 2
+assert #function_name#('0000', 'ZZZZ', 4)==False
+
+# test case 3
+assert #function_name#('11111', '11111', 5)==True
+
+# test case 4
+assert #function_name#('11111', '00011', 2)==False
+
+# test case 5
+assert #function_name#('01Z00', '0Z101', 5)==True

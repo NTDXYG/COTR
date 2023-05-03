@@ -1,0 +1,55 @@
+import java.util.*;
+import java.util.stream.*;
+import java.lang.*;
+
+public class Main_190 {
+
+#program#
+
+	public static void main(String[] args){
+		// test case 1
+		int[] arr_1 = new int[]{1, 2, 3, 4};
+		int N_1 = 3;
+		if (#function_name#(arr_1, N_1) == 3) {
+			System.out.println("Success");
+		} else {
+			System.out.println("Fail");
+		}
+		
+		// test case 2
+		int[] arr_2 = new int[]{2, 2, 3, 4};
+		int N_2 = 2;
+		if (#function_name#(arr_2, N_2) == 2) {
+			System.out.println("Success");
+		} else {
+			System.out.println("Fail");
+		}
+		
+		// test case 3
+		int[] arr_3 = new int[]{1, 2, 3, 4, 3};
+		int N_3 = 3;
+		if (#function_name#(arr_3, N_3) == 3) {
+			System.out.println("Success");
+		} else {
+			System.out.println("Fail");
+		}
+		
+		// test case 4
+		int[] arr_4 = new int[]{1, 4, 5, 4, 4};
+		int N_4 = 4;
+		if (#function_name#(arr_4, N_4) == 4) {
+			System.out.println("Success");
+		} else {
+			System.out.println("Fail");
+		}
+		
+		// test case 5
+		int[] arr_5 = new int[]{1, 5, 2, 3, 4};
+		int N_5 = 3;
+		if (#function_name#(arr_5, N_5) == 3) {
+			System.out.println("Success");
+		} else {
+			System.out.println("Fail");
+		}
+	}
+}

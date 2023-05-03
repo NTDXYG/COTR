@@ -1,0 +1,43 @@
+import numpy as np 
+import math
+from math import *
+import collections
+from collections import *
+import heapq
+import itertools
+import random
+import sys
+
+#program#
+
+# test case 1
+arr = [1,2,3,4,5]
+n = 5
+k = 3
+assert #function_name#(arr, n, k) == 8
+
+# test case 2
+arr = [5,4,3,2,1]
+n = 5
+k = 5
+assert #function_name#(arr, n, k) == 10
+
+# test case 3
+arr = [1,2,3,4,5]
+n = 5
+k = 10
+assert #function_name#(arr, n, k) == 15
+
+# test case 4
+arr = [10,20,30,40,50]
+n = 5
+k = 30
+assert #function_name#(arr, n, k) == 33
+
+# test case 5
+arr = [1,2,3,4,5]
+n = 5
+k = 0
+assert #function_name#(arr, n, k) == 0
+
+

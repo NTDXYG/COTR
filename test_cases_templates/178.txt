@@ -1,0 +1,36 @@
+import numpy as np 
+import math
+from math import *
+import collections
+from collections import *
+import heapq
+import itertools
+import random
+import sys
+
+#program#
+
+# test case 1
+s = "abcdefghijklmnopqrstuvwxyz"
+assert #function_name#(s) == "abcdefghijklmnopqrstuvwxyz"
+
+# test case 2
+s = "zzzzzzzzzzz"
+assert #function_name#(s) == "zzzzzzzzzzz"
+
+# test case 3
+s = "aaaabbbbcccc"
+assert #function_name#(s) == "aaaabbbbcccc"
+
+# test case 4
+s = "abcz"
+assert #function_name#(s) == "abcz"
+
+# test case 5
+s = "cba"
+assert #function_name#(s) == "abc"
+
+
+
+
+

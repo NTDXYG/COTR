@@ -1,0 +1,66 @@
+import java.util.*;
+import java.util.stream.*;
+import java.lang.*;
+
+public class Main_112 { 
+
+#program#
+
+  public static void main(String[] args) {
+    // test case 1
+    int arr_1 [ ] = { 1 , 3 , 5 , 7 , 9 } ;
+    int n_1 = 5 ;
+    int left_1 = 2 ;
+    int right_1 = 4 ;
+    if (#function_name#(arr_1, n_1, left_1, right_1) == 15) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+
+    // test case 2
+    int arr_2 [ ] = { 1 , 3 , 5 , 9,98,72, 7 , 9 } ;
+    int n_2 = 8 ;
+    int left_2 = 2 ;
+    int right_2 = 4 ;
+    if (#function_name#(arr_2, n_2, left_2, right_2) == 15) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+
+    // test case 3
+    int arr_3 [ ] = { 1 , 3 , 2 , 7 , 9 } ;
+    int n_3 = 5 ;
+    int left_3 = 2 ;
+    int right_3 = 4 ;
+    if (#function_name#(arr_3, n_3, left_3, right_3) == 15) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+
+    // test case 4
+    int arr_4 [ ] = { 235 , 3 , 45 , 654 , 9 } ;
+    int n_4 = 5 ;
+    int left_4 = 2 ;
+    int right_4 = 4 ;
+    if (#function_name#(arr_4, n_4, left_4, right_4) == -687) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+
+    // test case 5
+    int arr_5 [ ] = { 1 , 3} ;
+    int n_5 = 2 ;
+    int left_5 = 1 ;
+    int right_5 = 2 ;
+    if (#function_name#(arr_5, n_5, left_5, right_5) == 4) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+
+  }
+}

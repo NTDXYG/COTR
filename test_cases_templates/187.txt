@@ -1,0 +1,31 @@
+import numpy as np 
+import math
+from math import *
+import collections
+from collections import *
+import heapq
+import itertools
+import random
+import sys
+
+#program#
+
+# test case 1
+height = 0
+assert #function_name#(height) == 1
+
+# test case 2
+height = 1
+assert #function_name#(height) == 2
+
+# test case 3
+height = 2
+assert #function_name#(height) == 4
+
+# test case 4
+height = 3
+assert #function_name#(height) == 7
+
+# test case 5
+height = 4
+assert #function_name#(height) == 12

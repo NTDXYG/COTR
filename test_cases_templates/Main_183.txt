@@ -1,0 +1,66 @@
+import java.util.*;
+import java.util.stream.*;
+import java.lang.*;
+
+public class Main_183 {
+
+#program#
+
+	public static void main(String[] args){
+		// test case 1
+		int sx_1 = 1;
+		int sy_1 = 1;
+		int dx_1 = 3;
+		int dy_1 = 3;
+		if (#function_name#(sx_1, sy_1, dx_1, dy_1) == false) {
+			System.out.println("Success");
+		} else {
+			System.out.println("Fail");
+		}
+		
+		// test case 2
+		int sx_2 = 2;
+		int sy_2 = 2;
+		int dx_2 = 5;
+		int dy_2 = 4;
+		if (#function_name#(sx_2, sy_2, dx_2, dy_2) == false) {
+			System.out.println("Success");
+		} else {
+			System.out.println("Fail");
+		}
+		
+		// test case 3
+		int sx_3 = 1;
+		int sy_3 = 2;
+		int dx_3 = 3;
+		int dy_3 = 3;
+		if (#function_name#(sx_3, sy_3, dx_3, dy_3) == false) {
+			System.out.println("Success");
+		} else {
+			System.out.println("Fail");
+		}
+
+		// test case 4
+		int sx_4 = 1;
+		int sy_4 = 2;
+		int dx_4 = 3;
+		int dy_4 = 2;
+		if (#function_name#(sx_4, sy_4, dx_4, dy_4) == true) {
+			System.out.println("Success");
+		} else {
+			System.out.println("Fail");
+		}
+		
+		// test case 5
+		int sx_5 = 0;
+		int sy_5 = 1;
+		int dx_5 = 0;
+		int dy_5 = 1;
+		if (#function_name#(sx_5, sy_5, dx_5, dy_5) == true) {
+			System.out.println("Success");
+		} else {
+			System.out.println("Fail");
+		}
+	
+	}
+}

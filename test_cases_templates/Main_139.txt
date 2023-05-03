@@ -1,0 +1,57 @@
+import java.util.*;
+import java.util.stream.*;
+import java.lang.*;
+
+
+public class Main_139{
+
+#program#
+
+    public static  void  main(String []args){
+        // test case 1
+        int lower_1=1;
+        int higher_1=2;
+        if(#function_name#(lower_1,higher_1)==2) {
+            System.out.println("Success");
+        }else {
+            System.out.println("Fail");
+        }
+
+        // test case 2
+        int lower_2=11;
+        int higher_2=11;
+        if(#function_name#(lower_2,higher_2)==11) {
+            System.out.println("Success");
+        }else {
+            System.out.println("Fail");
+        }
+
+        // test case 3
+        int lower_3=123;
+        int higher_3=321;
+        if(#function_name#(lower_3,higher_3)==2) {
+            System.out.println("Success");
+        }else {
+            System.out.println("Fail");
+        }
+
+        // test case 4
+        int lower_4=12;
+        int higher_4=21;
+        if(#function_name#(lower_4,higher_4)==2) {
+            System.out.println("Success");
+        }else {
+            System.out.println("Fail");
+        }
+
+        // test case 5
+        int lower_5=123;
+        int higher_5=123;
+        if(#function_name#(lower_5,higher_5)==123) {
+            System.out.println("Success");
+        }else {
+            System.out.println("Fail");
+        }
+        }
+    }
+

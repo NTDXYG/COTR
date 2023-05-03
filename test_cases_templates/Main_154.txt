@@ -1,0 +1,61 @@
+import java.util.*;
+import java.util.stream.*;
+import java.lang.*;
+
+public class Main_154 {
+
+#program#
+
+  public static void main(String[] args){
+    //test case 1
+    int n1 = -1;
+    int l1 = 1;
+    int r1 = 0;
+    if(#function_name#(n1,l1,r1) == 0){
+      System.out.print("Success");
+    }else {
+      System.out.print("Fail");
+    }
+
+    //test case 2
+    int n2 = -1;
+    int l2 = 0;
+    int r2 = 1;
+    if(#function_name#(n2,l2,r2) == 0){
+      System.out.print("Success");
+    }else {
+      System.out.print("Fail");
+    }
+
+    //test case 3
+    int n3 = 1;
+    int l3 = 0;
+    int r3 = 1;
+    if(#function_name#(n3,l3,r3) == 2){
+      System.out.print("Success");
+    }else {
+      System.out.print("Fail");
+    }
+
+    //test case 4
+    int n4 = 2;
+    int l4 = 0;
+    int r4 = 1;
+    if(#function_name#(n4,l4,r4) == 1){
+      System.out.print("Success");
+    }else {
+      System.out.print("Fail");
+    }
+
+    //test case 5
+    int n5 = 4;
+    int l5 = 0;
+    int r5 = 1;
+    if(#function_name#(n5,l5,r5) == 3){
+      System.out.print("Success");
+    }else {
+      System.out.print("Fail");
+    }
+  }
+
+}

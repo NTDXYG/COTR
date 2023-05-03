@@ -1,0 +1,36 @@
+import numpy as np 
+import math
+from math import *
+import collections
+from collections import *
+import heapq
+import itertools
+import random
+import sys
+
+#program#
+
+# test case 1
+str = "abcabcabc"
+substr = "abc"
+assert #function_name#( str , substr ) == 10
+
+# test case 2
+str = "abababab"
+substr = "abfg"
+assert #function_name#( str , substr ) == 0
+
+# test case 3
+str = "abababab"
+substr = "abcf"
+assert #function_name#( str , substr ) == 0
+
+# test case 4
+str = "ababababaa"
+substr = "aba"
+assert #function_name#( str , substr ) == 30
+
+# test case 5
+str = "ababababaaaa"
+substr = "aba"
+assert #function_name#( str , substr ) == 50

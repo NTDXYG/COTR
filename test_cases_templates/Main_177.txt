@@ -1,0 +1,53 @@
+import java.util.*;
+import java.util.stream.*;
+import java.lang.*;
+
+public class Main_177 {
+
+#program#
+
+	public static void main(String[] args){
+		// test case 1
+		double r_1 = 2.4;
+		if (#function_name#(r_1) == 8.1189504) {
+			System.out.println("Success");
+		} else {
+			System.out.println("Fail");
+		}
+
+		// test case 2
+		double r_2 = 2.6;
+		if (#function_name#(r_2) == 9.5284904) {
+			System.out.println("Success");
+		} else {
+			System.out.println("Fail");
+		}
+
+		// test case 3
+		double r_3 = 4.56;
+		if (#function_name#(r_3) == 29.309410943999996) {
+			System.out.println("Success");
+		} else {
+			System.out.println("Fail");
+		}
+
+		// test case 4
+		double r_4 = 6.38;
+		if (#function_name#(r_4) == 57.374479976) {
+			System.out.println("Success");
+		} else {
+			System.out.println("Fail"); 
+		}
+
+		// test case 5
+		double r_5 = 10.6;
+		if (#function_name#(r_5) == 158.3759144){
+			System.out.println("Success");
+		} else {
+			System.out.println("Fail");
+		}
+	}
+}
+
+			
+	

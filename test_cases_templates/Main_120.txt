@@ -1,0 +1,55 @@
+import java.util.*;
+import java.util.stream.*;
+import java.lang.*;
+
+public class Main_120 { 
+
+#program#
+
+  public static void main(String[] args) {
+    // test case 1
+    int left_1 = 1 ;
+    int right_1 = 2 ;
+    if (#function_name#(left_1, right_1) == 1) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+
+    // test case 2
+    int left_2 = 2 ;
+    int right_2 = 3 ;
+    if (#function_name#(left_2, right_2) == 3) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+
+    // test case 3
+    int left_3 = 3 ;
+    int right_3 = 5 ;
+    if (#function_name#(left_3, right_3) == 3) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+
+    // test case 4
+    int left_4 = 6 ;
+    int right_4 = 7 ;
+    if (#function_name#(left_4, right_4) == 7) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+
+    // test case 5
+    int left_5 = 8 ;
+    int right_5 = 9 ;
+    if (#function_name#(left_5, right_5) == 9) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+  }
+}

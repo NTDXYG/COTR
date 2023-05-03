@@ -1,0 +1,54 @@
+import java.util.*;
+import java.util.stream.*;
+import java.lang.*;
+
+public class Main_197 {
+
+#program#
+
+	public static void main(String[] args){
+		// test case 1
+		int n_1 = 12;
+		int k_1 = 3;
+		if (#function_name#(n_1, k_1) == 891) {
+			System.out.println("Success");
+		} else {
+			System.out.println("Fail");
+		}
+		// test case 2
+		int n_2 = 22;
+		int k_2 = 2;
+		if (#function_name#(n_2, k_2) == 34) {
+			System.out.println("Success");
+		} else {
+			System.out.println("Fail");
+		}
+		
+		// test case 3
+		int n_3 = 13;
+		int k_3 = 3;
+		if (#function_name#(n_3, k_3) == 302) {
+			System.out.println("Success");
+		} else {
+			System.out.println("Fail");
+		}
+		
+		// test case 4
+		int n_4 = 42;
+		int k_4 = 4;
+		if (#function_name#(n_4, k_4) == 1501) {
+			System.out.println("Success");
+		} else {
+			System.out.println("Fail");
+		}
+		
+		// test case 5
+		int n_5 = 12;
+		int k_5 = 3;
+		if (#function_name#(n_5, k_5) == 891) {
+			System.out.println("Success");
+		} else {
+			System.out.println("Fail");
+		}
+	}
+}

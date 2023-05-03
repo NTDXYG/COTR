@@ -1,0 +1,61 @@
+import java.util.*;
+import java.util.stream.*;
+import java.lang.*;
+
+public class Main_103 { 
+
+#program#
+
+  public static void main(String[] args) {
+    // test case 1
+    float p_1 = 10000 ;
+    float r_1 = 10 ;
+    float t_1 = 5 ;
+    if (#function_name#(p_1, r_1, t_1) == 212.4706f) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+
+    // test case 2
+    float p_2 = 10000 ;
+    float r_2 = 10 ;
+    float t_2 = 10 ;
+    if (#function_name#(p_2, r_2, t_2) == 132.15082f) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+
+    // test case 3
+    float p_3 = 10000 ;
+    float r_3 = 10 ;
+    float t_3 = 15 ;
+    if (#function_name#(p_3, r_3, t_3) == 107.46056f) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+
+    // test case 4
+    float p_4 = 10000 ;
+    float r_4 = 10 ;
+    float t_4 = 20 ;
+    if (#function_name#(p_4, r_4, t_4) == 96.50219f) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+
+    // test case 5
+    float p_5 = 10000 ;
+    float r_5 = 10 ;
+    float t_5 = 25 ;
+    if (#function_name#(p_5, r_5, t_5) == 90.870094f) {
+      System.out.println("Success");
+    } else {
+      System.out.println("Fail");
+    }
+
+  }
+}

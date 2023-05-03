@@ -1,0 +1,37 @@
+import numpy as np 
+import math
+from math import *
+import collections
+from collections import *
+import heapq
+import itertools
+import random
+import sys
+
+#program#
+
+
+# test case 1
+left = 2
+right = 3
+assert #function_name#( left , right ) == 3
+
+# test case 2
+left = 3
+right = 5
+assert #function_name#( left , right ) == 3
+
+# test case 3
+left = 146
+right = 150
+assert #function_name#( left , right ) == 147
+
+# test case 4
+left = 187
+right = 10006
+assert #function_name#( left , right ) == 8191
+
+# test case 5
+left = 165
+right = 10000
+assert #function_name#( left , right ) == 8191

@@ -1,0 +1,41 @@
+import numpy as np 
+import math
+from math import *
+import collections
+from collections import *
+import heapq
+import itertools
+import random
+import sys
+
+#program#
+
+# test case 1
+p = 100000
+r = 10
+t = 20
+assert #function_name#( p , r , t ) == 965.0216450740089
+
+# test case 2
+p = 200000
+r = 10
+t = 20
+assert #function_name#( p , r , t ) == 1930.0432901480178
+
+# test case 3
+p = 300000
+r = 10
+t = 20
+assert #function_name#( p , r , t ) == 2895.064935222027
+
+# test case 4
+p = 400000
+r = 10
+t = 20
+assert #function_name#( p , r , t ) == 3860.0865802960357
+
+# test case 5
+p = 500000
+r = 10
+t = 20
+assert #function_name#( p , r , t ) == 4825.108225370045

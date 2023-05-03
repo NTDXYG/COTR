@@ -1,0 +1,32 @@
+import numpy as np 
+import math
+from math import *
+import collections
+from collections import *
+import heapq
+import itertools
+import random
+import sys
+
+
+#program#
+
+#test case 1
+string="asdfg"
+assert #function_name#(string)=="AsdfG"
+
+#test case 2
+string=""
+assert #function_name#(string)==""
+
+#test case 3
+string="ASDFG"
+assert #function_name#(string)=="ASDFG"
+
+#test case 4
+string="AsdfG"
+assert #function_name#(string)=="AsdfG"
+
+#test case 5
+string="asdfG"
+assert #function_name#(string)=="AsdfG"

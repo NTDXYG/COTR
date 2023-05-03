@@ -1,0 +1,52 @@
+import java.util.*;
+import java.util.stream.*;
+import java.lang.*;
+
+public class Main_29 { 
+
+#program#
+
+
+  public static void main(String[] args) {
+//    test case 1
+    int [] a1 = new int[] {4, 8, 12};
+    int n1 = 3;
+    if (#function_name#(a1, n1) == 2){
+      System.out.println("Success");
+    }else {
+      System.out.println("Fail");
+    }
+//    test case 2
+    int [] a2 = new int[] {4, 8, 12, 7};
+    int n2 = 4;
+    if (#function_name#(a2, n2) == 2){
+      System.out.println("Success");
+    }else {
+      System.out.println("Fail");
+    }
+//    test case 3
+    int [] a3 = new int[] {4, 8, 12, 7, 16};
+    int n3 = 5;
+    if (#function_name#(a3, n3) == 2){
+      System.out.println("Success");
+    }else {
+      System.out.println("Fail");
+    }
+//    test case 4
+    int [] a4 = new int[] {4, 8, 12, 7, 16, 3};
+    int n4 = 6;
+    if (#function_name#(a4, n4) == 2){
+      System.out.println("Success");
+    }else {
+      System.out.println("Fail");
+    }
+//    test case 5
+    int [] a5 = new int[] {4, 8, 12, 7, 16, 3};
+    int n5 = 7;
+    if (#function_name#(a1, n1) == 2){
+      System.out.println("Success");
+    }else {
+      System.out.println("Fail");
+    }
+  }
+}

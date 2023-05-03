@@ -1,0 +1,55 @@
+import java.util.*;
+import java.util.stream.*;
+import java.lang.*;
+
+public class Main_179 {
+
+#program#
+
+	public static void main(String[] args){
+		// test case 1
+		int[] ar_1 = new int[]{1};
+		int size_1 = 1;
+		if (#function_name#(ar_1, size_1) == 2) {
+			System.out.println("Success");
+		} else {
+			System.out.println("Fail");
+		}
+		
+		// test case 2
+		int[] ar_2 = new int[]{1, 2};
+		int size_2 = 2;
+		if (#function_name#(ar_2, size_2) == 2) {
+			System.out.println("Success");
+		} else {
+			System.out.println("Fail");
+		}		
+		
+		// test case 3
+		int[] ar_3 = new int[]{3, 2, 1};
+		int size_3 = 3;
+		if (#function_name#(ar_3, size_3) == 3) {
+			System.out.println("Success");
+		} else {
+			System.out.println("Fail");
+		}
+		
+		// test case 4
+		int[] ar_4 = new int[]{2, 4, 6, 8};
+		int size_4 = 4;
+		if (#function_name#(ar_4, size_4) == 5) {
+			System.out.println("Success");
+		} else {
+			System.out.println("Fail");
+		}
+		
+		// test case 5
+		int[] ar_5 = new int[]{7, 5, 3, 1};
+		int size_5 = 4;
+		if (#function_name#(ar_5, size_5) == 6) {
+			System.out.println("Success");
+		} else {
+			System.out.println("Fail");
+		}
+	}
+}
