@@ -7,7 +7,7 @@ class PythonProcessor:
     @classmethod
     def create_dead_for_loop(cls, body):
         control_variable = "_i_" + str(np.random.choice(list(range(10))))
-        loop = f"NEW_LINE for {control_variable} in range ( 0 ) : NEW_LINE INDENT {body} NEW_LINE DEDENT "
+        loop = f"NEWLINE for {control_variable} in range ( 0 ) : NEWLINE INDENT {body} NEWLINE DEDENT "
         return loop
 
     @classmethod
@@ -15,22 +15,22 @@ class PythonProcessor:
         p = np.random.uniform(0, 1)
         control_variable = "_i_" + str(np.random.choice(list(range(10))))
         if p < 0.33:
-            return f"while False : NEW_LINE INDENT {body} NEW_LINE DEDENT"
+            return f"while False : NEWLINE INDENT {body} NEWLINE DEDENT"
         elif p < 0.66:
-            return f"while {control_variable} < {control_variable} : NEW_LINE INDENT {body} NEW_LINE DEDENT"
+            return f"while {control_variable} < {control_variable} : NEWLINE INDENT {body} NEWLINE DEDENT"
         else:
-            return f"while {control_variable} > {control_variable} : NEW_LINE INDENT {body} NEW_LINE DEDENT"
+            return f"while {control_variable} > {control_variable} : NEWLINE INDENT {body} NEWLINE DEDENT"
 
     @classmethod
     def create_dead_if(cls, body):
         p = np.random.uniform(0, 1)
         control_variable = "_i_" + str(np.random.choice(list(range(10))))
         if p < 0.33:
-            return f"if False : NEW_LINE INDENT {body} NEW_LINE DEDENT"
+            return f"if False : NEWLINE INDENT {body} NEWLINE DEDENT"
         elif p < 0.66:
-            return f"if {control_variable} < {control_variable} : NEW_LINE INDENT {body} NEW_LINE DEDENT"
+            return f"if {control_variable} < {control_variable} : NEWLINE INDENT {body} NEWLINE DEDENT"
         else:
-            return f"if {control_variable} > {control_variable} : NEW_LINE INDENT {body} NEW_LINE DEDENT"
+            return f"if {control_variable} > {control_variable} : NEWLINE INDENT {body} NEWLINE DEDENT"
 
     @classmethod
     def get_tokens_insert_before(cls, code_str, root, insertion_code, insert_before_node):
@@ -56,11 +56,11 @@ class PythonProcessor:
         for child in children:
             child_type = str(child.type)
             if child_type == "block":
-                tokens += ["NEW_LINE", "INDENT"]
+                tokens += ["NEWLINE", "INDENT"]
             ts = cls.get_tokens_insert_before(code_str, child, insertion_code, insert_before_node)
             tokens += ts
             if child_type.endswith("statement"):
-                tokens.append("NEW_LINE")
+                tokens.append("NEWLINE")
             elif child_type == "block":
                 tokens.append("DEDENT")
         return tokens
@@ -85,11 +85,11 @@ class PythonProcessor:
         for child in children:
             child_type = str(child.type)
             if child_type == "block":
-                tokens += ["NEW_LINE", "INDENT"]
+                tokens += ["NEWLINE", "INDENT"]
             ts = cls.get_tokens(code, child)
             tokens += ts
             if child_type.endswith("statement"):
-                tokens.append("NEW_LINE")
+                tokens.append("NEWLINE")
             elif child_type == "block":
                 tokens.append("DEDENT")
         return tokens
@@ -160,7 +160,7 @@ class PythonProcessor:
         i = 0
         while i < len(tokens):
             token = tokens[i]
-            if token == "NEW_LINE":
+            if token == "NEWLINE":
                 code += "\n"
                 for _ in range(indent_count):
                     code += "\t"
@@ -205,10 +205,10 @@ class PythonProcessor:
             else:
                 child_type = str(child.type)
                 if child_type == "block":
-                    tokens += ["NEW_LINE", "INDENT"]
+                    tokens += ["NEWLINE", "INDENT"]
                 tokens += cls.get_tokens_replace_for(code_str, for_node, child, while_node)
                 if child_type.endswith("statement"):
-                    tokens.append("NEW_LINE")
+                    tokens.append("NEWLINE")
                 elif child_type == "block":
                     tokens.append("DEDENT")
         return tokens
@@ -244,13 +244,13 @@ class PythonProcessor:
                 identifier_name = cls.get_tokens(code_string, identifier)[0]
                 terminal_statements = cls.find_terminal_statement(body_node)
                 body_tokens = cls.get_tokens_insert_before(
-                    code_string, body_node, " ".join([identifier_name, "+="] + step + ["NEW_LINE"]), terminal_statements
+                    code_string, body_node, " ".join([identifier_name, "+="] + step + ["NEWLINE"]), terminal_statements
                 )
-                while_stmt = [identifier_name, "="] + start + ["NEW_LINE"] + \
+                while_stmt = [identifier_name, "="] + start + ["NEWLINE"] + \
                              ["while", identifier_name, "in", "list", "(", "range", "("] + stop + \
-                             [")", ")", ":", "NEW_LINE", "INDENT"] + \
-                             body_tokens + ["NEW_LINE", identifier_name, "+="] + step + \
-                             ["DEDENT", "NEW_LINE"]
+                             [")", ")", ":", "NEWLINE", "INDENT"] + \
+                             body_tokens + ["NEWLINE", identifier_name, "+="] + step + \
+                             ["DEDENT", "NEWLINE"]
                 tokens = cls.get_tokens_replace_for(
                     code_str=code_string,
                     for_node=fl,
@@ -388,7 +388,7 @@ class PythonProcessor:
         for child in children:
             child_type = str(child.type)
             if child_type == "block":
-                tokens += ["NEW_LINE", "INDENT"]
+                tokens += ["NEWLINE", "INDENT"]
             if child.start_byte == left_oprd.start_byte and child.end_byte == left_oprd.end_byte:
                 ts, _ = cls.get_tokens_for_opswap(code, right_oprd, left_oprd, operator, right_oprd)
             elif child.start_byte == right_oprd.start_byte and child.end_byte == right_oprd.end_byte:
@@ -397,7 +397,7 @@ class PythonProcessor:
                 ts, _ = cls.get_tokens_for_opswap(code, child, left_oprd, operator, right_oprd)
             tokens += ts
             if child_type.endswith("statement"):
-                tokens.append("NEW_LINE")
+                tokens.append("NEWLINE")
             elif child_type == "block":
                 tokens.append("DEDENT")
         return tokens, None
@@ -411,8 +411,7 @@ class PythonProcessor:
             current_node = queue[0]
             queue = queue[1:]
 
-            if (str(current_node.type) == '+=' or str(current_node.type) == "-=") and \
-                    "assignment" in str(current_node.parent.type):
+            if (str(current_node.type) in ['+=', "-=", "*=", "/=", "%="]) and "assignment" in str(current_node.parent.type):
                 nodes = current_node.parent.children
 
                 if len(nodes) == 3 and ("identifier" in str(nodes[
@@ -447,29 +446,41 @@ class PythonProcessor:
             if child in post_expr:
                 # child_type = str(child.type)
                 # if child_type == "block":
-                #     tokens += ["NEW_LINE", "INDENT"]
+                #     tokens += ["NEWLINE", "INDENT"]
                 expr = child
                 assignee = expr.children[0]
                 assignee_token = cls.get_tokens(code_string, assignee)[0]
                 op = ""
+
                 if cls.get_tokens(code_string, assignee)[1] == "+=":
                     op = ["=", "+"]
-                elif cls.get_tokens(code_string, assignee).split()[1] == "-=":
+
+                elif cls.get_tokens(code_string, assignee)[1] == "-=":
                     op = ["=", "-"]
+
+                elif cls.get_tokens(code_string, assignee)[1] == "*=":
+                    op = ["=", "*"]
+
+                elif cls.get_tokens(code_string, assignee)[1] == "/=":
+                    op = ["=", "/"]
+
+                elif cls.get_tokens(code_string, assignee)[1] == "%=":
+                    op = ["=", "%"]
+
                 assigner_token = ' '.join(cls.get_tokens(code_string, assignee)[2:])
-                tokens.extend([assignee_token, op[0], assignee_token, op[1], assigner_token])
+                tokens.extend([assignee_token, op[0], assignee_token, op[1], assigner_token, "NEWLINE"])
                 # if child_type.endswith("statement"):
-                #     tokens.append("NEW_LINE")
+                #     tokens.append("NEWLINE")
                 # elif child_type == "block":
                 #     tokens.append("DEDENT")
                 # break
             else:
                 child_type = str(child.type)
                 if child_type == "block":
-                    tokens += ["NEW_LINE", "INDENT"]
+                    tokens += ["NEWLINE", "INDENT"]
                 tokens += PythonProcessor.post_incre_decre_removal(code_string, post_expr, child, parser)
                 if child_type.endswith("statement"):
-                    tokens.append("NEW_LINE")
+                    tokens.append("NEWLINE")
                 elif child_type == "block":
                     tokens.append("DEDENT")
 
@@ -487,6 +498,7 @@ class PythonProcessor:
         if len(post_expr) > 0:
             try:
                 modified_tokens = cls.post_incre_decre_removal(code_string, post_expr, root, parser)
+                print(modified_tokens)
                 code_string = cls.beautify_python_code(modified_tokens)
                 root = parser.parse_code(code_string)
                 success = True
@@ -611,7 +623,7 @@ class PythonProcessor:
         for child in children:
             child_type = str(child.type)
             if child_type == "block":
-                tokens += ["NEW_LINE", "INDENT"]
+                tokens += ["NEWLINE", "INDENT"]
             if child.start_byte == first_block.start_byte and child.end_byte == first_block.end_byte and flagx == 0 \
                     and str(
                 child.type) == str(first_block.type):
@@ -628,7 +640,7 @@ class PythonProcessor:
                 ts, _ = cls.get_tokens_for_blockswap(code, child, first_block, opt_node, second_block, flagx, flagy)
             tokens += ts
             if child_type.endswith("statement"):
-                tokens.append("NEW_LINE")
+                tokens.append("NEWLINE")
             elif child_type == "block":
                 tokens.append("DEDENT")
         return tokens, None
@@ -699,7 +711,7 @@ def get_python_tokens(code, root=None):
         if token.type == 0 or token.type >= 58:
             continue
         elif token.type == 4:
-            tokens.append("NEW_LINE")
+            tokens.append("NEWLINE")
         elif token.type == 5:
             tokens.append("INDENT")
         elif token.type == 6:
